@@ -1,0 +1,2492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ramsey Financial Group — Intelligent Co-Investing in Frontier Industries</title>
+<meta name="description" content="Ramsey Financial Group is a Houston single-family office co-investing in frontier industries since 1992 — space, water, AgTech, AI, energy, and reconstruction finance." />
+
+<!-- Fonts: Fraunces (serif display) + Inter (geometric sans body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================================================
+     RFG HOMEPAGE MOCKUP — v1 pilot
+     Colors: deep forest green primary, burgundy accent
+     Type: Fraunces (display serif) + Inter (body sans)
+     ============================================================ */
+
+  :root {
+    /* Brand palette */
+    --ink:           #0F1A14;   /* near-black with green undertone, body text */
+    --forest:        #1B3A2E;   /* primary brand — deep forest green */
+    --forest-deep:   #0D2620;   /* darker forest for dark sections */
+    --forest-tint:   #2A5043;   /* lighter forest for hover */
+    --burgundy:      #7A2E2A;   /* accent — used sparingly */
+    --burgundy-deep: #5A1F1C;
+    --bone:          #F4EFE6;   /* warm off-white background */
+    --bone-soft:     #EBE4D6;   /* slightly deeper bone */
+    --sand:          #D9CFB8;   /* divider / supporting neutral */
+    --rule:          #C4B99D;   /* hairline rules */
+    --mute:          #5A5A52;   /* muted body text */
+
+    /* Typography */
+    --serif: 'Fraunces', 'Canela', Georgia, serif;
+    --sans:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Scale */
+    --container: 1280px;
+    --edge-pad:  clamp(20px, 4vw, 56px);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bone);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  img { max-width: 100%; display: block; }
+
+  /* ============ Layout primitives ============ */
+  .wrap {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding-left: var(--edge-pad);
+    padding-right: var(--edge-pad);
+  }
+
+  .rule {
+    height: 1px;
+    background: var(--rule);
+    opacity: 0.6;
+    width: 100%;
+  }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--forest);
+  }
+  .eyebrow.on-dark { color: var(--bone); opacity: 0.7; }
+  .eyebrow.accent { color: var(--burgundy); }
+
+  /* ============ Top Bar ============ */
+  .topbar {
+    background: var(--forest-deep);
+    color: var(--bone);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-weight: 500;
+  }
+  .topbar .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+  .topbar span { opacity: 0.75; }
+  .topbar .top-right a { margin-left: 20px; opacity: 0.85; }
+  .topbar .top-right a:hover { opacity: 1; }
+
+  @media (max-width: 680px) {
+    .topbar .top-left { display: none; }
+    .topbar .wrap { justify-content: center; }
+    .topbar .top-right a { margin: 0 10px; }
+  }
+
+  /* ============ Main Nav ============ */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bone);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    gap: 40px;
+  }
+  .brand {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    color: var(--forest);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-mark {
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid var(--forest);
+    position: relative;
+    transform: rotate(45deg);
+  }
+  .brand-mark::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background: var(--burgundy);
+  }
+  .brand-text { display: flex; flex-direction: column; line-height: 1.05; }
+  .brand-text .top {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mute);
+    font-family: var(--sans);
+    font-weight: 500;
+  }
+  .brand-text .name {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--forest);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    position: relative;
+    padding: 6px 0;
+    transition: color 0.2s ease;
+  }
+  .nav-links a:hover { color: var(--forest); }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0;
+    height: 1px;
+    background: var(--burgundy);
+    transition: width 0.25s ease;
+  }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 1px solid var(--forest);
+    color: var(--forest);
+    border-radius: 0;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  .nav-cta:hover {
+    background: var(--forest);
+    color: var(--bone);
+  }
+
+  .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--ink);
+    margin: 5px 0;
+  }
+
+  @media (max-width: 1020px) {
+    .nav-links, .nav-cta { display: none; }
+    .nav-toggle { display: block; }
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative;
+    padding: clamp(80px, 12vw, 160px) 0 clamp(60px, 10vw, 120px);
+    overflow: hidden;
+    background: var(--bone);
+  }
+  .hero::before {
+    /* subtle geometric mark in background */
+    content: '';
+    position: absolute;
+    right: -10%;
+    top: 20%;
+    width: 520px;
+    height: 520px;
+    border: 1px solid var(--rule);
+    transform: rotate(45deg);
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    width: 320px;
+    height: 320px;
+    border: 1px solid var(--rule);
+    transform: rotate(45deg);
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  .hero .wrap { position: relative; z-index: 2; }
+
+  .hero-eyebrow {
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hero-eyebrow::after {
+    content: '';
+    flex: 1;
+    max-width: 80px;
+    height: 1px;
+    background: var(--forest);
+    opacity: 0.4;
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(44px, 7vw, 92px);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    max-width: 16ch;
+    margin-bottom: 40px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--forest);
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+  }
+  .hero h1 .underline {
+    position: relative;
+    white-space: nowrap;
+  }
+  .hero h1 .underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.08em;
+    width: 100%;
+    height: 0.08em;
+    background: var(--burgundy);
+    opacity: 0.85;
+  }
+
+  .hero-lede {
+    font-family: var(--sans);
+    font-size: clamp(17px, 1.3vw, 19px);
+    line-height: 1.6;
+    max-width: 58ch;
+    color: var(--mute);
+    margin-bottom: 48px;
+    font-weight: 400;
+  }
+  .hero-lede strong { color: var(--ink); font-weight: 500; }
+
+  .hero-actions {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 18px 32px;
+    background: var(--forest);
+    color: var(--bone);
+    border: 1px solid var(--forest);
+    transition: all 0.25s ease;
+  }
+  .btn-primary:hover {
+    background: var(--forest-deep);
+    border-color: var(--forest-deep);
+    transform: translateY(-1px);
+  }
+  .btn-primary svg { transition: transform 0.25s ease; }
+  .btn-primary:hover svg { transform: translateX(4px); }
+
+  .btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    padding: 18px 0;
+    border-bottom: 1px solid var(--ink);
+    transition: all 0.25s ease;
+  }
+  .btn-link:hover { color: var(--burgundy); border-bottom-color: var(--burgundy); }
+  .btn-link svg { transition: transform 0.25s ease; }
+  .btn-link:hover svg { transform: translateX(4px); }
+
+  /* Decorative year / est. badge in hero */
+  .hero-est {
+    position: absolute;
+    right: var(--edge-pad);
+    bottom: 80px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--forest);
+    opacity: 0.6;
+  }
+  @media (max-width: 900px) { .hero-est { display: none; } }
+
+  /* AUM tagline pill — rendered above the H1 */
+  .hero-aum {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 18px;
+    margin-bottom: 28px;
+    background: rgba(27, 58, 46, 0.06);
+    border: 1px solid var(--forest);
+    border-left-width: 3px;
+    border-left-color: var(--burgundy);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--forest-deep);
+  }
+  .hero-aum strong {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--forest-deep);
+    letter-spacing: -0.005em;
+  }
+  .hero-aum .dot {
+    width: 4px;
+    height: 4px;
+    background: var(--burgundy);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* Hero video thumbnails — top-right column */
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  @media (max-width: 980px) { .hero-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+  .hero-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-top: 12px;
+  }
+  .hero-video-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--forest);
+    opacity: 0.7;
+    margin-bottom: 4px;
+  }
+  .hero-video {
+    display: block;
+    background: var(--bone-soft);
+    border: 1px solid var(--rule);
+    transition: all 0.25s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+  .hero-video:hover {
+    border-color: var(--forest);
+    transform: translateY(-2px);
+  }
+  .hero-video-thumb {
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
+    background: var(--forest-deep);
+  }
+  .hero-video-thumb::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 40%, rgba(244,239,230,0.12) 0%, transparent 40%),
+      radial-gradient(circle at 70% 65%, rgba(122,46,42,0.18) 0%, transparent 50%);
+  }
+  .hero-video.video-2 .hero-video-thumb {
+    background: linear-gradient(135deg, #1B3A2E 0%, #0D2620 100%);
+  }
+  .hero-video.video-2 .hero-video-thumb::before {
+    background:
+      linear-gradient(to top, rgba(244,239,230,0.06) 1px, transparent 1px) 0 0 / 100% 18px,
+      radial-gradient(ellipse 70% 50% at 50% 60%, rgba(217,207,184,0.12), transparent 70%);
+  }
+  .hero-video-play {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: rgba(244,239,230,0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, background 0.25s ease;
+  }
+  .hero-video:hover .hero-video-play { transform: translate(-50%, -50%) scale(1.08); background: var(--bone); }
+  .hero-video-play::after {
+    content: '';
+    width: 0; height: 0;
+    margin-left: 4px;
+    border-style: solid;
+    border-width: 8px 0 8px 12px;
+    border-color: transparent transparent transparent var(--forest-deep);
+  }
+  .hero-video-meta {
+    padding: 14px 16px 16px;
+  }
+  .hero-video-tag {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    margin-bottom: 6px;
+  }
+  .hero-video-title {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+
+  /* ============ Snapshot Band ============ */
+  .snapshot {
+    background: var(--forest-deep);
+    color: var(--bone);
+    padding: 56px 0;
+  }
+  .snapshot .wrap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    align-items: start;
+  }
+  .snapshot .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 20px;
+    border-right: 1px solid rgba(244, 239, 230, 0.12);
+  }
+  .snapshot .stat:last-child { border-right: 0; }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: var(--bone);
+  }
+  .stat-num em {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--sand);
+    font-style: normal;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  .stat-label {
+    font-size: 15px;
+    color: var(--bone);
+    opacity: 0.88;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  @media (max-width: 900px) {
+    .snapshot .wrap { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .snapshot .stat { border-right: 0; border-bottom: 1px solid rgba(244,239,230,0.12); padding-bottom: 24px; }
+    .snapshot .stat:nth-last-child(-n+2) { border-bottom: 0; padding-bottom: 0; }
+  }
+
+  /* ============ Section shell ============ */
+  section { position: relative; }
+
+  .section-head {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    padding-top: clamp(80px, 10vw, 120px);
+    padding-bottom: 56px;
+    align-items: start;
+  }
+  .section-head h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+  .section-head h2 em { font-style: italic; color: var(--forest); font-weight: 300; }
+  .section-head-left .eyebrow { margin-bottom: 20px; }
+  .section-head-right p {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--mute);
+    max-width: 58ch;
+  }
+
+  @media (max-width: 900px) {
+    .section-head { grid-template-columns: 1fr; gap: 32px; }
+  }
+
+  /* ============ Portfolio Section ============ */
+  .portfolio { padding-bottom: clamp(80px, 10vw, 120px); }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 1100px) { .portfolio-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 620px) { .portfolio-grid { grid-template-columns: 1fr; } }
+
+  .port-card {
+    background: var(--bone-soft);
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+  }
+  .port-card:hover {
+    border-color: var(--forest);
+    transform: translateY(-2px);
+  }
+
+  .port-image {
+    aspect-ratio: 4 / 3;
+    background: var(--sand);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--rule);
+  }
+  /* Image placeholder pattern — each card gets a unique gradient / motif via data attr */
+  .port-image .placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 16px;
+    color: var(--forest-deep);
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: 0.85;
+  }
+  .port-image .placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: 20px 20px;
+    background-image: linear-gradient(to right, rgba(15,26,20,0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(15,26,20,0.05) 1px, transparent 1px);
+    z-index: 0;
+  }
+  .port-image .placeholder span { position: relative; z-index: 1; }
+
+  /* Individual card visual treatments — each distinctive */
+  .port-axe .port-image  { background: linear-gradient(135deg, #4A6B5C 0%, #2A4738 100%); }
+  .port-axe .port-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 40%, rgba(244,239,230,0.15) 0%, transparent 30%),
+      radial-gradient(circle at 70% 70%, rgba(244,239,230,0.1) 0%, transparent 40%);
+  }
+
+  .port-karman .port-image { background: linear-gradient(180deg, #1B3A2E 0%, #0D2620 100%); }
+  .port-karman .port-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to top, rgba(244,239,230,0.08) 1px, transparent 1px) 0 0 / 100% 24px,
+      linear-gradient(to right, rgba(244,239,230,0.05) 1px, transparent 1px) 0 0 / 24px 100%;
+  }
+
+  .port-eden .port-image { background: linear-gradient(120deg, #2F4F3F 0%, #1B3A2E 100%); }
+  .port-eden .port-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(0deg, transparent 0 28px, rgba(244,239,230,0.08) 28px 29px),
+      repeating-linear-gradient(90deg, transparent 0 28px, rgba(244,239,230,0.06) 28px 29px);
+  }
+
+  .port-celestial .port-image { background: linear-gradient(160deg, #5A1F1C 0%, #2A1514 100%); }
+  .port-celestial .port-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(244,239,230,0.12) 0%, transparent 60%);
+  }
+
+  .port-wimberley .port-image { background: linear-gradient(135deg, #3F5A42 0%, #1B3A2E 100%); }
+  .port-wimberley .port-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 25% 30%, rgba(244,239,230,0.15), transparent 25%),
+                radial-gradient(circle at 75% 60%, rgba(244,239,230,0.1), transparent 20%),
+                radial-gradient(circle at 50% 85%, rgba(244,239,230,0.08), transparent 15%);
+  }
+
+  .port-ahura .port-image { background: linear-gradient(200deg, #0D2620 0%, #1B3A2E 60%, #2A5043 100%); }
+  .port-ahura .port-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, transparent 49.5%, rgba(244,239,230,0.1) 49.5%, rgba(244,239,230,0.1) 50.5%, transparent 50.5%),
+      linear-gradient(0deg, transparent 49.5%, rgba(244,239,230,0.1) 49.5%, rgba(244,239,230,0.1) 50.5%, transparent 50.5%);
+  }
+
+  .port-iran .port-image { background: linear-gradient(140deg, #7A2E2A 0%, #5A1F1C 100%); }
+  .port-iran .port-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      conic-gradient(from 45deg at 50% 50%, transparent 0deg, rgba(244,239,230,0.12) 45deg, transparent 90deg,
+                     rgba(244,239,230,0.08) 135deg, transparent 180deg, rgba(244,239,230,0.12) 225deg,
+                     transparent 270deg, rgba(244,239,230,0.08) 315deg, transparent 360deg);
+  }
+
+  .port-novaspark .port-image { background: linear-gradient(180deg, #2A5043 0%, #0D2620 100%); }
+  .port-novaspark .port-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 50% 40%, rgba(244,239,230,0.2), transparent 60%),
+      radial-gradient(ellipse 40% 20% at 50% 60%, rgba(122,46,42,0.3), transparent 60%);
+  }
+
+  .port-body {
+    padding: 24px 22px 28px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .port-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .port-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--forest);
+  }
+  .port-stage {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .port-name {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .port-summary {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--mute);
+    margin-bottom: 18px;
+    flex: 1;
+  }
+  .port-more {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .port-card:hover .port-more { color: var(--burgundy); }
+  .port-card:hover .port-more svg { transform: translateX(4px); }
+  .port-more svg { transition: transform 0.25s ease; }
+
+  .portfolio-foot {
+    margin-top: 56px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ============ Proven Track Record (Top 3) ============ */
+  /* Larger panels — visual weight intentionally above active raises */
+  .track-record { padding-bottom: clamp(60px, 8vw, 90px); }
+
+  .track-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  @media (max-width: 1100px) { .track-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 720px)  { .track-grid { grid-template-columns: 1fr; } }
+
+  .track-card {
+    background: var(--bone-soft);
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+  }
+  .track-card:hover {
+    border-color: var(--forest);
+    transform: translateY(-3px);
+  }
+  .track-image {
+    aspect-ratio: 16 / 10;     /* taller / more substantial than active-raise cards */
+    background: var(--sand);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--rule);
+  }
+  .track-image .placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 18px;
+    color: var(--forest-deep);
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: 0.85;
+  }
+  .track-image .placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: 22px 22px;
+    background-image: linear-gradient(to right, rgba(15,26,20,0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(15,26,20,0.05) 1px, transparent 1px);
+    z-index: 0;
+  }
+  .track-image .placeholder span { position: relative; z-index: 1; }
+
+  /* Distinct gradient treatments for each Proven Track Record card */
+  .track-park .track-image      { background: linear-gradient(135deg, #2A4A38 0%, #1B3A2E 100%); }
+  .track-park .track-image::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(244,239,230,0.18), transparent 35%),
+                radial-gradient(circle at 70% 30%, rgba(244,239,230,0.12), transparent 30%);
+  }
+  .track-detecticam .track-image { background: linear-gradient(160deg, #1B3A2E 0%, #0D2620 100%); }
+  .track-detecticam .track-image::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(45deg, transparent 48%, rgba(244,239,230,0.14) 49%, rgba(244,239,230,0.14) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, rgba(244,239,230,0.10) 49%, rgba(244,239,230,0.10) 51%, transparent 52%);
+  }
+  .track-ambrose .track-image    { background: linear-gradient(140deg, #5A1F1C 0%, #2A1514 100%); }
+  .track-ambrose .track-image::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(244,239,230,0.18) 0%, transparent 50%);
+  }
+
+  .track-body {
+    padding: 28px 26px 32px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .track-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .track-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--forest);
+  }
+  .track-stage {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .track-name {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+  .track-summary {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--mute);
+    margin-bottom: 20px;
+    flex: 1;
+  }
+  .track-more {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .track-card:hover .track-more { color: var(--burgundy); }
+  .track-card:hover .track-more svg { transform: translateX(4px); }
+  .track-more svg { transition: transform 0.25s ease; }
+
+  .track-foot {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ============ Current Projects Seeking Funding (6 panels) ============ */
+  /* Smaller, equally-distributed call-to-action tiles — roughly half the visual weight of Proven Track Record */
+  .raises {
+    background: var(--bone);
+    padding: clamp(80px, 10vw, 120px) 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .raises-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 1100px) { .raises-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 620px)  { .raises-grid { grid-template-columns: 1fr; } }
+
+  .raise-card {
+    background: var(--bone-soft);
+    border: 1px solid var(--rule);
+    padding: 22px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    min-height: 200px;
+  }
+  .raise-card:hover {
+    border-color: var(--forest);
+    transform: translateY(-2px);
+    background: #fff;
+  }
+
+  .raise-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .raise-tag {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--forest);
+  }
+  .raise-stage {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .raise-name {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  /* Punchy CTA one-liner — the hook that drives the click */
+  .raise-hook {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--mute);
+    margin-bottom: 16px;
+    flex: 1;
+  }
+  .raise-cta {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+  }
+  .raise-card:hover .raise-cta { color: var(--burgundy); border-bottom-color: var(--burgundy); }
+  .raise-card:hover .raise-cta svg { transform: translateX(3px); }
+  .raise-cta svg { transition: transform 0.25s ease; }
+
+  /* Sixth-slot placeholder — visually quieter to signal "open / TBD" */
+  .raise-card.raise-tbd {
+    background: transparent;
+    border-style: dashed;
+    border-color: var(--rule);
+    cursor: default;
+  }
+  .raise-card.raise-tbd:hover { transform: none; background: transparent; border-color: var(--rule); }
+  .raise-card.raise-tbd .raise-name { color: var(--mute); font-style: italic; }
+  .raise-card.raise-tbd .raise-hook { color: var(--mute); opacity: 0.8; }
+
+  /* ============ Space Capital Stack Section ============ */
+  .scs {
+    background: var(--forest-deep);
+    color: var(--bone);
+    padding: clamp(90px, 12vw, 140px) 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .scs::before {
+    content: '';
+    position: absolute;
+    right: -20%;
+    top: -20%;
+    width: 700px;
+    height: 700px;
+    border: 1px solid rgba(244,239,230,0.08);
+    transform: rotate(45deg);
+  }
+  .scs .wrap { position: relative; z-index: 2; }
+
+  .scs-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  @media (max-width: 980px) { .scs-grid { grid-template-columns: 1fr; gap: 56px; } }
+
+  .scs-left .eyebrow { color: rgba(244,239,230,0.55); margin-bottom: 24px; }
+  .scs-left h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(40px, 5.5vw, 68px);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--bone);
+    margin-bottom: 28px;
+  }
+  .scs-left h2 em { color: var(--sand); font-style: italic; font-weight: 300; }
+
+  .scs-lede {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--bone);
+    opacity: 0.82;
+    margin-bottom: 36px;
+    max-width: 50ch;
+  }
+
+  .scs-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 18px 32px;
+    background: var(--bone);
+    color: var(--forest-deep);
+    border: 1px solid var(--bone);
+    transition: all 0.25s ease;
+  }
+  .scs-cta:hover { background: transparent; color: var(--bone); }
+  .scs-cta svg { transition: transform 0.25s ease; }
+  .scs-cta:hover svg { transform: translateX(4px); }
+
+  /* The four-layer diagram */
+  .stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: rgba(244,239,230,0.1);
+    padding: 2px;
+    position: relative;
+  }
+  .stack::before {
+    content: '01 · 02 · 03 · 04';
+    position: absolute;
+    top: -32px;
+    left: 0;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: rgba(244,239,230,0.5);
+  }
+  .layer {
+    background: var(--forest-deep);
+    padding: 28px 32px;
+    display: grid;
+    grid-template-columns: 48px 1fr auto;
+    gap: 24px;
+    align-items: center;
+    transition: all 0.25s ease;
+    cursor: default;
+    position: relative;
+  }
+  .layer:hover { background: var(--forest); }
+  .layer-num {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--sand);
+    line-height: 1;
+    font-style: italic;
+  }
+  .layer-body h3 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--bone);
+    margin-bottom: 4px;
+    letter-spacing: -0.005em;
+  }
+  .layer-body p {
+    font-size: 13px;
+    color: var(--bone);
+    opacity: 0.7;
+    line-height: 1.5;
+  }
+  .layer-vehicle {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    font-weight: 600;
+    text-align: right;
+    padding-left: 20px;
+    border-left: 1px solid rgba(244,239,230,0.12);
+    line-height: 1.5;
+  }
+  .layer.accent .layer-vehicle { color: var(--sand); }
+
+  @media (max-width: 600px) {
+    .layer { grid-template-columns: 40px 1fr; gap: 16px; padding: 22px; }
+    .layer-vehicle { grid-column: 1 / -1; padding-left: 0; border-left: 0; border-top: 1px solid rgba(244,239,230,0.12); padding-top: 14px; margin-top: 6px; text-align: left; }
+  }
+
+  /* ============ Thought Leadership ============ */
+  .tl { padding: clamp(90px, 12vw, 140px) 0; background: var(--bone); }
+
+  .tl-grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 80px;
+    align-items: center;
+  }
+  @media (max-width: 980px) { .tl-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+  .tl-cover {
+    aspect-ratio: 4 / 5;
+    background: var(--forest-deep);
+    color: var(--bone);
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .tl-cover::before {
+    content: '';
+    position: absolute;
+    right: -30%;
+    top: -30%;
+    width: 120%;
+    height: 120%;
+    border: 1px solid rgba(244,239,230,0.1);
+    transform: rotate(45deg);
+  }
+  .tl-cover::after {
+    content: '';
+    position: absolute;
+    right: -20%;
+    top: -20%;
+    width: 90%;
+    height: 90%;
+    border: 1px solid rgba(244,239,230,0.08);
+    transform: rotate(45deg);
+  }
+  .tl-cover-top { position: relative; z-index: 2; }
+  .tl-cover-top .eyebrow { color: var(--sand); }
+  .tl-cover-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(30px, 3.5vw, 42px);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--bone);
+    margin-top: 32px;
+  }
+  .tl-cover-title em { font-style: italic; color: var(--sand); font-weight: 300; }
+  .tl-cover-bottom { position: relative; z-index: 2; }
+  .tl-cover-author {
+    font-size: 13px;
+    color: var(--bone);
+    opacity: 0.8;
+    line-height: 1.5;
+  }
+  .tl-cover-author strong { font-weight: 500; display: block; }
+  .tl-cover-meta {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(244,239,230,0.15);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sand);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tl-right .eyebrow { margin-bottom: 20px; }
+  .tl-right h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 28px;
+  }
+  .tl-excerpt {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--forest);
+    margin-bottom: 28px;
+    padding-left: 24px;
+    border-left: 2px solid var(--burgundy);
+  }
+  .tl-right p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--mute);
+    margin-bottom: 20px;
+  }
+  .tl-actions { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; margin-top: 32px; }
+
+  /* ============ Team Section ============ */
+  .team {
+    padding: clamp(80px, 10vw, 120px) 0;
+    background: var(--bone);
+    border-top: 1px solid var(--rule);
+  }
+  .team-head {
+    margin-bottom: 64px;
+    max-width: 780px;
+  }
+  .team-head .eyebrow { margin-bottom: 20px; }
+  .team-head h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .team-head h2 em { font-style: italic; color: var(--forest); font-weight: 300; }
+  .team-head p { font-size: 17px; line-height: 1.6; color: var(--mute); max-width: 60ch; }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  @media (max-width: 980px) { .team-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  @media (max-width: 620px) { .team-grid { grid-template-columns: 1fr; } }
+
+  .team-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .team-photo {
+    aspect-ratio: 4 / 5;
+    background: var(--bone-soft);
+    border: 1px solid var(--rule);
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .team-photo .placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--forest);
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    text-align: center;
+    padding: 16px;
+  }
+  .team-photo.t-leo { background: linear-gradient(180deg, #2A5043 0%, #0D2620 100%); }
+  .team-photo.t-bart { background: linear-gradient(180deg, #1B3A2E 0%, #2A5043 100%); }
+  .team-photo.t-meagan { background: linear-gradient(180deg, #2F4F3F 0%, #1B3A2E 100%); }
+  .team-photo .placeholder { color: var(--bone); opacity: 0.6; }
+
+  .team-name {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .team-role {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    margin-bottom: 16px;
+  }
+  .team-bio {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--mute);
+    margin-bottom: 18px;
+  }
+  .team-links {
+    display: flex;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+  }
+  .team-links a {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--forest);
+    transition: color 0.2s ease;
+  }
+  .team-links a:hover { color: var(--burgundy); }
+
+  /* ============ Media Section ============ */
+  .media {
+    padding: clamp(80px, 10vw, 120px) 0;
+    background: var(--bone-soft);
+    border-top: 1px solid var(--rule);
+  }
+  .media-head {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    margin-bottom: 56px;
+    align-items: end;
+  }
+  @media (max-width: 900px) {
+    .media-head { grid-template-columns: 1fr; gap: 24px; align-items: start; }
+  }
+  .media-head-left .eyebrow { margin-bottom: 20px; }
+  .media-head-left h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 52px);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+  .media-head-left h2 em { font-style: italic; color: var(--forest); font-weight: 300; }
+  .media-head-right { padding-bottom: 8px; }
+  .media-head-right p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--mute);
+    max-width: 56ch;
+  }
+
+  .media-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  @media (max-width: 980px) { .media-grid { grid-template-columns: 1fr 1fr; gap: 24px; } }
+  @media (max-width: 620px) { .media-grid { grid-template-columns: 1fr; } }
+
+  .media-card {
+    background: var(--bone);
+    border: 1px solid var(--rule);
+    transition: all 0.25s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  .media-card:hover { border-color: var(--forest); transform: translateY(-2px); }
+
+  .media-thumb {
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
+    background: var(--forest-deep);
+  }
+  .media-thumb::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 40%, rgba(244,239,230,0.12) 0%, transparent 40%),
+      radial-gradient(circle at 70% 65%, rgba(122,46,42,0.15) 0%, transparent 50%);
+  }
+  .media-card.m-2 .media-thumb {
+    background: linear-gradient(135deg, #1B3A2E 0%, #0D2620 100%);
+  }
+  .media-card.m-2 .media-thumb::before {
+    background:
+      linear-gradient(to top, rgba(244,239,230,0.06) 1px, transparent 1px) 0 0 / 100% 18px,
+      radial-gradient(ellipse 70% 50% at 50% 60%, rgba(217,207,184,0.12), transparent 70%);
+  }
+  .media-card.m-3 .media-thumb {
+    background: linear-gradient(135deg, #5A1F1C 0%, #2A1514 100%);
+  }
+  .media-card.m-3 .media-thumb::before {
+    background: radial-gradient(ellipse at center, rgba(244,239,230,0.14) 0%, transparent 60%);
+  }
+
+  .media-play {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: rgba(244,239,230,0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, background 0.25s ease;
+  }
+  .media-card:hover .media-play { transform: translate(-50%, -50%) scale(1.08); background: var(--bone); }
+  .media-play::after {
+    content: '';
+    width: 0; height: 0;
+    margin-left: 4px;
+    border-style: solid;
+    border-width: 9px 0 9px 14px;
+    border-color: transparent transparent transparent var(--forest-deep);
+  }
+
+  .media-duration {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(13,38,32,0.85);
+    color: var(--bone);
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 4px 8px;
+  }
+
+  .media-body {
+    padding: 22px 22px 26px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .media-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    margin-bottom: 10px;
+  }
+  .media-title {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .media-byline {
+    font-size: 13px;
+    color: var(--mute);
+    line-height: 1.55;
+    flex: 1;
+  }
+  .media-foot {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ============ Contact Section ============ */
+  .contact { padding: clamp(90px, 12vw, 140px) 0; background: var(--bone-soft); border-top: 1px solid var(--rule); }
+
+  .contact-head {
+    text-align: center;
+    margin-bottom: 72px;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-head .eyebrow { margin-bottom: 20px; }
+  .contact-head h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .contact-head h2 em { font-style: italic; color: var(--forest); font-weight: 300; }
+  .contact-head p { font-size: 17px; line-height: 1.6; color: var(--mute); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+  .contact-card {
+    background: var(--bone);
+    padding: 44px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.25s ease;
+  }
+  .contact-card:hover { background: var(--bone-soft); }
+  .contact-num {
+    font-family: var(--serif);
+    font-size: 14px;
+    font-style: italic;
+    color: var(--burgundy);
+    letter-spacing: 0.05em;
+  }
+  .contact-card h3 {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.15;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .contact-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--mute);
+    flex: 1;
+  }
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--forest);
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    transition: color 0.2s ease;
+  }
+  .contact-card:hover .contact-link { color: var(--burgundy); }
+  .contact-card:hover .contact-link svg { transform: translateX(4px); }
+  .contact-link svg { transition: transform 0.25s ease; }
+
+  /* ============ Footer ============ */
+  footer.site-footer {
+    background: var(--forest-deep);
+    color: var(--bone);
+    padding: 80px 0 40px;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(244,239,230,0.12);
+  }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+  }
+  @media (max-width: 520px) {
+    .footer-top { grid-template-columns: 1fr; }
+  }
+
+  .foot-brand .brand { color: var(--bone); }
+  .foot-brand .brand-mark { border-color: var(--bone); }
+  .foot-brand .brand-text .top { color: rgba(244,239,230,0.55); }
+  .foot-brand .brand-text .name { color: var(--bone); }
+  .foot-brand p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(244,239,230,0.7);
+    margin-top: 20px;
+    max-width: 36ch;
+  }
+  .foot-address {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(244,239,230,0.55);
+    font-style: normal;
+  }
+
+  .foot-col h4 {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sand);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .foot-col a {
+    font-size: 14px;
+    color: rgba(244,239,230,0.75);
+    transition: color 0.2s ease;
+  }
+  .foot-col a:hover { color: var(--bone); }
+
+  .footer-bottom {
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 12px;
+    color: rgba(244,239,230,0.5);
+  }
+  .footer-bottom .legal { display: flex; gap: 24px; flex-wrap: wrap; }
+  .footer-bottom a:hover { color: var(--bone); }
+
+  /* Footer crest mark — secondary identity */
+  .foot-crest {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(244,239,230,0.12);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .foot-crest-mark {
+    width: 56px;
+    height: 64px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .foot-crest-mark svg { width: 100%; height: 100%; }
+  .foot-crest-text {
+    font-family: var(--serif);
+    font-size: 11px;
+    line-height: 1.5;
+    font-style: italic;
+    color: rgba(244,239,230,0.55);
+    letter-spacing: 0.04em;
+  }
+  .foot-crest-text strong {
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--sand);
+    margin-bottom: 4px;
+  }
+
+  /* ============ Entrance animation ============ */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero h1, .hero-lede, .hero-actions, .hero-eyebrow {
+      opacity: 0;
+      animation: fadeUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .hero-eyebrow { animation-delay: 0.1s; }
+    .hero h1 { animation-delay: 0.25s; }
+    .hero-lede { animation-delay: 0.55s; }
+    .hero-actions { animation-delay: 0.8s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+
+  /* Mockup label (top-right dev badge) */
+  .mockup-label {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    background: var(--burgundy);
+    color: var(--bone);
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    font-weight: 600;
+    z-index: 200;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="mockup-label">Mockup v2 · Homepage</div>
+
+<!-- Top utility bar -->
+<div class="topbar">
+  <div class="wrap">
+    <span class="top-left">Houston, Texas · Established 1992 · Manager of the Leo B. Womack Family Trust</span>
+    <div class="top-right">
+      <a href="#">Ramsey RegA&nbsp;↗</a>
+      <a href="#">LinkedIn&nbsp;↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- Main navigation -->
+<nav class="nav">
+  <div class="wrap">
+    <a href="#" class="brand" aria-label="Ramsey Financial Group home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">
+        <span class="top">Ramsey</span>
+        <span class="name">Financial Group</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#track-record">Portfolio</a></li>
+      <li><a href="#current-raises">Current Raises</a></li>
+      <li><a href="#scs">Space Capital Stack</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#tl">Thought Leadership</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Request an Introduction</a>
+    <button class="nav-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <span class="eyebrow">A Houston Single-Family Office · Since 1992</span>
+        </div>
+        <div class="hero-aum" aria-label="Assets under management">
+          <span class="dot" aria-hidden="true"></span>
+          <span><strong>$100M+</strong> &nbsp;·&nbsp; Assets Under Management</span>
+        </div>
+        <h1>
+          Intelligent <em>co-investing</em> in the <span class="underline">industries</span> taking shape now.
+        </h1>
+        <p class="hero-lede">
+          Ramsey Financial Group manages the Leo B. Womack Family Trust and partners with aligned family offices, angel networks, and institutional investors across <strong>space, water, AgTech, AI, energy, and reconstruction finance</strong>. We build positions in companies solving problems that matter — and stay for the full arc.
+        </p>
+        <div class="hero-actions">
+          <a href="#track-record" class="btn-primary">
+            Explore the Portfolio
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true">
+              <path d="M1 6h13m0 0L9 1m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+            </svg>
+          </a>
+          <a href="#tl" class="btn-link">
+            Read the White Paper
+            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+              <path d="M1 5h12m0 0L9 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-videos" aria-label="Featured videos">
+        <div class="hero-video-label">Hear from the principals</div>
+
+        <a href="#" class="hero-video video-1" aria-label="Watch: The legacy of Ramsey Financial Group">
+          <div class="hero-video-thumb">
+            <div class="hero-video-play" aria-hidden="true"></div>
+          </div>
+          <div class="hero-video-meta">
+            <div class="hero-video-tag">Bart Womack · Speech</div>
+            <div class="hero-video-title">Hear about the legacy of Ramsey Financial Group</div>
+          </div>
+        </a>
+
+        <a href="#" class="hero-video video-2" aria-label="Watch: The Texas space economy ecosystem">
+          <div class="hero-video-thumb">
+            <div class="hero-video-play" aria-hidden="true"></div>
+          </div>
+          <div class="hero-video-meta">
+            <div class="hero-video-tag">Meagan Crawford · Speech</div>
+            <div class="hero-video-title">Learn about the Texas space economy ecosystem</div>
+          </div>
+        </a>
+      </aside>
+    </div>
+
+    <div class="hero-est" aria-hidden="true">Est. MCMXCII · Houston</div>
+  </div>
+</header>
+
+<!-- Firm snapshot band -->
+<section class="snapshot" aria-label="Firm at a glance">
+  <div class="wrap">
+    <div class="stat">
+      <div class="stat-num">30<em>+ yrs</em></div>
+      <div class="stat-label">Co-investing across frontier industries since 1992</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">10</div>
+      <div class="stat-label">Active portfolio projects across seven verticals</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Integrated layers of the space economy capital stack</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">$1B<em>+</em></div>
+      <div class="stat-label">In total project scope across active investments</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">1</div>
+      <div class="stat-label">Family office with the complete capital stack for space</div>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================================== -->
+<!-- PROVEN TRACK RECORD — Top 3 features                                  -->
+<!-- v3: Park Plaza, Detecticam, Ambrose. Larger panels; paragraph         -->
+<!-- descriptions land here once Leo provides them.                        -->
+<!-- =================================================================== -->
+<section class="track-record" id="track-record">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head-left">
+        <div class="eyebrow">Proven Track Record</div>
+        <h2>The bets that <em>worked.</em></h2>
+      </div>
+      <div class="section-head-right">
+        <p>
+          A small selection of the firm's highest-conviction wins — operating businesses, exits, and projects that have moved from thesis to execution. Each one represents the kind of work, capital structure, and partner network we bring to every position. <strong>Project descriptions to follow once Leo provides paragraph copy for each.</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="track-grid">
+
+      <!-- Card 1: Park Plaza Hospital -->
+      <article class="track-card track-park" tabindex="0" data-project="park-plaza">
+        <div class="track-image" role="img" aria-label="Park Plaza Hospital">
+          <div class="placeholder">
+            <span>IMG: Park Plaza Hospital — graphic to come from Bart</span>
+          </div>
+        </div>
+        <div class="track-body">
+          <div class="track-meta">
+            <span class="track-tag">Healthcare · Real Assets</span>
+            <span class="track-stage">Realized</span>
+          </div>
+          <h3 class="track-name">Park Plaza Hospital</h3>
+          <p class="track-summary">
+            [Paragraph description placeholder — to be supplied by Leo. One of the firm's flagship realized investments and a touchstone for how Ramsey Financial Group approaches healthcare-adjacent real assets.]
+          </p>
+          <a href="projects/park-plaza.html" class="track-more">
+            View project
+            <svg width="12" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+              <path d="M1 5h12m0 0L9 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 2: Detecticam -->
+      <article class="track-card track-detecticam" tabindex="0" data-project="detecticam">
+        <div class="track-image" role="img" aria-label="Detecticam">
+          <div class="placeholder">
+            <span>IMG: Detecticam — graphic to come from Bart</span>
+          </div>
+        </div>
+        <div class="track-body">
+          <div class="track-meta">
+            <span class="track-tag">Med-Tech · Commercialization</span>
+            <span class="track-stage">Realized</span>
+          </div>
+          <h3 class="track-name">Detecticam</h3>
+          <p class="track-summary">
+            [Paragraph description placeholder — to be supplied by Leo. Med-tech commercialization win drawing on three decades of operating experience taking new medical technologies to market.]
+          </p>
+          <a href="projects/detecticam.html" class="track-more">
+            View project
+            <svg width="12" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+              <path d="M1 5h12m0 0L9 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 3: Ambrose Stem Cell Therapy -->
+      <article class="track-card track-ambrose" tabindex="0" data-project="ambrose">
+        <div class="track-image" role="img" aria-label="Ambrose Stem Cell Therapy">
+          <div class="placeholder">
+            <span>IMG: Ambrose Stem Cell Therapy — graphic to come from Bart</span>
+          </div>
+        </div>
+        <div class="track-body">
+          <div class="track-meta">
+            <span class="track-tag">Stem Cell · Med-Tech</span>
+            <span class="track-stage">FDA Pathway</span>
+          </div>
+          <h3 class="track-name">Ambrose Stem Cell Therapy</h3>
+          <p class="track-summary">
+            [Paragraph description placeholder — to be supplied by Leo. Beverly Hills–based stem cell therapy company on the path to becoming the first FDA-approved hospital-administered stem cell therapy in the United States. Early-stage Ramsey position with strong conviction.]
+          </p>
+          <a href="projects/ambrose.html" class="track-more">
+            View project
+            <svg width="12" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+              <path d="M1 5h12m0 0L9 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="track-foot">
+      <a href="portfolio.html" class="btn-link">
+        View the full portfolio
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+          <path d="M1 5h12m0 0L9 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================================== -->
+<!-- CURRENT PROJECTS SEEKING FUNDING — Six panels                         -->
+<!-- v3: Smaller, equally-distributed call-to-action tiles. Roughly half  -->
+<!-- the visual weight of Proven Track Record. One-liners are placeholder -->
+<!-- copy — Logan to refine in Phase 2 against project decks.             -->
+<!-- Five known candidates carried from v2; sixth slot is "TBD" pending   -->
+<!-- final alignment between Bart Sr., Bart Jr., and Megan.               -->
+<!-- =================================================================== -->
+<section class="raises" id="current-raises">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head-left">
+        <div class="eyebrow">Current Projects Seeking Funding</div>
+        <h2>What we're <em>raising for now.</em></h2>
+      </div>
+      <div class="section-head-right">
+        <p>
+          Six active positions across water, space, agriculture, AI, and energy. Each is open to qualified co-investment. Click any project for the deck, the team, and the structure of the raise.
+        </p>
+      </div>
+    </div>
+
+    <div class="raises-grid">
+
+      <!-- Raise 1: Karman Line / SpacePort Fund -->
+      <article class="raise-card" tabindex="0" data-project="karman-line">
+        <div class="raise-meta">
+          <span class="raise-tag">Space · Real Estate</span>
+          <span class="raise-stage">Fund I — Active</span>
+        </div>
+        <h3 class="raise-name">Karman Line / SpacePort Fund</h3>
+        <p class="raise-hook">[CTA one-liner placeholder — Logan to draft in Phase 2.]</p>
+        <a href="projects/karman-line.html" class="raise-cta">
+          Open raise
+          <svg width="10" height="8" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+            <path d="M1 5h12m0 0L9 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Raise 2: Eden Grow Systems -->
+      <article class="raise-card" tabindex="0" data-project="eden-grow">
+        <div class="raise-meta">
+          <span class="raise-tag">AgTech · CRE</span>
+          <span class="raise-stage">Operating</span>
+        </div>
+        <h3 class="raise-name">Eden Grow Systems</h3>
+        <p class="raise-hook">[CTA one-liner placeholder — Logan to draft in Phase 2.]</p>
+        <a href="projects/eden-grow.html" class="raise-cta">
+          Open raise
+          <svg width="10" height="8" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+            <path d="M1 5h12m0 0L9 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Raise 3: Celestial Cellars -->
+      <!-- NOTE: pending alignment — may move to portfolio sub-page -->
+      <article class="raise-card" tabindex="0" data-project="celestial-cellars">
+        <div class="raise-meta">
+          <span class="raise-tag">AgTech · CPG</span>
+          <span class="raise-stage">Seed</span>
+        </div>
+        <h3 class="raise-name">Celestial Cellars</h3>
+        <p class="raise-hook">[CTA one-liner placeholder — Logan to draft in Phase 2.]</p>
+        <a href="projects/celestial-cellars.html" class="raise-cta">
+          Open raise
+          <svg width="10" height="8" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+            <path d="M1 5h12m0 0L9 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Raise 4: Ahura AI -->
+      <article class="raise-card" tabindex="0" data-project="ahura-ai">
+        <div class="raise-meta">
+          <span class="raise-tag">AI · EdTech</span>
+          <span class="raise-stage">Series A</span>
+        </div>
+        <h3 class="raise-name">Ahura AI</h3>
+        <p class="raise-hook">[CTA one-liner placeholder — Logan to draft in Phase 2.]</p>
+        <a href="projects/ahura-ai.html" class="raise-cta">
+          Open raise
+          <svg width="10" height="8" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+            <path d="M1 5h12m0 0L9 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Raise 5: AXE H2O -->
+      <article class="raise-card" tabindex="0" data-project="axe-h2o">
+        <div class="raise-meta">
+          <span class="raise-tag">Water · Infrastructure</span>
+          <span class="raise-stage">Pre-Construction</span>
+        </div>
+        <h3 class="raise-name">AXE H2O</h3>
+        <p class="raise-hook">[CTA one-liner placeholder — Logan to draft in Phase 2.]</p>
+        <a href="projects/axe-h2o.html" class="raise-cta">
+          Open raise
+          <svg width="10" height="8" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+            <path d="M1 5h12m0 0L9 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Raise 6: TBD — placeholder pending Bart Sr. / Bart Jr. / Megan alignment -->
+      <a href="projects/tbd.html" class="raise-card raise-tbd" data-project="tbd" style="text-decoration:none; color:inherit;">
+        <div class="raise-meta">
+          <span class="raise-tag">TBD</span>
+          <span class="raise-stage">Pending</span>
+        </div>
+        <h3 class="raise-name">Sixth raise — to be confirmed</h3>
+        <p class="raise-hook">Slot reserved pending final alignment on the six current raises.</p>
+        <span class="raise-cta" style="opacity:0.5;">
+          Awaiting confirmation
+        </span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Space Capital Stack section -->
+<section class="scs" id="scs">
+  <div class="wrap">
+    <div class="scs-grid">
+      <div class="scs-left">
+        <div class="eyebrow on-dark">The Thesis</div>
+        <h2>The complete <em>capital stack</em> for the space economy.</h2>
+        <p class="scs-lede">
+          Venture capital gets a space company off the ground. It is the wrong tool once the company has hardware on orbit producing revenue. The missing tools — <strong style="color: var(--bone); font-weight: 500;">debt, infrastructure, insurance</strong> — have matured every other capital-intensive industry before this one. Building them for space is what we do.
+        </p>
+        <a href="#" class="scs-cta">
+          Explore the Stack
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true">
+            <path d="M1 6h13m0 0L9 1m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="scs-right">
+        <div class="stack" aria-label="The four-layer capital stack">
+          <div class="layer">
+            <div class="layer-num">01</div>
+            <div class="layer-body">
+              <h3>Early-Stage Equity</h3>
+              <p>The spark. Pre-seed through Series B venture capital.</p>
+            </div>
+            <div class="layer-vehicle">SpaceFund</div>
+          </div>
+          <div class="layer">
+            <div class="layer-num">02</div>
+            <div class="layer-body">
+              <h3>Private Credit</h3>
+              <p>The bridge. Non-dilutive, secured debt for revenue-generating assets.</p>
+            </div>
+            <div class="layer-vehicle">Space Finance<br>Company</div>
+          </div>
+          <div class="layer">
+            <div class="layer-num">03</div>
+            <div class="layer-body">
+              <h3>Infrastructure &amp; Real Estate</h3>
+              <p>The ground. Workforce housing, labs, and spaceport-adjacent real estate.</p>
+            </div>
+            <div class="layer-vehicle">SpacePort Fund<br>Karman Line</div>
+          </div>
+          <div class="layer accent">
+            <div class="layer-num">04</div>
+            <div class="layer-body">
+              <h3>Insurance Innovation</h3>
+              <p>The enabler. Making space assets insurable — and therefore financeable.</p>
+            </div>
+            <div class="layer-vehicle">Alera Group<br>Partnership</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Thought Leadership feature -->
+<section class="tl" id="tl">
+  <div class="wrap">
+    <div class="tl-grid">
+      <div class="tl-cover" aria-label="White paper cover">
+        <div class="tl-cover-top">
+          <div class="eyebrow">Ramsey Financial Group · White Paper</div>
+          <h3 class="tl-cover-title">
+            Beyond Venture:<br>Space Needs a <em>Complete</em><br>Capital Stack.
+          </h3>
+        </div>
+        <div class="tl-cover-bottom">
+          <div class="tl-cover-author">
+            <strong>Meagan Murphy Crawford</strong>
+            Principal, Ramsey Financial Group<br>
+            Co-Founder, SpaceFund
+          </div>
+          <div class="tl-cover-meta">
+            <span>2026 · 7 pages</span>
+            <span>PDF · Web</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-right">
+        <div class="eyebrow">Thought Leadership</div>
+        <h2>The next space inflection point is financial — not technical.</h2>
+        <blockquote class="tl-excerpt">
+          "The success of the space economy will not be written by venture capital alone. It will be written by those who build the complete capital stack — the equity that sparks ideas, the credit that scales them, the infrastructure that grounds them, and the insurance that de-risks them."
+        </blockquote>
+        <p>
+          Florida's Space Coast launched 109 times in 2025. Revenue-generating assets are proliferating on orbit. But the financing architecture required to scale proven space companies into cash-flow-positive operators has not kept pace with the launch manifest.
+        </p>
+        <p>
+          In this white paper, Meagan Crawford — one of the leading voices in space venture — lays out the four-layer framework being assembled at Ramsey Financial Group, and what governments, investors, and founders need to build together now.
+        </p>
+        <div class="tl-actions">
+          <a href="#" class="btn-primary">
+            Read the Paper
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true">
+              <path d="M1 6h13m0 0L9 1m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+            </svg>
+          </a>
+          <a href="#" class="btn-link">
+            Download PDF
+            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+              <path d="M7 1v8m0 0L3 5m4 4l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team section -->
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="team-head">
+      <div class="eyebrow">The Team</div>
+      <h2>Three principals. <em>One operating philosophy.</em></h2>
+      <p>Three decades, three generations of operators across life sciences, energy, real estate, and the space economy. Every position in the portfolio is shaped by people who have run companies, sat on boards, and stayed in the work for the full arc.</p>
+    </div>
+
+    <div class="team-grid">
+      <article class="team-card">
+        <div class="team-photo t-leo" role="img" aria-label="Photo of Leo B. Womack">
+          <div class="placeholder">[Headshot — Leo B. Womack]</div>
+        </div>
+        <h3 class="team-name">Leo B. Womack</h3>
+        <div class="team-role">Principal · Founder</div>
+        <p class="team-bio">[Bio placeholder — to be supplied. Founder of Ramsey Financial Group; thirty-plus years of energy, life-sciences, and Houston-area real estate investment; current and prior board service across the firm's portfolio.]</p>
+        <div class="team-links">
+          <a href="#">LinkedIn ↗</a>
+          <a href="#">Full Bio →</a>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="team-photo t-bart" role="img" aria-label="Photo of Bart Womack">
+          <div class="placeholder">[Headshot — Bart Womack]</div>
+        </div>
+        <h3 class="team-name">Bart Womack</h3>
+        <div class="team-role">Principal</div>
+        <p class="team-bio">[Bio placeholder — to be supplied. Operator and entrepreneur; portfolio leadership across Eden Grow Systems, Celestial Cellars, Wimberley CBD, and the firm's emerging med-tech and real-estate initiatives.]</p>
+        <div class="team-links">
+          <a href="#">LinkedIn ↗</a>
+          <a href="#">Full Bio →</a>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <div class="team-photo t-meagan" role="img" aria-label="Photo of Meagan Murphy Crawford">
+          <div class="placeholder">[Headshot — Meagan Crawford]</div>
+        </div>
+        <h3 class="team-name">Meagan Murphy Crawford</h3>
+        <div class="team-role">Principal · Space Capital Stack</div>
+        <p class="team-bio">[Bio placeholder — to be supplied. Co-founder of SpaceFund; architect of the firm's four-layer Space Capital Stack thesis; recognized voice in space finance and the Texas space economy.]</p>
+        <div class="team-links">
+          <a href="#">LinkedIn ↗</a>
+          <a href="#">Full Bio →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Media section -->
+<section class="media" id="media">
+  <div class="wrap">
+    <div class="media-head">
+      <div class="media-head-left">
+        <div class="eyebrow">Media &amp; Speeches</div>
+        <h2>In their <em>own words.</em></h2>
+      </div>
+      <div class="media-head-right">
+        <p>Featured speeches and interviews from across the firm — from the founding history of Ramsey to the architecture of the Texas space economy. Full library updated as new appearances air.</p>
+      </div>
+    </div>
+
+    <div class="media-grid">
+      <article class="media-card m-1" tabindex="0">
+        <div class="media-thumb">
+          <div class="media-play" aria-hidden="true"></div>
+          <div class="media-duration">~ 18:00</div>
+        </div>
+        <div class="media-body">
+          <div class="media-tag">Speech · Ramsey Event</div>
+          <h3 class="media-title">The Legacy of Ramsey Financial Group</h3>
+          <p class="media-byline">Bart Womack on the firm's history, what Leo built, and the operating philosophy carried forward.</p>
+        </div>
+      </article>
+
+      <article class="media-card m-2" tabindex="0">
+        <div class="media-thumb">
+          <div class="media-play" aria-hidden="true"></div>
+          <div class="media-duration">~ 22:00</div>
+        </div>
+        <div class="media-body">
+          <div class="media-tag">Speech · Ramsey Event</div>
+          <h3 class="media-title">The Texas Space Economy Ecosystem</h3>
+          <p class="media-byline">Meagan Crawford on the fundamentals of Texas's space economy and the financing architecture required to scale it.</p>
+        </div>
+      </article>
+
+      <article class="media-card m-3" tabindex="0">
+        <div class="media-thumb">
+          <div class="media-play" aria-hidden="true"></div>
+          <div class="media-duration">— : —</div>
+        </div>
+        <div class="media-body">
+          <div class="media-tag">Interview · Featured</div>
+          <h3 class="media-title">Featured Interview — Title TBD</h3>
+          <p class="media-byline">Placeholder for an additional featured interview. To be selected and slotted in alongside the Womack and Crawford speeches.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="media-foot">
+      <a href="#" class="btn-link">
+        See the full media library
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+          <path d="M1 5h12m0 0L9 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact section -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head">
+      <div class="eyebrow">Get in Touch</div>
+      <h2>Three ways to <em>start a conversation.</em></h2>
+      <p>
+        Whether you are building a company, allocating capital, or writing about the future of frontier industries — we read every inquiry and respond to the ones we can help.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <article class="contact-card">
+        <span class="contact-num">I.</span>
+        <h3>For Founders</h3>
+        <p>Present your idea or funding needs together with a brief executive summary. We review every submission and respond to opportunities that fit our thesis.</p>
+        <a href="#" class="contact-link">
+          Submit an Executive Summary
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+            <path d="M1 5h12m0 0L9 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </a>
+      </article>
+
+      <article class="contact-card">
+        <span class="contact-num">II.</span>
+        <h3>For Investors</h3>
+        <p>For accredited investors and institutional LPs interested in RFG co-investment opportunities or allocation to affiliated funds. Accredited verification required before specific terms are shared.</p>
+        <a href="#" class="contact-link">
+          Request an Introduction
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+            <path d="M1 5h12m0 0L9 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </a>
+      </article>
+
+      <article class="contact-card">
+        <span class="contact-num">III.</span>
+        <h3>For Press &amp; Policy</h3>
+        <p>Interview requests, speaking invitations, podcast appearances, and policy engagement. Meagan Crawford is available for commentary on space finance, capital-stack structure, and industry policy.</p>
+        <a href="#" class="contact-link">
+          Request an Interview
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+            <path d="M1 5h12m0 0L9 1m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="foot-brand">
+        <a href="#" class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <span class="top">Ramsey</span>
+            <span class="name">Financial Group</span>
+          </span>
+        </a>
+        <p>A Houston single-family office co-investing in frontier industries since 1992. Manager of the Leo B. Womack Family Trust.</p>
+        <address class="foot-address">
+          710 N Post Oak Rd<br>
+          Houston, Texas 77024<br>
+          sep@ramseyfg.com
+        </address>
+        <div class="foot-crest" aria-label="Ramsey heritage crest">
+          <div class="foot-crest-mark" aria-hidden="true">
+            <svg viewBox="0 0 56 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6 L28 2 L52 6 L52 32 C52 48 40 58 28 62 C16 58 4 48 4 32 Z"
+                    fill="none" stroke="rgba(244,239,230,0.4)" stroke-width="1.2"/>
+              <path d="M9 10 L28 7 L47 10 L47 32 C47 45 37 53 28 56 C19 53 9 45 9 32 Z"
+                    fill="none" stroke="rgba(244,239,230,0.25)" stroke-width="1"/>
+              <!-- Unicorn silhouette: head, horn, mane -->
+              <path d="M28 18 L28 14 L31 17 L29.5 18.5 Z"
+                    fill="rgba(217,207,184,0.7)" stroke="rgba(244,239,230,0.4)" stroke-width="0.6"/>
+              <path d="M22 30 C22 24 25 21 28 21 C31 21 34 23 34 28 L34 36 C34 40 32 42 30 42 L26 42 C24 42 22 40 22 36 Z"
+                    fill="none" stroke="rgba(244,239,230,0.5)" stroke-width="1.1"/>
+              <path d="M22 28 L20 26 M23 25 L21 22 M24 23 L23 20"
+                    stroke="rgba(244,239,230,0.4)" stroke-width="0.8" stroke-linecap="round"/>
+              <circle cx="30" cy="30" r="0.8" fill="rgba(122,46,42,0.7)"/>
+              <!-- Estab year -->
+              <text x="28" y="52" text-anchor="middle"
+                    fill="rgba(217,207,184,0.6)"
+                    font-family="serif" font-style="italic" font-size="6" letter-spacing="0.5">MCMXCII</text>
+            </svg>
+          </div>
+          <div class="foot-crest-text">
+            <strong>Ramsey Heritage</strong>
+            Continuity across three decades<br>and three generations of operators.
+          </div>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#track-record">Portfolio</a></li>
+          <li><a href="#current-raises">Current Raises</a></li>
+          <li><a href="#scs">Space Capital Stack</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#tl">Thought Leadership</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Platforms</h4>
+        <ul>
+          <li><a href="#">Ramsey RegA&nbsp;↗</a></li>
+          <li><a href="#">SpaceFund&nbsp;↗</a></li>
+          <li><a href="#">Space Finance Company&nbsp;↗</a></li>
+          <li><a href="#">SpacePort Fund&nbsp;↗</a></li>
+          <li><a href="#">Off-Earth Data&nbsp;↗</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">LinkedIn&nbsp;↗</a></li>
+          <li><a href="#">Press Releases</a></li>
+          <li><a href="#">Speaking Requests</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Ramsey Financial Group, LLC. All rights reserved.</div>
+      <div class="legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Disclosures</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Smooth anchor scroll respects sticky nav offset
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id === '#' || id.length < 2) return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      const navH = document.querySelector('.nav').offsetHeight;
+      window.scrollTo({ top: target.offsetTop - navH - 8, behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
