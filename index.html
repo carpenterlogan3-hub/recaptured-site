@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>ReCaptured — The operating system for lean, ambitious teams</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -204,13 +205,34 @@
     .final p{font-size:18px}
     .foot-in{gap:12px;font-size:11px}
   }
+.logo-lockup{display:inline-flex;align-items:center;gap:11px}
+.logo-lockup .logo{line-height:1}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="wrap nav-in">
-    <div class="logo">Re<b>Captured</b></div>
+    <a href="#" class="logo-lockup" aria-label="ReCaptured home">
+      <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true" style="flex:none">
+        <rect x="1.5" y="1.5" width="45" height="45" rx="10" fill="#16110D" stroke="rgba(244,236,222,.16)" stroke-width="1"/>
+        <text x="8" y="34" font-family="Archivo,sans-serif" font-weight="800" font-size="27" fill="#E8A33D">R</text>
+        <g stroke="#E8A33D" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".9">
+          <path d="M28.5 25 C34 25 35 11 40 11"/>
+          <path d="M28.5 25 C34 25 35 18 40 18"/>
+          <path d="M28.5 25 C35 25 37 25 41.5 25"/>
+          <path d="M28.5 25 C34 25 35 32 40 32"/>
+          <path d="M28.5 25 C34 25 35 39 40 39"/>
+        </g>
+        <circle cx="27" cy="25" r="2.2" fill="#E8A33D"/>
+        <circle cx="40" cy="11" r="2.2" fill="#F4ECDE"/>
+        <circle cx="40" cy="18" r="2.2" fill="#F4ECDE"/>
+        <circle cx="41.5" cy="25" r="2.2" fill="#E8A33D"/>
+        <circle cx="40" cy="32" r="2.2" fill="#F4ECDE"/>
+        <circle cx="40" cy="39" r="2.2" fill="#F4ECDE"/>
+      </svg>
+      <span class="logo">Re<b>Captured</b></span>
+    </a>
     <a href="#book" class="btn btn-solid">Book a call</a>
   </div>
 </nav>
