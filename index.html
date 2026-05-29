@@ -305,19 +305,23 @@
     <div class="system reveal d2">
       <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" aria-label="Inputs flowing through an operating system into multiplied output">
         <defs><radialGradient id="eg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#3a2a14"/><stop offset="100%" stop-color="#1d1610"/></radialGradient></defs>
-        <text class="colhead" x="80" y="26" text-anchor="middle">RAW INPUTS</text>
+        <text class="colhead" x="95" y="26" text-anchor="middle">RAW INPUTS</text>
         <text class="colhead" x="820" y="26" text-anchor="middle">MULTIPLIED OUTPUT</text>
-        <path class="path" d="M100 95 C250 95 300 160 440 160"/>
-        <path class="path" d="M100 160 C250 160 300 160 440 160"/>
-        <path class="path" d="M100 225 C250 225 300 160 440 160"/>
+        <path class="path" d="M168 60 C290 60 330 160 440 160"/>
+        <path class="path" d="M168 110 C290 110 350 160 440 160"/>
+        <path class="path" d="M168 160 C290 160 350 160 440 160"/>
+        <path class="path" d="M168 210 C290 210 350 160 440 160"/>
+        <path class="path" d="M168 260 C290 260 330 160 440 160"/>
         <path id="p0" fill="none" stroke="rgba(232,163,61,.2)" stroke-width="1.5" d="M590 160 C710 160 730 70 820 70"/>
         <path id="p1" fill="none" stroke="rgba(232,163,61,.2)" stroke-width="1.5" d="M590 160 C710 160 730 115 820 115"/>
         <path id="p2" fill="none" stroke="rgba(232,163,61,.2)" stroke-width="1.5" d="M590 160 C710 160 760 160 820 160"/>
         <path id="p3" fill="none" stroke="rgba(232,163,61,.2)" stroke-width="1.5" d="M590 160 C710 160 730 205 820 205"/>
         <path id="p4" fill="none" stroke="rgba(232,163,61,.2)" stroke-width="1.5" d="M590 160 C710 160 730 250 820 250"/>
-        <g><circle class="nodeC" cx="80" cy="95" r="20"/><text class="nodeLbl" x="80" y="99" text-anchor="middle">LEADS</text></g>
-        <g><circle class="nodeC" cx="80" cy="160" r="20"/><text class="nodeLbl" x="80" y="164" text-anchor="middle">WORK</text></g>
-        <g><circle class="nodeC" cx="80" cy="225" r="20"/><text class="nodeLbl" x="80" y="229" text-anchor="middle">OPPS</text></g>
+        <g><circle class="nodeC" cx="150" cy="60" r="18"/><text class="nodeLbl" x="120" y="64" text-anchor="end" font-size="11">LEADS</text></g>
+        <g><circle class="nodeC" cx="150" cy="110" r="18"/><text class="nodeLbl" x="120" y="114" text-anchor="end" font-size="11">CONVERSATIONS</text></g>
+        <g><circle class="nodeC" cx="150" cy="160" r="18"/><text class="nodeLbl" x="120" y="164" text-anchor="end" font-size="11">PROPOSALS</text></g>
+        <g><circle class="nodeC" cx="150" cy="210" r="18"/><text class="nodeLbl" x="120" y="214" text-anchor="end" font-size="11">OPERATIONS</text></g>
+        <g><circle class="nodeC" cx="150" cy="260" r="18"/><text class="nodeLbl" x="120" y="264" text-anchor="end" font-size="11">SCATTERED DATA</text></g>
         <rect class="engine" x="440" y="120" width="150" height="80" rx="14"/>
         <text class="engLbl" x="515" y="153" text-anchor="middle">OPERATING</text>
         <text class="engLbl" x="515" y="172" text-anchor="middle">SYSTEM</text>
@@ -327,8 +331,9 @@
         <circle id="d2" class="nodeC" cx="820" cy="160" r="12"/>
         <circle id="d3" class="nodeC" cx="820" cy="205" r="12"/>
         <circle id="d4" class="nodeC" cx="820" cy="250" r="12"/>
-        <circle class="flow" r="4"><animateMotion dur="3s" repeatCount="indefinite" path="M100 95 C250 95 300 160 440 160"/></circle>
-        <circle class="flow" r="4"><animateMotion dur="3s" begin="1s" repeatCount="indefinite" path="M100 225 C250 225 300 160 440 160"/></circle>
+        <circle class="flow" r="4"><animateMotion dur="3s" repeatCount="indefinite" path="M168 60 C290 60 330 160 440 160"/></circle>
+        <circle class="flow" r="4"><animateMotion dur="3s" begin="1s" repeatCount="indefinite" path="M168 160 C290 160 350 160 440 160"/></circle>
+        <circle class="flow" r="4"><animateMotion dur="3s" begin="2s" repeatCount="indefinite" path="M168 260 C290 260 330 160 440 160"/></circle>
       </svg>
       <div class="out-cats" id="outCats">
         <button class="out-cat on" data-i="0">Revenue motion</button>
