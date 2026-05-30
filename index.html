@@ -368,6 +368,426 @@
   </div>
 </section>
 
+<!-- =========  RECAPTURED · COMMAND CENTER  (v2 · LIVING)  —  START OF EMBED BLOCK  ============= -->
+<!-- ============================================================================================ -->
+<style>
+  /* Scoped to .rcc-* so it can never collide with your existing styles.
+     Uses var(--token, fallback) so it matches your site live, and still renders if pasted anywhere. */
+  .rcc-section{position:relative;padding:clamp(72px,10vw,130px) 0;border-top:1px solid var(--line-2,rgba(244,236,222,.07))}
+  .rcc-wrap{max-width:var(--maxw,1200px);margin:0 auto;padding:0 36px}
+  .rcc-grid2{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(30px,6vw,90px);align-items:start}
+  .rcc-sticky{position:sticky;top:120px}
+  .rcc-eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#E8A33D);font-weight:500}
+  .rcc-head{font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:-.025em;line-height:1.02;font-size:clamp(32px,4.4vw,58px);max-width:16ch}
+  .rcc-sub{color:var(--soft,#C9BEAD);font-size:clamp(17px,1.4vw,21px);margin-top:30px;line-height:1.6}
+  .rcc-sub p+p{margin-top:16px}
+  .rcc-try{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.05em;color:var(--muted,#8C8170);margin-top:22px;line-height:1.7}
+  .rcc-try b{color:var(--accent,#E8A33D);font-weight:500}
+
+  /* the product window */
+  .rcc-app{margin-top:48px;background:linear-gradient(155deg,#1d1711,#120e0a);border:1px solid var(--line,rgba(244,236,222,.12));
+    border-radius:16px;overflow:hidden;box-shadow:0 50px 90px -45px rgba(0,0,0,.8);opacity:1;transform:none}
+  .rcc-section.js-rcc .rcc-app{opacity:0;transform:translateY(26px);transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1)}
+  .rcc-section.js-rcc.is-live .rcc-app{opacity:1;transform:none}
+
+  .rcc-bar{position:relative;display:flex;align-items:center;gap:11px;padding:15px 20px;border-bottom:1px solid var(--line-2,rgba(244,236,222,.07));background:rgba(0,0,0,.22)}
+  .rcc-bdot{width:9px;height:9px;border-radius:50%;background:var(--accent,#E8A33D);box-shadow:0 0 0 3px rgba(232,163,61,.16)}
+  .rcc-brand{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.18em;color:var(--cream,#F4ECDE)}
+  /* tenant is now an interactive switcher */
+  .rcc-tenant{display:inline-flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
+    color:var(--soft,#C9BEAD);background:transparent;border:1px solid var(--line,rgba(244,236,222,.12));border-radius:5px;padding:4px 9px;margin-left:6px;cursor:pointer;transition:.2s}
+  .rcc-tenant:hover{border-color:rgba(232,163,61,.55);color:var(--cream,#F4ECDE)}
+  .rcc-tenant .car{font-size:8px;opacity:.7;transition:transform .2s}
+  .rcc-tenant.open .car{transform:rotate(180deg)}
+  .rcc-hint{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;color:var(--muted,#8C8170);opacity:.85}
+  .rcc-hint b{color:var(--accent,#E8A33D);font-weight:500}
+  .rcc-meta{margin-left:auto;display:flex;align-items:center;gap:14px}
+  .rcc-live{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;color:#74A878;display:inline-flex;align-items:center;gap:6px}
+  .rcc-live .ld{width:7px;height:7px;border-radius:50%;background:#74A878;animation:rccBreathe 2.4s ease-in-out infinite}
+  @keyframes rccBreathe{0%,100%{box-shadow:0 0 0 0 rgba(116,168,120,.55)}50%{box-shadow:0 0 0 6px rgba(116,168,120,0)}}
+  .rcc-sync{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:var(--muted,#8C8170)}
+
+  /* tenant menu */
+  .rcc-menu{position:absolute;z-index:20;top:48px;left:170px;min-width:240px;background:#161009;border:1px solid var(--line,rgba(244,236,222,.12));
+    border-radius:10px;padding:6px;box-shadow:0 24px 50px -22px rgba(0,0,0,.85);display:none}
+  .rcc-menu.open{display:block;animation:rccFade .22s ease both}
+  .rcc-mlabel{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted,#8C8170);padding:7px 9px 4px}
+  .rcc-mitem{display:block;width:100%;text-align:left;background:transparent;border:0;border-radius:7px;padding:9px 9px;cursor:pointer;transition:.15s}
+  .rcc-mitem:hover{background:rgba(232,163,61,.08)}
+  .rcc-mitem .mn{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--cream,#F4ECDE)}
+  .rcc-mitem .mi{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.08em;color:var(--muted,#8C8170);margin-top:3px}
+  .rcc-mitem.on .mn{color:var(--accent,#E8A33D)}
+
+  .rcc-tabs{display:flex;flex-wrap:wrap;gap:8px;padding:16px 20px 0}
+  .rcc-tab{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.05em;color:var(--soft,#C9BEAD);
+    background:transparent;border:1px solid var(--line,rgba(244,236,222,.12));border-radius:5px;padding:9px 14px;cursor:pointer;transition:.2s}
+  .rcc-tab:hover{border-color:rgba(232,163,61,.5)}
+  .rcc-tab.on{border-color:var(--accent,#E8A33D);color:var(--accent,#E8A33D);background:rgba(232,163,61,.08)}
+
+  .rcc-stage{position:relative;padding:22px 20px 26px;min-height:296px}
+  .rcc-view{display:none;animation:rccFade .4s ease both}
+  .rcc-view.on{display:block}
+  @keyframes rccFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  /* re-scan shimmer when the surface reconfigures */
+  .rcc-scan{position:absolute;inset:0;pointer-events:none;opacity:0;background:linear-gradient(100deg,transparent 30%,rgba(232,163,61,.10) 50%,transparent 70%);
+    background-size:220% 100%}
+  .rcc-stage.scan .rcc-scan{opacity:1;animation:rccSweep .6s ease both}
+  @keyframes rccSweep{from{background-position:140% 0}to{background-position:-40% 0}}
+
+  /* module rail — the malleable part */
+  .rcc-rail{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:16px}
+  .rcc-rlabel{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted,#8C8170);margin-right:4px}
+  .rcc-modchip{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;color:var(--muted,#8C8170);
+    background:transparent;border:1px dashed var(--line,rgba(244,236,222,.16));border-radius:99px;padding:6px 12px;cursor:pointer;transition:.18s;display:inline-flex;align-items:center;gap:7px}
+  .rcc-modchip:hover{border-color:rgba(232,163,61,.55);color:var(--soft,#C9BEAD)}
+  .rcc-modchip .mk{font-size:11px;line-height:1;opacity:.8}
+  .rcc-modchip.on{border-style:solid;border-color:var(--accent,#E8A33D);color:var(--accent,#E8A33D);background:rgba(232,163,61,.07)}
+
+  /* mission control KPIs */
+  .rcc-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .rcc-kpi{background:var(--bg,#0F0C0A);border:1px solid var(--line-2,rgba(244,236,222,.07));border-radius:11px;padding:16px;animation:rccPop .35s ease both}
+  @keyframes rccPop{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+  .rcc-kpi .l{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted,#8C8170)}
+  .rcc-kpi .v{font-family:'Archivo',sans-serif;font-weight:800;font-size:30px;letter-spacing:-.02em;margin:8px 0 3px;line-height:1}
+  .rcc-kpi .v .u{font-size:15px;font-weight:700}
+  .rcc-kpi .o{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--soft,#C9BEAD)}
+  .rcc-pbar{height:5px;background:rgba(244,236,222,.10);border-radius:99px;margin-top:12px;overflow:hidden}
+  .rcc-pbar i{display:block;height:100%;width:var(--w,0%);border-radius:99px;background:linear-gradient(90deg,var(--accent-2,#C9722B),var(--accent,#E8A33D));transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+
+  /* risk radar */
+  .rcc-risk{display:flex;flex-direction:column;gap:10px}
+  .rcc-rrow{display:flex;gap:13px;align-items:flex-start;background:var(--bg,#0F0C0A);border:1px solid var(--line-2,rgba(244,236,222,.07));
+    border-left:3px solid var(--muted,#8C8170);border-radius:10px;padding:13px 15px;animation:rccPop .35s ease both}
+  .rcc-rrow.crit{border-left-color:#E2574A}.rcc-rrow.warn{border-left-color:var(--accent,#E8A33D)}.rcc-rrow.watch{border-left-color:var(--muted,#8C8170)}
+  .rcc-rdot{width:9px;height:9px;border-radius:50%;margin-top:5px;flex:0 0 auto;background:var(--muted,#8C8170)}
+  .rcc-rrow.crit .rcc-rdot{background:#E2574A;animation:rccPulse 2s infinite}
+  .rcc-rrow.warn .rcc-rdot{background:var(--accent,#E8A33D)}
+  @keyframes rccPulse{0%{box-shadow:0 0 0 0 rgba(226,87,74,.5)}70%{box-shadow:0 0 0 9px rgba(226,87,74,0)}100%{box-shadow:0 0 0 0 rgba(226,87,74,0)}}
+  .rcc-rsev{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+  .rcc-rrow.crit .rcc-rsev{color:#E2574A}.rcc-rrow.warn .rcc-rsev{color:var(--accent,#E8A33D)}.rcc-rrow.watch .rcc-rsev{color:var(--muted,#8C8170)}
+  .rcc-rtxt{font-size:14px;color:var(--cream,#F4ECDE);line-height:1.4}
+  .rcc-rmove{font-size:12.5px;color:var(--soft,#C9BEAD);margin-top:4px}
+  .rcc-rmove b{color:#74A878;font-weight:600}
+
+  /* initiatives */
+  .rcc-init{display:flex;flex-direction:column;gap:1px;background:var(--line-2,rgba(244,236,222,.07));border:1px solid var(--line-2,rgba(244,236,222,.07));border-radius:10px;overflow:hidden}
+  .rcc-irow{display:grid;grid-template-columns:1.6fr .8fr .8fr;gap:12px;align-items:center;background:var(--bg,#0F0C0A);padding:14px 16px}
+  .rcc-iname{font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;color:var(--cream,#F4ECDE)}
+  .rcc-iname small{display:block;font-family:'JetBrains Mono',monospace;font-weight:400;font-size:9.5px;letter-spacing:.06em;color:var(--muted,#8C8170);margin-top:3px}
+  .rcc-pill{justify-self:start;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:99px}
+  .rcc-pill.ok{color:#74A878;background:rgba(116,168,120,.13)}
+  .rcc-pill.risk{color:var(--accent,#E8A33D);background:rgba(232,163,61,.13)}
+  .rcc-pill.idle{color:var(--muted,#8C8170);background:rgba(140,129,112,.13)}
+  .rcc-mini{height:5px;background:rgba(244,236,222,.10);border-radius:99px;overflow:hidden}
+  .rcc-mini i{display:block;height:100%;width:var(--w,0%);border-radius:99px;background:linear-gradient(90deg,var(--accent-2,#C9722B),var(--accent,#E8A33D));transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+
+  /* CTA */
+  .rcc-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:26px;
+    padding:22px 24px;background:radial-gradient(120% 160% at 85% 0%,#241a10,#0f0c0a);border:1px solid var(--line,rgba(244,236,222,.12));border-radius:14px}
+  .rcc-cta-txt{font-size:15px;color:var(--soft,#C9BEAD);max-width:58ch;line-height:1.5}
+  .rcc-cta-txt b{color:var(--cream,#F4ECDE);font-weight:600}
+  .rcc-btn{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.03em;padding:14px 22px;
+    border-radius:4px;cursor:pointer;white-space:nowrap;background:var(--accent,#E8A33D);color:#1a1206;border:1px solid var(--accent,#E8A33D);transition:.25s;text-decoration:none}
+  .rcc-btn:hover{background:transparent;color:var(--accent,#E8A33D)}
+
+  @media(max-width:900px){
+    .rcc-grid2{grid-template-columns:1fr;gap:24px}.rcc-sticky{position:static}
+    .rcc-kpis{grid-template-columns:repeat(2,1fr)}
+    .rcc-irow{grid-template-columns:1.4fr .9fr;gap:10px}.rcc-irow .rcc-mini{display:none}
+    .rcc-menu{left:20px;right:20px;min-width:0}
+  }
+  @media(max-width:560px){.rcc-kpis{grid-template-columns:1fr 1fr}.rcc-wrap{padding:0 20px}
+    .rcc-hint{display:none}.rcc-meta{gap:8px}.rcc-sync{display:none}}
+  @media(prefers-reduced-motion:reduce){.rcc-live .ld,.rcc-rrow.crit .rcc-rdot{animation:none}}
+</style>
+
+<section id="cockpit" class="rcc-section">
+  <div class="rcc-wrap">
+    <div class="rcc-grid2">
+      <div class="rcc-sticky"><div class="rcc-eyebrow">A living surface</div></div>
+      <div>
+        <h2 class="rcc-head">Not a report you read. A surface you run.</h2>
+        <div class="rcc-sub">
+          <p>Every system we install feeds one command center — your whole operation in a single view, with a radar that flags what's about to break before it does.</p>
+          <p>It's not a static snapshot. It's a living surface you reshape as the business shifts: swap the tenant, add or pull a module, and the whole view rebuilds on the spot. Below is a sample tenant — yours is assembled around your real numbers in a single 30-minute discovery session.</p>
+        </div>
+        <div class="rcc-try">↳ Try it live below — <b>switch the tenant</b>, <b>tap a module on or off</b>. Same surface, reconfigured.</div>
+      </div>
+    </div>
+
+    <div class="rcc-app" id="rccApp">
+      <div class="rcc-bar">
+        <span class="rcc-bdot"></span>
+        <span class="rcc-brand">RECAPTURED · COMMAND CENTER</span>
+        <button class="rcc-tenant" id="rccTenantBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="rccTenantName">MERIDIAN GROUP</span><span class="car">▼</span>
+        </button>
+        <span class="rcc-hint">← <b>switch tenant</b></span>
+        <span class="rcc-meta">
+          <span class="rcc-sync" id="rccSync">synced just now</span>
+          <span class="rcc-live"><span class="ld"></span>LIVE</span>
+        </span>
+
+        <!-- tenant menu -->
+        <div class="rcc-menu" id="rccMenu" role="menu">
+          <div class="rcc-mlabel">Sample tenants — one surface, any business</div>
+          <button class="rcc-mitem on" data-t="meridian" role="menuitem"><span class="mn">MERIDIAN GROUP</span><span class="mi">Professional services · 12 people</span></button>
+          <button class="rcc-mitem" data-t="northwind" role="menuitem"><span class="mn">NORTHWIND LOGISTICS</span><span class="mi">Freight & operations · 40 people</span></button>
+          <button class="rcc-mitem" data-t="atlas" role="menuitem"><span class="mn">ATLAS DENTAL PARTNERS</span><span class="mi">Multi-site healthcare · 5 locations</span></button>
+        </div>
+      </div>
+
+      <div class="rcc-tabs" role="tablist">
+        <button class="rcc-tab on" data-v="mc">Mission Control</button>
+        <button class="rcc-tab" data-v="risk">Risk Radar</button>
+        <button class="rcc-tab" data-v="init">Initiatives</button>
+      </div>
+
+      <div class="rcc-stage" id="rccStage">
+        <div class="rcc-scan"></div>
+
+        <!-- MISSION CONTROL -->
+        <div class="rcc-view on" data-view="mc">
+          <div class="rcc-rail" id="rccRail" aria-label="Modules — tap to add or remove">
+            <span class="rcc-rlabel">Modules</span>
+            <!-- populated by JS; static fallback below for no-JS -->
+          </div>
+          <div class="rcc-kpis" id="rccKpis">
+            <div class="rcc-kpi"><div class="l">Revenue Run-Rate</div><div class="v">$4.2<span class="u">M</span></div><div class="o">70% to $6M target</div><div class="rcc-pbar"><i style="--w:70%"></i></div></div>
+            <div class="rcc-kpi"><div class="l">Active Deals</div><div class="v">38</div><div class="o">76% of quarter quota</div><div class="rcc-pbar"><i style="--w:76%"></i></div></div>
+            <div class="rcc-kpi"><div class="l">On-Time Delivery</div><div class="v">91<span class="u">%</span></div><div class="o">vs 95% goal</div><div class="rcc-pbar"><i style="--w:91%"></i></div></div>
+            <div class="rcc-kpi"><div class="l">Cash Runway</div><div class="v">14<span class="u"> mo</span></div><div class="o">healthy</div><div class="rcc-pbar"><i style="--w:78%"></i></div></div>
+          </div>
+        </div>
+
+        <!-- RISK RADAR -->
+        <div class="rcc-view" data-view="risk"><div class="rcc-risk" id="rccRisk">
+          <div class="rcc-rrow crit"><span class="rcc-rdot"></span><div>
+            <div class="rcc-rsev">Critical</div>
+            <div class="rcc-rtxt">2 deals stalled 14+ days in "Proposal" — <b>$180K</b> at risk.</div>
+            <div class="rcc-rmove"><b>Move —</b> Founder re-engages both personally this week.</div></div></div>
+          <div class="rcc-rrow warn"><span class="rcc-rdot"></span><div>
+            <div class="rcc-rsev">Elevated</div>
+            <div class="rcc-rtxt">Onboarding backlog building — 3 new clients awaiting kickoff.</div>
+            <div class="rcc-rmove"><b>Move —</b> Assign a kickoff owner; cap work-in-progress at 2.</div></div></div>
+          <div class="rcc-rrow watch"><span class="rcc-rdot"></span><div>
+            <div class="rcc-rsev">Watch</div>
+            <div class="rcc-rtxt">Founder is owner on 6 of 9 active priorities.</div>
+            <div class="rcc-rmove"><b>Move —</b> Delegate two before the next sprint.</div></div></div>
+        </div></div>
+
+        <!-- INITIATIVES -->
+        <div class="rcc-view" data-view="init"><div class="rcc-init" id="rccInit">
+          <div class="rcc-irow"><div class="rcc-iname">Q3 Sales System Rollout<small>OWNER · OPS</small></div><span class="rcc-pill ok">On Track</span><div class="rcc-mini"><i style="--w:72%"></i></div></div>
+          <div class="rcc-irow"><div class="rcc-iname">New Client Onboarding Flow<small>OWNER · YOU</small></div><span class="rcc-pill risk">At Risk</span><div class="rcc-mini"><i style="--w:40%"></i></div></div>
+          <div class="rcc-irow"><div class="rcc-iname">Referral Program Launch<small>OWNER · UNASSIGNED</small></div><span class="rcc-pill idle">Not Started</span><div class="rcc-mini"><i style="--w:6%"></i></div></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="rcc-cta">
+      <div class="rcc-cta-txt">What you just reconfigured by hand, we configure around your real operation. <b>Same living surface — your numbers, your modules, your risks</b> — stood up in a 30-minute discovery session, no rebuild and no lift on your team.</div>
+      <a class="rcc-btn" href="#diagnostic">Build your command center →</a>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var sec=document.getElementById('cockpit'); if(!sec) return;
+    sec.classList.add('js-rcc');
+
+    /* ---- data: one surface, any business ---- */
+    var MODS=[ /* order + labels for the rail */
+      {id:'rev',  label:'Revenue'},
+      {id:'deals',label:'Pipeline'},
+      {id:'del',  label:'Delivery'},
+      {id:'cash', label:'Cash'},
+      {id:'team', label:'Team Load'},
+      {id:'nps',  label:'Client Health'}
+    ];
+    var T={
+      meridian:{name:'MERIDIAN GROUP',
+        kpi:{
+          rev:{l:'Revenue Run-Rate',p:'$',base:4.2,d:1,u:'M',o:'70% to $6M target',w:70,j:.04},
+          deals:{l:'Active Deals',base:38,d:0,o:'76% of quarter quota',w:76,j:1},
+          del:{l:'On-Time Delivery',base:91,d:0,u:'%',o:'vs 95% goal',w:91,j:.6},
+          cash:{l:'Cash Runway',base:14,d:0,u:' mo',o:'healthy',w:78,j:0},
+          team:{l:'Founder Load',base:67,d:0,u:'%',o:'owner on 6 of 9 priorities',w:67,j:1},
+          nps:{l:'Client Health',base:72,d:0,o:'+8 vs last quarter',w:72,j:1}
+        },
+        risk:[
+          ['crit','Critical','2 deals stalled 14+ days in "Proposal" — <b>$180K</b> at risk.','Founder re-engages both personally this week.'],
+          ['warn','Elevated','Onboarding backlog building — 3 new clients awaiting kickoff.','Assign a kickoff owner; cap work-in-progress at 2.'],
+          ['watch','Watch','Founder is owner on 6 of 9 active priorities.','Delegate two before the next sprint.']
+        ],
+        init:[
+          ['Q3 Sales System Rollout','OPS','ok','On Track',72],
+          ['New Client Onboarding Flow','YOU','risk','At Risk',40],
+          ['Referral Program Launch','UNASSIGNED','idle','Not Started',6]
+        ]},
+      northwind:{name:'NORTHWIND LOGISTICS',
+        kpi:{
+          rev:{l:'Revenue Run-Rate',p:'$',base:11.8,d:1,u:'M',o:'64% to $18M target',w:64,j:.05},
+          deals:{l:'Contracts in Play',base:21,d:0,o:'58% of quota',w:58,j:1},
+          del:{l:'On-Time Freight',base:96,d:0,u:'%',o:'vs 97% goal',w:96,j:.4},
+          cash:{l:'Cash Runway',base:9,d:0,u:' mo',o:'watch',w:52,j:0},
+          team:{l:'Dispatch Load',base:81,d:0,u:'%',o:'no slack for surges',w:81,j:1},
+          nps:{l:'Client Health',base:64,d:0,o:'-3 vs last quarter',w:64,j:1}
+        },
+        risk:[
+          ['crit','Critical','Carrier gap on Lane 7 — 4 loads unassigned next week.','Lock a backup carrier contract by Friday.'],
+          ['warn','Elevated','Fuel surcharge not repriced on 12 active contracts.','Push updated rate cards this billing cycle.'],
+          ['watch','Watch','Dispatch team at 81% utilization — surge-fragile.','Cross-train two CSRs on dispatch.']
+        ],
+        init:[
+          ['TMS Automation Rollout','OPS','ok','On Track',81],
+          ['Carrier Scorecard System','YOU','risk','At Risk',35],
+          ['Regional Lane Expansion','UNASSIGNED','idle','Not Started',12]
+        ]},
+      atlas:{name:'ATLAS DENTAL PARTNERS',
+        kpi:{
+          rev:{l:'Revenue Run-Rate',p:'$',base:7.6,d:1,u:'M',o:'83% to $9M target',w:83,j:.04},
+          deals:{l:'Locations in Pipeline',base:6,d:0,o:'50% of expansion target',w:50,j:0},
+          del:{l:'Chair Utilization',base:88,d:0,u:'%',o:'vs 90% goal',w:88,j:.5},
+          cash:{l:'Cash Runway',base:18,d:0,u:' mo',o:'strong',w:88,j:0},
+          team:{l:'Ops Lead Load',base:59,d:0,u:'%',o:'spread across 5 sites',w:59,j:1},
+          nps:{l:'Patient Health',base:79,d:0,o:'+5 vs last quarter',w:79,j:1}
+        },
+        risk:[
+          ['crit','Critical','Hygiene recall down 18% across 3 sites — <b>$120K/yr</b> drift.','Re-launch the automated recall sequence now.'],
+          ['warn','Elevated','New-location credentialing stalled 21 days.','Escalate to payer rep; set a weekly check-in.'],
+          ['watch','Watch','Ops lead is single point of contact for 5 sites.','Stand up a site-manager tier this quarter.']
+        ],
+        init:[
+          ['Centralized Scheduling System','OPS','ok','On Track',78],
+          ['Recall & Reactivation Engine','YOU','risk','At Risk',44],
+          ['Site #6 Onboarding Playbook','UNASSIGNED','idle','Not Started',9]
+        ]}
+    };
+
+    var cur='meridian';
+    var active={rev:1,deals:1,del:1,cash:1}; /* default 4 modules on */
+
+    var $=function(s){return sec.querySelector(s);};
+    var stage=$('#rccStage'), railEl=$('#rccRail'), kpisEl=$('#rccKpis'),
+        riskEl=$('#rccRisk'), initEl=$('#rccInit'), nameEl=$('#rccTenantName'),
+        menu=$('#rccMenu'), tbtn=$('#rccTenantBtn'), syncEl=$('#rccSync');
+
+    function fmtKpi(k){ var n=k.base; var s=k.d? n.toFixed(k.d): String(Math.round(n)); return (k.p||'')+s; }
+
+    function renderRail(){
+      var html='<span class="rcc-rlabel">Modules</span>';
+      MODS.forEach(function(m){
+        var on=active[m.id]?' on':'';
+        html+='<button class="rcc-modchip'+on+'" data-mod="'+m.id+'"><span class="mk">'+(active[m.id]?'−':'+')+'</span>'+m.label+'</button>';
+      });
+      railEl.innerHTML=html;
+    }
+    function renderKpis(){
+      var t=T[cur], html='';
+      MODS.forEach(function(m){
+        if(!active[m.id]) return;
+        var k=t.kpi[m.id]; var u=k.u?'<span class="u">'+k.u+'</span>':'';
+        html+='<div class="rcc-kpi"><div class="l">'+k.l+'</div>'+
+              '<div class="v"><span data-k="'+m.id+'">'+fmtKpi(k)+'</span>'+u+'</div>'+
+              '<div class="o">'+k.o+'</div><div class="rcc-pbar"><i data-w="'+k.w+'" style="--w:0%"></i></div></div>';
+      });
+      kpisEl.innerHTML=html;
+      fillBars(kpisEl);
+    }
+    function renderRisk(){
+      var html='';
+      T[cur].risk.forEach(function(r){
+        html+='<div class="rcc-rrow '+r[0]+'"><span class="rcc-rdot"></span><div>'+
+              '<div class="rcc-rsev">'+r[1]+'</div>'+
+              '<div class="rcc-rtxt">'+r[2]+'</div>'+
+              '<div class="rcc-rmove"><b>Move —</b> '+r[3]+'</div></div></div>';
+      });
+      riskEl.innerHTML=html;
+    }
+    function renderInit(){
+      var html='';
+      T[cur].init.forEach(function(i){
+        html+='<div class="rcc-irow"><div class="rcc-iname">'+i[0]+'<small>OWNER · '+i[1]+'</small></div>'+
+              '<span class="rcc-pill '+i[2]+'">'+i[3]+'</span>'+
+              '<div class="rcc-mini"><i data-w="'+i[4]+'" style="--w:0%"></i></div></div>';
+      });
+      initEl.innerHTML=html;
+      fillBars(initEl);
+    }
+    function fillBars(scope){ /* animate 0 -> target */
+      var bars=scope.querySelectorAll('i[data-w]');
+      requestAnimationFrame(function(){ requestAnimationFrame(function(){
+        bars.forEach(function(b){ b.style.setProperty('--w', b.getAttribute('data-w')+'%'); });
+      });});
+    }
+    function scan(){ stage.classList.remove('scan'); void stage.offsetWidth; stage.classList.add('scan'); }
+
+    function renderAll(){ renderRail(); renderKpis(); renderRisk(); renderInit(); markSync(0); }
+
+    /* tenant switching */
+    function setTenant(id){
+      if(!T[id]) return; cur=id;
+      nameEl.textContent=T[id].name;
+      menu.querySelectorAll('.rcc-mitem').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-t')===id); });
+      scan(); renderKpis(); renderRisk(); renderInit(); markSync(0);
+    }
+    tbtn.addEventListener('click',function(e){ e.stopPropagation();
+      var open=menu.classList.toggle('open'); tbtn.classList.toggle('open',open); tbtn.setAttribute('aria-expanded',open);
+    });
+    menu.addEventListener('click',function(e){ var b=e.target.closest('.rcc-mitem'); if(!b)return;
+      setTenant(b.getAttribute('data-t')); menu.classList.remove('open'); tbtn.classList.remove('open'); tbtn.setAttribute('aria-expanded',false);
+    });
+    document.addEventListener('click',function(){ menu.classList.remove('open'); tbtn.classList.remove('open'); tbtn.setAttribute('aria-expanded',false); });
+
+    /* module toggling */
+    railEl.addEventListener('click',function(e){ var b=e.target.closest('.rcc-modchip'); if(!b)return;
+      var id=b.getAttribute('data-mod'); var onCount=Object.keys(active).length;
+      if(active[id]){ if(onCount<=1) return; delete active[id]; } else { active[id]=1; }
+      scan(); renderRail(); renderKpis();
+    });
+
+    /* tabs */
+    var tabs=sec.querySelectorAll('.rcc-tab'), views=sec.querySelectorAll('.rcc-view');
+    tabs.forEach(function(t){ t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.classList.remove('on')}); t.classList.add('on');
+      views.forEach(function(v){ v.classList.toggle('on', v.getAttribute('data-view')===t.getAttribute('data-v')); });
+    });});
+
+    /* breathing: tick values + sync clock */
+    var syncT=0;
+    function markSync(n){ syncT=n; paintSync(); }
+    function paintSync(){ if(!syncEl) return; syncEl.textContent = syncT<=0?'synced just now':'synced '+syncT+'s ago'; }
+    function tickValues(){
+      var t=T[cur];
+      kpisEl.querySelectorAll('[data-k]').forEach(function(el){
+        var k=t.kpi[el.getAttribute('data-k')]; if(!k||!k.j) return;
+        var v=k.base+(Math.random()*2-1)*k.j; var s=k.d? v.toFixed(k.d): String(Math.round(v));
+        el.textContent=(k.p||'')+s;
+      });
+      markSync(0);
+    }
+    var iVals=null,iSync=null;
+    function startLife(){
+      if(iVals) return;
+      iVals=setInterval(function(){ if(!document.hidden) tickValues(); },2600);
+      iSync=setInterval(function(){ if(!document.hidden){ syncT++; paintSync(); } },1000);
+    }
+
+    /* boot */
+    renderAll();
+    function live(){ sec.classList.add('is-live'); fillBars(kpisEl); fillBars(initEl); startLife(); }
+    try{
+      if('IntersectionObserver' in window){
+        var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ live(); io.disconnect(); } }); },{threshold:.25});
+        io.observe(sec.querySelector('.rcc-app'));
+      } else { live(); }
+    }catch(e){ live(); }
+  })();
+  </script>
+</section>
+<!-- ============================================================================================ -->
+<!-- ==========  RECAPTURED · COMMAND CENTER  (v2 · LIVING)  —  END OF EMBED BLOCK  ============== -->
 <section id="caps">
   <div class="wrap">
     <div class="grid2">
