@@ -893,7 +893,7 @@
       <div class="sticky-label"><div class="eyebrow reveal">Live diagnostic</div></div>
       <div>
         <h2 class="sec-head reveal">Find your leverage in 30 seconds.</h2>
-        <div class="body-lg reveal d1" style="margin-top:30px"><p>Tell the engine where you're stuck. It returns a sharp read on your real constraint and where systems would multiply your team — the same lens we bring to every engagement, running live, right here.</p></div>
+        <div class="body-lg reveal d1" style="margin-top:30px"><p>Tell the engine your pain points. It returns a sharp read on your real constraint and where systems would multiply your team — the same lens we bring to every engagement, running live, right here.</p></div>
       </div>
     </div>
 
@@ -914,8 +914,8 @@
           </select>
         </div>
         <div class="field full">
-          <label for="bottleneck">Where does growth feel stuck right now?</label>
-          <textarea id="bottleneck" placeholder="e.g. Every deal runs through me. I can't keep up with follow-ups and onboarding at the same time, so the pipeline leaks."></textarea>
+          <label for="painPoints">What are your pain points?</label>
+          <textarea id="painPoints" placeholder="e.g. Every deal runs through me. I can't keep up with follow-ups and onboarding at the same time, so the pipeline leaks."></textarea>
         </div>
       </div>
       <button id="runBtn" class="btn btn-solid">Find my leverage →</button>
@@ -1039,15 +1039,15 @@
   // ---- Booking (Calendly) ----
   // Replace CALENDLY_URL with your real Calendly event link once it exists.
   // For prefill to land, set up THREE custom questions on that event, in order:
-  //   1) What does your company do?   2) Team size   3) Where is growth stuck?
+  //   1) What does your company do?   2) Team size   3) What are your pain points?
   // Calendly maps them to a1 / a2 / a3 below.
   const CALENDLY_URL = "https://calendly.com/recaptured/discovery";
-  function buildCalendlyLink(company, team, bottleneck){
+  function buildCalendlyLink(company, team, painPoints){
     try{
       const u = new URL(CALENDLY_URL);
       if(company)    u.searchParams.set('a1', company);
       if(team)       u.searchParams.set('a2', team);
-      if(bottleneck) u.searchParams.set('a3', bottleneck);
+      if(painPoints) u.searchParams.set('a3', painPoints);
       u.searchParams.set('utm_source','recaptured-site');
       return u.toString();
     }catch(_){ return CALENDLY_URL; }
@@ -1066,7 +1066,7 @@
   const fitResult=document.getElementById('fitResult');
   const novelResult=document.getElementById('novelResult');
 
-  async function callEngine(company,team,bottleneck){
+  async function callEngine(company,team,painPoints){
     const prompt=`You are the Leverage Engine for ReCaptured, a firm that installs operating systems, playbooks, and automations so lean teams (usually under ~10 people, under ~$1M revenue) produce the output of a much larger team.
 
 ReCaptured works from a library of proven, reusable templates and playbooks covering four areas:
@@ -1078,7 +1078,7 @@ ReCaptured works from a library of proven, reusable templates and playbooks cove
 A visitor submitted:
 - Company: ${company||"(not specified)"}
 - Team size: ${team}
-- Where growth feels stuck: ${bottleneck||"(not specified)"}
+- Pain points: ${painPoints||"(not specified)"}
 
 First decide: can ReCaptured serve this need by assembling and adapting its existing templates and playbooks across those four areas (often paired with automation)?
 
@@ -1117,8 +1117,8 @@ Return ONLY valid JSON — no markdown, no backticks, no preamble. Be specific t
   // ---- Local fallback engine ----
   // Runs entirely in the page. Used whenever the live call can't be reached
   // (i.e. until the backend is deployed). Always returns a result, never throws.
-  function localEngine(company, team, bottleneck){
-    const t = ((company||"") + " " + (bottleneck||"")).toLowerCase();
+  function localEngine(company, team, painPoints){
+    const t = ((company||"") + " " + (painPoints||"")).toLowerCase();
     const has = (arr)=>arr.some(k=>t.includes(k));
     // genuinely out-of-scope → novel
     if(has(["gps","fleet","driver","dispatch","vehicle","real-time track","hardware","firmware","manufactur","defect","iot","sensor","medical device","diagnos","build an app","app development"])){
@@ -1181,13 +1181,13 @@ Return ONLY valid JSON — no markdown, no backticks, no preamble. Be specific t
   runBtn.addEventListener('click',async()=>{
     const company=document.getElementById('company').value.trim();
     const team=document.getElementById('team').value;
-    const bottleneck=document.getElementById('bottleneck').value.trim();
-    if(!company && !bottleneck){errEl.style.display='block';errEl.textContent="Add a line or two about your company and where you're stuck.";return;}
+    const painPoints=document.getElementById('painPoints').value.trim();
+    if(!company && !painPoints){errEl.style.display='block';errEl.textContent="Add a line or two about your company and your pain points.";return;}
     errEl.style.display='none';result.classList.remove('show');runBtn.disabled=true;loading.style.display='flex';
-    const link=buildCalendlyLink(company,team,bottleneck);
+    const link=buildCalendlyLink(company,team,painPoints);
     let r;
-    try{ r=await callEngine(company,team,bottleneck); }
-    catch(e){ r=localEngine(company,team,bottleneck); }
+    try{ r=await callEngine(company,team,painPoints); }
+    catch(e){ r=localEngine(company,team,painPoints); }
     try{
       if(r.status==="novel"){
         fitResult.style.display='none';
@@ -1207,7 +1207,7 @@ Return ONLY valid JSON — no markdown, no backticks, no preamble. Be specific t
       result.scrollIntoView({behavior:'smooth',block:'nearest'});
     }catch(e){
       // last-resort safety net — render the local result directly
-      const f=localEngine(company,team,bottleneck);
+      const f=localEngine(company,team,painPoints);
       novelResult.style.display='none';fitResult.style.display='block';
       document.getElementById('rHeadline').textContent=f.headline;
       document.getElementById('rConstraint').textContent=f.constraint;
