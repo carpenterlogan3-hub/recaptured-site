@@ -1041,7 +1041,7 @@
   // For prefill to land, set up THREE custom questions on that event, in order:
   //   1) What does your company do?   2) Team size   3) What are your pain points?
   // Calendly maps them to a1 / a2 / a3 below.
-  const CALENDLY_URL = "https://calendly.com/recaptured/discovery";
+  const CALENDLY_URL = "https://calendly.com/carpenterlogan3/discovery-call";
   function buildCalendlyLink(company, team, painPoints){
     try{
       const u = new URL(CALENDLY_URL);
@@ -1052,7 +1052,7 @@
       return u.toString();
     }catch(_){ return CALENDLY_URL; }
   }
-  function openLink(el, href){ if(!el) return; el.href=href; el.target="_blank"; el.rel="noopener"; }
+  function openLink(el, href){ if(!el) return; el.href=href; el.target="_blank"; el.rel="noopener noreferrer"; }
   openLink(document.getElementById('finalBook'), CALENDLY_URL);
 
   // ---- Live Leverage Engine (Claude-powered) ----
