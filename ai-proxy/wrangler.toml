@@ -1,0 +1,23 @@
+name = "ai-proxy"
+main = "src/index.js"
+compatibility_date = "2025-05-01"
+
+# ---------------------------------------------------------------------------
+# Public (non-secret) configuration. Edit these for each deployment.
+# ---------------------------------------------------------------------------
+[vars]
+# Comma-separated origins allowed to call this proxy. Use "*" only for testing.
+ALLOWED_ORIGINS = "https://recaptured.io,https://www.recaptured.io"
+
+# Comma-separated model allowlist (prevents your key being used for arbitrary
+# models). Use "*" to allow any. Keep this in sync with what your apps send.
+ALLOWED_MODELS = "claude-sonnet-4-20250514,claude-sonnet-4-6,claude-opus-4-7,claude-haiku-4-5-20251001"
+
+ANTHROPIC_VERSION = "2023-06-01"
+MAX_BODY_BYTES = "32768"
+
+# ---------------------------------------------------------------------------
+# SECRET — never put the key here. Set it once per environment with:
+#   npx wrangler secret put ANTHROPIC_API_KEY
+# For local dev, copy .dev.vars.example -> .dev.vars and fill it in.
+# ---------------------------------------------------------------------------
