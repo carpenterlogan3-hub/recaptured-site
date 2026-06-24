@@ -6,17 +6,17 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<title>ReCaptured Intelligent OS — CRM, projects & whatever your business needs next</title>
-<meta name="description" content="ReCaptured Intelligent OS unifies CRM, project management, and your company knowledge in a single AI-first workspace — built on a flexible data model that grows with you. Days, not months.">
+<title>ReCaptured Intelligent OS — customers, projects & knowledge in one system</title>
+<meta name="description" content="ReCaptured puts your customers, projects, and knowledge in one system, so a small team gets more done without juggling five tools. Set up in days, not months.">
 <link rel="canonical" href="https://recaptured.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://recaptured.io/">
-<meta property="og:title" content="ReCaptured Intelligent OS — one intelligent system for your whole business">
-<meta property="og:description" content="CRM, projects — and whatever your business needs next — in one AI-first workspace. New capabilities are configuration, not another tool to buy and bolt on.">
+<meta property="og:title" content="ReCaptured Intelligent OS — one system for your whole business">
+<meta property="og:description" content="Put your customers, projects, and knowledge in one system, so a small team gets more done without juggling five tools.">
 <meta property="og:image" content="https://recaptured.io/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ReCaptured Intelligent OS">
-<meta name="twitter:description" content="CRM, projects — and whatever your business needs next — in one AI-first workspace.">
+<meta name="twitter:description" content="Customers, projects, and knowledge in one system — so a small team gets more done without juggling five tools.">
 <meta name="twitter:image" content="https://recaptured.io/og-image.png">
 <script type="application/ld+json">
 {
@@ -27,7 +27,7 @@
   "operatingSystem": "Web",
   "url": "https://recaptured.io/",
   "image": "https://recaptured.io/apple-touch-icon.png",
-  "description": "ReCaptured Intelligent OS unifies CRM, project management, and company knowledge in a single AI-first workspace, built on a flexible data model so new fields, objects, and workflows are configuration, not code.",
+  "description": "ReCaptured puts your customers, projects, and knowledge in one system, built on a flexible data model so new fields, objects, and workflows are configuration, not code.",
   "publisher": {
     "@type": "Organization",
     "name": "ReCaptured",
@@ -39,167 +39,147 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Schibsted+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script>document.documentElement.className+=' js';</script>
 <style>
   :root{
-    --bg:#0F0C0A;
-    --bg-2:#16110D;
-    --panel:#1B1510;
-    --cream:#F4ECDE;
-    --soft:#C9BEAD;
-    --muted:#8C8170;
-    --accent:#E8A33D;
-    --accent-2:#C9722B;
-    --line:rgba(244,236,222,.12);
-    --line-2:rgba(244,236,222,.07);
-    --font-serif:'Playfair Display',Georgia,serif;
-    --maxw:1200px;
+    --bg:#FBFAF8;        /* page near-white */
+    --bg-2:#F2EEE6;      /* light warm band / tiles */
+    --card:#FFFFFF;
+    --ink:#171310;       /* near-black body/heading text */
+    --ink-2:#3D352C;     /* dark secondary text */
+    --accent:#E8A33D;    /* amber — accents & buttons only */
+    --accent-press:#CF8B27;
+    --btn-ink:#1A1206;   /* near-black label on amber */
+    --line:#E2DBD0;      /* visible light border */
+    --line-strong:#CABFAE;
+    --ok:#2E6B33;        /* green status text */
+    --warn:#8A5A12;      /* dark amber status text */
+    --crit:#B3261E;      /* red status */
+    --focus:#15509E;     /* high-contrast focus ring */
+    --maxw:1180px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
   body{
-    background:var(--bg);color:var(--cream);
-    font-family:'Schibsted Grotesk',sans-serif;font-size:18px;line-height:1.6;
+    background:var(--bg);color:var(--ink);
+    font-family:'Archivo',system-ui,Arial,sans-serif;font-size:19px;line-height:1.6;
     -webkit-font-smoothing:antialiased;overflow-x:hidden;
   }
-  body::after{ /* grain */
-    content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.045;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 36px}
-  h1,h2,h3{font-family:'Archivo',sans-serif;font-weight:800;line-height:1.02;letter-spacing:-.025em}
-  /* high-contrast serif for display headlines, with gold italic emphasis */
-  h1.hero,.sec-head,.rcc-head,.proof h2,.final h2{font-family:var(--font-serif);font-weight:700;letter-spacing:-.01em;line-height:1.06}
-  h1.hero em,.sec-head em,.rcc-head em,.proof h2 em,.final h2 em{font-style:italic;color:var(--accent);font-weight:700}
-  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:500}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+  h1,h2,h3{font-family:'Archivo',system-ui,Arial,sans-serif;font-weight:800;line-height:1.12;letter-spacing:-.01em;color:var(--ink)}
+  .eyebrow{font-size:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-weight:700}
   a{color:inherit;text-decoration:none}
-  .accent{color:var(--accent)}
+  /* visible focus + larger hit areas */
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 
-  /* reveal */
-  .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  /* reveal (fade up only — never leaves content hidden) */
+  .js .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
-  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+  .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
+  @media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;font-family:inherit;font-size:17px;font-weight:700;letter-spacing:.01em;padding:13px 26px;border-radius:8px;transition:.2s ease;cursor:pointer;border:2px solid transparent}
+  .btn-solid{background:var(--accent);color:var(--btn-ink);border-color:var(--accent)}
+  .btn-solid:hover{background:var(--accent-press);border-color:var(--accent-press)}
+  .btn-ghost{border-color:var(--line-strong);color:var(--ink);background:var(--card)}
+  .btn-ghost:hover{border-color:var(--ink);background:var(--bg-2)}
+  .textlink{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px;text-decoration-color:var(--accent)}
+  .textlink:hover{text-decoration-color:var(--ink)}
 
   /* nav */
-  nav{position:sticky;top:0;z-index:100;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line-2)}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .logo-lockup{display:inline-flex;align-items:center;gap:12px}
-  .logo-mark{width:40px;height:40px;border-radius:9px;display:block;flex:none}
-  .logo-words{display:flex;flex-direction:column;line-height:1}
-  .logo-words .logo{font-family:'Archivo',sans-serif;font-weight:800;font-size:21px;letter-spacing:-.03em}
-  .logo b{color:var(--accent);font-weight:800}
-  .logo-os{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.22em;color:var(--accent);margin-top:5px}
-  .btn{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.03em;padding:13px 24px;border-radius:3px;transition:.28s ease;cursor:pointer;border:1px solid transparent}
-  .btn-solid{background:var(--accent);color:#1a1206;font-weight:500}
-  .btn-solid:hover{background:var(--cream);transform:translateY(-1px)}
-  .btn-ghost{border-color:var(--line);color:var(--cream)}
-  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+  .logo-lockup{display:inline-flex;align-items:center;gap:13px}
+  .logo-mark{width:42px;height:42px;border-radius:9px;display:block;flex:none}
+  .logo-words{display:flex;flex-direction:column;line-height:1.05}
+  .logo-words .logo{font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--ink)}
+  .logo-words .logo b{color:var(--ink);font-weight:800}
+  .logo-os{font-size:16px;letter-spacing:.04em;color:var(--ink-2);font-weight:600;margin-top:2px}
 
-  /* hero */
-  header{position:relative;padding:clamp(80px,13vw,170px) 0 clamp(70px,10vw,130px);overflow:hidden}
-  .glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;z-index:0;pointer-events:none}
-  .glow.a{width:620px;height:620px;background:radial-gradient(circle,var(--accent-2),transparent 65%);top:-180px;right:-140px;animation:drift 18s ease-in-out infinite alternate}
-  .glow.b{width:480px;height:480px;background:radial-gradient(circle,#7a4a16,transparent 68%);bottom:-200px;left:-120px;animation:drift2 22s ease-in-out infinite alternate}
-  @keyframes drift{to{transform:translate(-60px,40px) scale(1.1)}}
-  @keyframes drift2{to{transform:translate(70px,-30px) scale(1.05)}}
-  header .wrap{position:relative;z-index:1}
-  h1.hero{font-size:clamp(44px,7.6vw,104px);max-width:16ch;margin-top:26px}
-  .hero-sub{font-size:clamp(18px,1.9vw,23px);color:var(--soft);max-width:58ch;margin-top:34px}
-  .hero-cta{margin-top:44px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-  .hero-cta .scroll{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.03em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:3px;transition:.25s}
-  .hero-cta .scroll:hover{color:var(--accent);border-color:var(--accent)}
-  .hero-meta{margin-top:64px;display:flex;gap:40px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--muted);border-top:1px solid var(--line-2);padding-top:24px}
-  .hero-meta b{color:var(--cream);font-weight:500}
+  /* hero — solid field, no gradient/image behind text */
+  header{background:var(--bg);padding:clamp(56px,9vw,104px) 0 clamp(48px,7vw,84px)}
+  h1.hero{font-size:clamp(34px,5.2vw,62px);max-width:18ch;margin-top:22px;line-height:1.1}
+  .hero-sub{font-size:clamp(19px,1.7vw,22px);color:var(--ink-2);max-width:60ch;margin-top:26px}
+  .hero-cta{margin-top:36px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .hero-meta{margin-top:52px;display:flex;gap:14px 40px;flex-wrap:wrap;font-size:17px;color:var(--ink-2);border-top:1px solid var(--line);padding-top:24px}
+  .hero-meta b{color:var(--ink);font-weight:700}
 
   /* sections */
-  section{position:relative;padding:clamp(72px,10vw,130px) 0;border-top:1px solid var(--line-2)}
-  .grid2{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(30px,6vw,90px);align-items:start}
-  .sec-head{font-size:clamp(32px,4.4vw,58px);max-width:16ch}
-  .sec-head.wide{max-width:20ch}
-  .body-lg{color:var(--soft);font-size:clamp(17px,1.4vw,21px)}
-  .body-lg p+p{margin-top:20px}
-  .sticky-label{position:sticky;top:120px}
-  .signum{font-family:var(--font-serif);font-size:clamp(48px,6vw,86px);font-weight:800;color:var(--accent);line-height:1;margin-bottom:12px}
+  section{padding:clamp(56px,8vw,104px) 0;border-top:1px solid var(--line)}
+  .grid2{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(28px,5vw,72px);align-items:start}
+  .sec-head{font-size:clamp(28px,3.4vw,44px);max-width:18ch;line-height:1.14}
+  .body-lg{color:var(--ink-2);font-size:clamp(18px,1.3vw,20px)}
+  .body-lg p+p{margin-top:18px}
+  .sticky-label{position:sticky;top:104px}
+  .signum{font-size:clamp(44px,5vw,72px);font-weight:900;color:var(--ink);line-height:1;margin-bottom:10px}
+  .signum::after{content:"";display:block;width:46px;height:5px;background:var(--accent);border-radius:3px;margin-top:14px}
 
   /* proof band */
-  .proof{text-align:center;background:linear-gradient(180deg,var(--bg-2),var(--bg))}
-  .proof h2{font-size:clamp(34px,5vw,64px);max-width:20ch;margin:18px auto 0}
-  .proof-sub{color:var(--soft);max-width:62ch;margin:24px auto 0;font-size:clamp(16px,1.4vw,20px)}
-  .proof-stat{margin-top:42px;display:inline-flex;align-items:center;gap:24px;text-align:left;border:1px solid var(--line);border-radius:14px;padding:24px 36px;background:var(--bg-2)}
-  .proof-stat .big{font-family:var(--font-serif);font-size:clamp(60px,9vw,104px);font-weight:900;color:var(--accent);line-height:.85}
-  .proof-stat .stat-cap{color:var(--soft);max-width:24ch;font-size:15px;line-height:1.45}
+  .proof{background:var(--bg-2)}
+  .proof .wrap{text-align:center}
+  .proof h2{font-size:clamp(28px,4vw,48px);max-width:20ch;margin:14px auto 0}
+  .proof-sub{color:var(--ink-2);max-width:64ch;margin:22px auto 0;font-size:clamp(18px,1.3vw,20px)}
+  .proof-stat{margin-top:38px;display:inline-flex;align-items:center;gap:22px;text-align:left;border:2px solid var(--line-strong);border-radius:14px;padding:24px 34px;background:var(--card)}
+  .proof-stat .big{font-size:clamp(60px,9vw,96px);font-weight:900;color:var(--ink);line-height:.85}
+  .proof-stat .stat-cap{color:var(--ink);max-width:24ch;font-size:18px;line-height:1.4;font-weight:600}
 
-  /* capabilities / pillars */
-  .caps{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2);border-radius:10px;overflow:hidden;margin-top:56px}
-  .cap{background:var(--bg);padding:40px 34px;transition:background .35s}
-  .cap:hover{background:var(--bg-2)}
-  .cap .k{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--accent)}
-  .cap h3{font-size:25px;margin:16px 0 12px;font-weight:600}
-  .cap p{color:var(--soft);font-size:16px}
-  .cap .eg{margin-top:18px;padding-top:16px;border-top:1px solid var(--line-2);font-size:14.5px;color:var(--muted);line-height:1.5}
-  .cap .eg b{color:var(--accent);font-weight:500;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;display:block;margin-bottom:6px}
+  /* pillars */
+  .caps{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:48px}
+  .cap{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:34px 30px}
+  .cap .k{font-size:16px;letter-spacing:.06em;color:var(--ink-2);font-weight:700;text-transform:uppercase}
+  .cap h3{font-size:24px;margin:14px 0 12px;font-weight:800}
+  .cap p{color:var(--ink-2);font-size:18px}
+  .cap .eg{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:17px;color:var(--ink-2);line-height:1.5}
+  .cap .eg b{color:var(--ink);font-weight:700;font-size:16px;letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:7px}
 
-  /* feature cards (intelligence / audio) */
-  .feats{display:grid;gap:1px;background:var(--line-2);border:1px solid var(--line-2);border-radius:10px;overflow:hidden;margin-top:48px}
+  /* feature cards */
+  .feats{display:grid;gap:18px;margin-top:44px}
   .feats.two{grid-template-columns:repeat(2,1fr)}
   .feats.three{grid-template-columns:repeat(3,1fr)}
-  .feat{background:var(--bg);padding:34px 30px;transition:background .35s}
-  .feat:hover{background:var(--bg-2)}
-  .feat .fk{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
-  .feat h3{font-size:21px;font-weight:600;margin:14px 0 10px;letter-spacing:-.01em}
-  .feat p{color:var(--soft);font-size:15.5px;line-height:1.55}
+  .feat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:30px 28px}
+  .feat .fk{font-size:16px;letter-spacing:.05em;color:var(--ink-2);font-weight:700;text-transform:uppercase}
+  .feat h3{font-size:21px;font-weight:800;margin:13px 0 10px}
+  .feat p{color:var(--ink-2);font-size:18px;line-height:1.55}
 
   /* compliance pills */
-  .pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-  .pill{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:99px;padding:11px 22px;background:rgba(232,163,61,.05)}
-  .pill-note{margin-top:20px;font-size:14.5px;color:var(--muted);font-style:italic}
+  .pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .pill{font-size:17px;letter-spacing:.04em;color:var(--ink);font-weight:700;border:2px solid var(--accent);border-radius:10px;padding:11px 20px;background:var(--card)}
+  .pill-note{margin-top:20px;font-size:18px;color:var(--ink-2)}
 
   /* summary band */
-  .summary .sum-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2);border-radius:10px;overflow:hidden}
-  .sum-cell{background:var(--bg);padding:38px 30px}
-  .sum-k{font-family:var(--font-serif);font-size:clamp(26px,3.2vw,38px);font-weight:800;color:var(--cream)}
-  .sum-v{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-top:14px;line-height:1.5}
+  .summary{background:var(--bg-2)}
+  .summary .sum-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .sum-cell{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:32px 26px}
+  .sum-k{font-size:clamp(26px,3vw,34px);font-weight:900;color:var(--ink)}
+  .sum-v{font-size:16px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2);margin-top:12px;line-height:1.5;font-weight:600}
 
   /* final */
-  .final{text-align:center;background:linear-gradient(180deg,var(--bg),#120d09)}
-  .final h2{font-size:clamp(38px,6vw,82px);max-width:16ch;margin:0 auto 26px}
-  .final p{color:var(--soft);max-width:54ch;margin:0 auto 40px;font-size:20px}
+  .final .wrap{text-align:center}
+  .final h2{font-size:clamp(30px,4.4vw,52px);max-width:18ch;margin:0 auto 22px}
+  .final p{color:var(--ink-2);max-width:56ch;margin:0 auto 36px;font-size:20px}
   .final-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
-  footer{border-top:1px solid var(--line-2);padding:46px 0}
-  .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.05em;color:var(--muted)}
-  .foot-in .logo{font-family:'Archivo',sans-serif;font-weight:800;font-size:18px;letter-spacing:-.03em;color:var(--cream)}
+  footer{border-top:1px solid var(--line);padding:42px 0;background:var(--bg)}
+  .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;font-size:16px;color:var(--ink-2)}
+  .foot-in .logo{font-weight:800;font-size:19px;letter-spacing:-.02em;color:var(--ink)}
+  .foot-in .logo b{color:var(--ink)}
 
   @media(max-width:820px){
     .feats.two,.feats.three{grid-template-columns:1fr}
-    .grid2{grid-template-columns:1fr;gap:24px}
+    .grid2{grid-template-columns:1fr;gap:22px}
     .sticky-label{position:static}
     .caps{grid-template-columns:1fr}
     .summary .sum-grid{grid-template-columns:1fr 1fr}
   }
   @media(max-width:480px){
-    body{font-size:16px}
     .wrap{padding:0 20px}
-    .nav-in{height:64px}
-    .logo-mark{width:34px;height:34px}
-    .logo-words .logo{font-size:18px}
-    .nav-in .btn{padding:11px 16px}
-    header{padding:60px 0 54px}
-    h1.hero{font-size:clamp(34px,11vw,46px);margin-top:18px}
-    .hero-sub{font-size:17px;margin-top:24px}
-    .hero-cta{margin-top:30px;gap:14px}
-    .hero-meta{margin-top:42px;gap:14px 24px;padding-top:20px}
-    section{padding:54px 0}
-    .sec-head{font-size:clamp(27px,8vw,34px)}
-    .body-lg{font-size:17px}
-    .cap{padding:30px 24px}
-    .cap h3{font-size:22px}
-    .feat{padding:28px 24px}
-    .proof-stat{flex-direction:column;align-items:flex-start;gap:14px;padding:24px 26px}
-    .final h2{font-size:clamp(34px,11vw,52px)}
-    .final p{font-size:18px}
-    .foot-in{gap:12px;font-size:11px}
+    .nav-in{min-height:64px}
+    .logo-mark{width:36px;height:36px}
+    header{padding:44px 0 40px}
+    section{padding:48px 0}
+    .proof-stat{flex-direction:column;align-items:flex-start;gap:14px;padding:22px 24px}
   }
 </style>
 </head>
@@ -210,7 +190,7 @@
     <a href="#" class="logo-lockup" aria-label="ReCaptured Intelligent OS home">
       <img class="logo-mark" src="recaptured-logo-80.png"
            srcset="recaptured-logo-40.png 1x, recaptured-logo-80.png 2x, recaptured-logo-120.png 3x"
-           width="40" height="40" alt="ReCaptured">
+           width="42" height="42" alt="ReCaptured">
       <span class="logo-words">
         <span class="logo">Re<b>Captured</b></span>
         <span class="logo-os">Intelligent OS</span>
@@ -221,20 +201,18 @@
 </nav>
 
 <header>
-  <div class="glow a"></div>
-  <div class="glow b"></div>
   <div class="wrap">
-    <div class="eyebrow reveal in">One platform · CRM, projects &amp; whatever you need next</div>
-    <h1 class="hero reveal in d1">CRM, projects — and <em>whatever your business needs next</em> — in one intelligent system.</h1>
-    <p class="hero-sub reveal in d2">ReCaptured Intelligent OS unifies CRM, project management, and your company knowledge in a single AI-first workspace — then keeps going. Because it's built on a flexible data model, the platform isn't boxed into a fixed set of features: it takes on the objects, fields, and workflows your business needs and grows right alongside you. No more stitching together five disconnected tools, and no more outgrowing your software.</p>
+    <div class="eyebrow reveal in">One system for your whole business</div>
+    <h1 class="hero reveal in d1">ReCaptured puts your customers, projects, and knowledge in one system — so a small team gets more done without juggling five tools.</h1>
+    <p class="hero-sub reveal in d2">Your customers, your projects, your documents, and the everyday work that ties them together all live in one place. Your team stops switching between tools and copying information from one to the next. Start with what you need today, and add more as you grow — without buying another app.</p>
     <div class="hero-cta reveal in d3">
       <a href="https://calendly.com/carpenterlogan3/discovery-call" target="_blank" rel="noopener noreferrer" class="btn btn-solid">Book a call</a>
-      <a href="#configure" class="scroll">Shape it around your business ↓</a>
+      <a href="#configure" class="textlink">See how it works ↓</a>
     </div>
     <div class="hero-meta reveal in d4">
-      <div><b>All-in-one</b> — CRM, projects &amp; more</div>
-      <div><b>AI-first</b> — from the data layer up</div>
-      <div><b>Days, not months</b> — to adapt</div>
+      <div><b>One system</b> — not five separate tools</div>
+      <div><b>Set up in days</b> — not months</div>
+      <div><b>Grows</b> as your business grows</div>
     </div>
   </div>
 </header>
@@ -242,11 +220,11 @@
 <section id="proof" class="proof">
   <div class="wrap">
     <div class="eyebrow reveal">Grows with you</div>
-    <h2 class="reveal d1">Grows with you. <em>Days, not months.</em></h2>
-    <p class="proof-sub reveal d2">As your business expands into new lines, teams, and processes, ReCaptured expands with it. Built on a flexible data model, most new fields, objects, and workflows are configuration — not code — so new needs go live in days, with no rip-and-replace.</p>
+    <h2 class="reveal d1">Add new needs in days — not months.</h2>
+    <p class="proof-sub reveal d2">As your business grows, ReCaptured grows with it. Most new fields, forms, and workflows are just configuration — so new needs go live in days, with no rebuild and nothing to rip and replace.</p>
     <div class="proof-stat reveal d3">
       <div class="big">0</div>
-      <div class="stat-cap">code changes needed for the majority of new requirements</div>
+      <div class="stat-cap">code changes needed for most new requirements</div>
     </div>
   </div>
 </section>
@@ -256,37 +234,37 @@
     <div class="grid2">
       <div class="sticky-label">
         <div class="signum reveal">01</div>
-        <div class="eyebrow reveal d1">CRM, Projects &amp; whatever you need next</div>
+        <div class="eyebrow reveal d1">CRM, projects &amp; whatever you need next</div>
       </div>
       <div>
-        <h2 class="sec-head reveal">Start with the essentials. <em>Extend to anything.</em></h2>
-        <div class="body-lg reveal d1" style="margin-top:30px"><p>Start with the essentials below — then extend the very same system to anything else you run. New capabilities are added as configuration, not another tool to buy and bolt on.</p></div>
+        <h2 class="sec-head reveal">Start with the basics. Add anything else later.</h2>
+        <div class="body-lg reveal d1" style="margin-top:26px"><p>Start with the essentials below — then extend the very same system to anything else you run. New capabilities are added as configuration, not another tool to buy and bolt on.</p></div>
       </div>
     </div>
     <div class="caps">
       <div class="cap reveal">
-        <div class="k">i — CRM</div>
+        <div class="k">CRM</div>
         <h3>CRM that knows your customers</h3>
-        <p>Companies, contacts, deals, and every interaction in one connected graph — enriched and kept current by AI so your team always works from the truth.</p>
-        <div class="eg"><b>In practice</b>Model an entire buying committee as a connected graph — every buyer, blocker, and silent veto — to surface the one relationship that moves a deal.</div>
+        <p>Companies, contacts, deals, and every interaction in one connected place — kept current automatically, so your team always works from the truth.</p>
+        <div class="eg"><b>In practice</b>Map an entire buying group — every decision-maker and blocker — to find the one relationship that moves a deal forward.</div>
       </div>
       <div class="cap reveal d1">
-        <div class="k">ii — PROJECTS</div>
+        <div class="k">Projects</div>
         <h3>Project &amp; work management</h3>
         <p>Projects, tasks, milestones, and workloads live beside your customer data — with boards, calendars, timelines, and dashboards out of the box.</p>
-        <div class="eg"><b>In practice</b>Run a deal through a stage-gated system where every stage is owned and gated, so nothing slips and work only moves forward once it's earned.</div>
+        <div class="eg"><b>In practice</b>Run a deal through clear, owned stages, so nothing slips and work only moves forward once it's truly ready.</div>
       </div>
       <div class="cap reveal">
-        <div class="k">iii — KNOWLEDGE</div>
+        <div class="k">Knowledge</div>
         <h3>A living knowledge base</h3>
-        <p>Documents, notes, and files become searchable institutional memory. Ask in plain language and get answers grounded in your own content.</p>
-        <div class="eg"><b>In practice</b>Ask a plain-language question and get a source-cited answer in seconds instead of a day of digging through people and documents.</div>
+        <p>Documents, notes, and files become a searchable company memory. Ask a question in plain language and get answers grounded in your own content.</p>
+        <div class="eg"><b>In practice</b>Ask a plain-language question and get a sourced answer in seconds, instead of a day spent digging through people and files.</div>
       </div>
       <div class="cap reveal d1">
-        <div class="k">iv — MEMORY</div>
-        <h3>Memory &amp; learning built in</h3>
-        <p>The system captures what happens, distills it into durable knowledge, and gets smarter with every interaction — insight compounds instead of walking out the door.</p>
-        <div class="eg"><b>In practice</b>Outreach across every inbox becomes one shared, structured record automatically — no double entry, no behavior change, full capture.</div>
+        <div class="k">Memory</div>
+        <h3>Remembers what your team learns</h3>
+        <p>The system captures what happens and turns it into lasting knowledge — so the next person doesn't have to re-learn what the company already knew.</p>
+        <div class="eg"><b>In practice</b>Email and notes across every inbox become one shared, organized record — no double entry and nothing lost.</div>
       </div>
     </div>
   </div>
@@ -297,23 +275,23 @@
     <div class="grid2">
       <div class="sticky-label">
         <div class="signum reveal">02</div>
-        <div class="eyebrow reveal d1">Intelligence at the core</div>
+        <div class="eyebrow reveal d1">AI that handles the busywork</div>
       </div>
       <div>
-        <h2 class="sec-head reveal">Built <em>AI-first</em> — from the data layer up.</h2>
-        <div class="body-lg reveal d1" style="margin-top:30px"><p>Most software bolted on a chatbot. ReCaptured was built AI-first from the data layer up — intelligence runs through your CRM, projects, and knowledge as a teammate that drafts, enriches, recalls, and acts, always with your confirmation.</p></div>
+        <h2 class="sec-head reveal">Let the system do the typing and the chasing.</h2>
+        <div class="body-lg reveal d1" style="margin-top:26px"><p>The AI works inside the tools your team already uses — filling in records, drafting updates, finding the right information, and turning a voice note or meeting into clean, organized data. It always asks before it acts, and every change is tracked.</p></div>
       </div>
     </div>
     <div class="feats two">
       <div class="feat reveal">
-        <div class="fk">AI-first, end to end</div>
-        <h3>A teammate inside the work</h3>
-        <p>Auto-fill records, draft updates, surface the right context, and turn a voice note or meeting into clean, structured data — inside the flow of work, with full provenance on every change.</p>
+        <div class="fk">Less data entry</div>
+        <h3>Records fill themselves in</h3>
+        <p>Auto-fill records, draft updates, surface the right context, and turn a voice note or meeting into clean, structured data — inside the flow of work, with a clear history of every change.</p>
       </div>
       <div class="feat reveal d1">
-        <div class="fk">Memory that compounds</div>
-        <h3>Never re-learn what you knew</h3>
-        <p>ReCaptured remembers decisions, customers, and what worked — consolidating day-to-day activity into lasting knowledge so your team never re-learns what the company already knew.</p>
+        <div class="fk">Nothing gets re-learned</div>
+        <h3>It remembers, so you don't repeat work</h3>
+        <p>ReCaptured remembers decisions, customers, and what worked — turning day-to-day activity into lasting knowledge, so your team never re-learns what the company already knew.</p>
       </div>
     </div>
   </div>
@@ -327,25 +305,25 @@
         <div class="eyebrow reveal d1">Capture every word — built-in audio</div>
       </div>
       <div>
-        <h2 class="sec-head reveal">Every conversation, <em>captured and structured.</em></h2>
-        <div class="body-lg reveal d1" style="margin-top:30px"><p>Conversations, meetings, and site visits become clean, structured records automatically — transcribed and summarized in-platform, then sealed as a defensible system of record.</p></div>
+        <h2 class="sec-head reveal">Record a meeting, get clean notes automatically.</h2>
+        <div class="body-lg reveal d1" style="margin-top:26px"><p>Conversations, meetings, and site visits become clean, organized records on their own — transcribed and summarized inside the platform, then kept as a record you can trust.</p></div>
       </div>
     </div>
     <div class="feats three">
       <div class="feat reveal">
-        <div class="fk">Transcription &amp; summarization, included</div>
+        <div class="fk">Transcribe &amp; summarize, included</div>
         <h3>Audio becomes records</h3>
-        <p>Conversations, meetings, and site visits become clean, structured records automatically. ReCaptured transcribes and summarizes audio in-platform, then drops the key points straight onto the right customer, project, or note.</p>
+        <p>Conversations, meetings, and site visits become clean, structured records automatically. ReCaptured transcribes and summarizes audio in-platform, then puts the key points straight onto the right customer, project, or note.</p>
       </div>
       <div class="feat reveal d1">
-        <div class="fk">Optional field recording device</div>
+        <div class="fk">Optional field recorder</div>
         <h3>So nothing is missed</h3>
         <p>An optional hands-free field audio device captures discussions out in the world, where notes never get written. Walk a site, run a meeting, take a call — it's all captured and turned into records back in the platform.</p>
       </div>
       <div class="feat reveal d2">
-        <div class="fk">Immutable transcripts</div>
-        <h3>A defensible audit trail</h3>
-        <p>Every transcript is sealed and tamper-evident — a permanent, content-verified system of record. Corrections are tracked separately, never overwritten, giving you a complete and defensible history of what was said.</p>
+        <div class="fk">Sealed transcripts</div>
+        <h3>A record you can defend</h3>
+        <p>Every transcript is sealed and tamper-evident — a permanent, verified record. Corrections are tracked separately, never overwritten, giving you a complete and defensible history of what was said.</p>
       </div>
     </div>
   </div>
@@ -353,159 +331,152 @@
 
 <!-- =========  RECAPTURED · INTELLIGENT OS  ·  CONFIGURE + COMMAND CENTER  —  START  ========= -->
 <style>
-  .rcc-section{position:relative;padding:clamp(72px,10vw,130px) 0;border-top:1px solid var(--line-2,rgba(244,236,222,.07))}
-  .rcc-wrap{max-width:var(--maxw,1200px);margin:0 auto;padding:0 36px}
-  .rcc-grid2{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(30px,6vw,90px);align-items:start}
-  .rcc-sticky{position:sticky;top:120px}
-  .rcc-eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#E8A33D);font-weight:500}
-  .rcc-sub{color:var(--soft,#C9BEAD);font-size:clamp(17px,1.4vw,21px);margin-top:30px;line-height:1.6}
-  .rcc-sub p+p{margin-top:16px}
-  .rcc-try{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.05em;color:var(--muted,#8C8170);margin-top:22px;line-height:1.7}
-  .rcc-try b{color:var(--accent,#E8A33D);font-weight:500}
+  .rcc-section{padding:clamp(56px,8vw,104px) 0;border-top:1px solid var(--line,#E2DBD0)}
+  .rcc-wrap{max-width:var(--maxw,1180px);margin:0 auto;padding:0 32px}
+  .rcc-grid2{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(28px,5vw,72px);align-items:start}
+  .rcc-sticky{position:sticky;top:104px}
+  .rcc-eyebrow{font-size:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2,#3D352C);font-weight:700}
+  .rcc-head{font-size:clamp(28px,3.4vw,44px);font-weight:800;line-height:1.14;color:var(--ink,#171310);max-width:18ch;letter-spacing:-.01em}
+  .rcc-sub{color:var(--ink-2,#3D352C);font-size:clamp(18px,1.3vw,20px);margin-top:24px;line-height:1.6}
+  .rcc-sub p+p{margin-top:14px}
+  .rcc-try{font-size:17px;color:var(--ink-2,#3D352C);margin-top:20px;line-height:1.6}
+  .rcc-try b{color:var(--ink,#171310);font-weight:700}
 
   /* configurator */
-  .cfg{margin-top:48px;background:linear-gradient(155deg,#1d1711,#130f0b);border:1px solid var(--line,rgba(244,236,222,.12));border-radius:16px;padding:clamp(28px,4vw,44px);box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
-  .cfg-badge{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--accent,#E8A33D);text-transform:uppercase}
-  .cfg-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--accent,#E8A33D);box-shadow:0 0 10px var(--accent,#E8A33D);animation:rccPulse2 1.8s infinite}
-  @keyframes rccPulse2{50%{opacity:.35}}
-  .cfg-lead{color:var(--soft,#C9BEAD);font-size:clamp(16px,1.4vw,19px);margin-top:14px;max-width:62ch;line-height:1.55}
-  .cfg-controls{display:grid;grid-template-columns:1fr 1.5fr;gap:26px;margin-top:30px}
-  .cfg-field label{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft,#C9BEAD);margin-bottom:13px}
-  .cfg-opts{display:flex;flex-wrap:wrap;gap:9px}
-  .cfg-opt{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.03em;color:var(--soft,#C9BEAD);background:#0d0b09;border:1px solid var(--line,rgba(244,236,222,.12));border-radius:6px;padding:10px 14px;cursor:pointer;transition:.2s}
-  .cfg-opt:hover{border-color:rgba(232,163,61,.55);color:var(--cream,#F4ECDE)}
-  .cfg-opt.on{border-color:var(--accent,#E8A33D);color:var(--accent,#E8A33D);background:rgba(232,163,61,.08)}
-  .cfg-apply{margin-top:26px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.03em;padding:14px 24px;border-radius:3px;cursor:pointer;background:var(--accent,#E8A33D);color:#1a1206;border:1px solid var(--accent,#E8A33D);font-weight:500;transition:.25s}
-  .cfg-apply:hover{background:var(--cream,#F4ECDE)}
-  .cfg-note{margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.04em;color:var(--muted,#8C8170)}
+  .cfg{margin-top:44px;background:var(--card,#FFFFFF);border:1px solid var(--line,#E2DBD0);border-radius:14px;padding:clamp(26px,3.5vw,40px)}
+  .cfg-badge{display:inline-flex;align-items:center;gap:9px;font-size:16px;letter-spacing:.05em;color:var(--ink,#171310);text-transform:uppercase;font-weight:700}
+  .cfg-badge .dot{width:9px;height:9px;border-radius:50%;background:var(--accent,#E8A33D)}
+  .cfg-lead{color:var(--ink-2,#3D352C);font-size:18px;margin-top:14px;max-width:64ch;line-height:1.55}
+  .cfg-controls{display:grid;grid-template-columns:1fr 1.5fr;gap:26px;margin-top:28px}
+  .cfg-field label{display:block;font-size:16px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2,#3D352C);margin-bottom:12px;font-weight:700}
+  .cfg-opts{display:flex;flex-wrap:wrap;gap:10px}
+  .cfg-opt{font-size:16px;font-weight:600;color:var(--ink,#171310);background:var(--bg,#FBFAF8);border:2px solid var(--line-strong,#CABFAE);border-radius:9px;padding:11px 16px;min-height:46px;cursor:pointer;transition:.15s}
+  .cfg-opt:hover{border-color:var(--ink,#171310)}
+  .cfg-opt.on{border-color:var(--accent,#E8A33D);background:#FBEFD8;color:var(--btn-ink,#1A1206);font-weight:700}
+  .cfg-apply{margin-top:26px;font-size:17px;font-weight:700;padding:13px 24px;min-height:48px;border-radius:8px;cursor:pointer;background:var(--accent,#E8A33D);color:var(--btn-ink,#1A1206);border:2px solid var(--accent,#E8A33D);transition:.2s}
+  .cfg-apply:hover{background:var(--accent-press,#CF8B27);border-color:var(--accent-press,#CF8B27)}
+  .cfg-note{margin-top:14px;font-size:16px;color:var(--ink-2,#3D352C);line-height:1.5}
 
-  /* the product window */
-  .rcc-app{margin-top:30px;background:linear-gradient(155deg,#1d1711,#120e0a);border:1px solid var(--line,rgba(244,236,222,.12));
-    border-radius:16px;overflow:hidden;box-shadow:0 50px 90px -45px rgba(0,0,0,.8);opacity:1;transform:none}
-  .rcc-section.js-rcc .rcc-app{opacity:0;transform:translateY(26px);transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1)}
+  /* product window */
+  .rcc-app{margin-top:24px;background:var(--card,#FFFFFF);border:1px solid var(--line,#E2DBD0);
+    border-radius:14px;overflow:hidden;box-shadow:0 18px 40px -28px rgba(23,19,16,.35);opacity:1;transform:none}
+  .rcc-section.js-rcc .rcc-app{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
   .rcc-section.js-rcc.is-live .rcc-app{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.rcc-section.js-rcc .rcc-app{opacity:1;transform:none;transition:none}}
 
-  .rcc-bar{position:relative;display:flex;align-items:center;gap:11px;padding:15px 20px;border-bottom:1px solid var(--line-2,rgba(244,236,222,.07));background:rgba(0,0,0,.22)}
-  .rcc-bdot{width:9px;height:9px;border-radius:50%;background:var(--accent,#E8A33D);box-shadow:0 0 0 3px rgba(232,163,61,.16)}
-  .rcc-brand{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.18em;color:var(--cream,#F4ECDE)}
-  .rcc-tenant{display:inline-flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
-    color:var(--soft,#C9BEAD);background:transparent;border:1px solid var(--line,rgba(244,236,222,.12));border-radius:5px;padding:4px 9px;margin-left:6px;cursor:pointer;transition:.2s}
-  .rcc-tenant:hover{border-color:rgba(232,163,61,.55);color:var(--cream,#F4ECDE)}
-  .rcc-tenant .car{font-size:8px;opacity:.7;transition:transform .2s}
+  .rcc-bar{position:relative;display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;padding:16px 20px;border-bottom:1px solid var(--line,#E2DBD0);background:var(--bg-2,#F2EEE6)}
+  .rcc-bdot{width:10px;height:10px;border-radius:50%;background:var(--accent,#E8A33D)}
+  .rcc-brand{font-size:16px;letter-spacing:.04em;color:var(--ink,#171310);font-weight:700}
+  .rcc-tenant{display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:600;
+    color:var(--ink,#171310);background:var(--card,#FFFFFF);border:2px solid var(--line-strong,#CABFAE);border-radius:8px;padding:7px 12px;min-height:44px;cursor:pointer;transition:.15s}
+  .rcc-tenant:hover{border-color:var(--ink,#171310)}
+  .rcc-tenant .car{font-size:16px;transition:transform .2s}
   .rcc-tenant.open .car{transform:rotate(180deg)}
-  .rcc-hint{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;color:var(--muted,#8C8170);opacity:.85}
-  .rcc-hint b{color:var(--accent,#E8A33D);font-weight:500}
-  .rcc-meta{margin-left:auto;display:flex;align-items:center;gap:14px}
-  .rcc-live{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;color:#74A878;display:inline-flex;align-items:center;gap:6px}
-  .rcc-live .ld{width:7px;height:7px;border-radius:50%;background:#74A878;animation:rccBreathe 2.4s ease-in-out infinite}
-  @keyframes rccBreathe{0%,100%{box-shadow:0 0 0 0 rgba(116,168,120,.55)}50%{box-shadow:0 0 0 6px rgba(116,168,120,0)}}
-  .rcc-sync{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:var(--muted,#8C8170)}
+  .rcc-meta{margin-left:auto;display:flex;align-items:center;gap:16px}
+  .rcc-live{font-size:16px;letter-spacing:.02em;color:var(--ok,#2E6B33);font-weight:700;display:inline-flex;align-items:center;gap:7px}
+  .rcc-live .ld{width:9px;height:9px;border-radius:50%;background:var(--ok,#2E6B33)}
+  .rcc-sync{font-size:16px;color:var(--ink-2,#3D352C)}
 
-  .rcc-menu{position:absolute;z-index:20;top:48px;left:170px;min-width:240px;background:#161009;border:1px solid var(--line,rgba(244,236,222,.12));
-    border-radius:10px;padding:6px;box-shadow:0 24px 50px -22px rgba(0,0,0,.85);display:none}
-  .rcc-menu.open{display:block;animation:rccFade .22s ease both}
-  .rcc-mlabel{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted,#8C8170);padding:7px 9px 4px}
-  .rcc-mitem{display:block;width:100%;text-align:left;background:transparent;border:0;border-radius:7px;padding:9px 9px;cursor:pointer;transition:.15s}
-  .rcc-mitem:hover{background:rgba(232,163,61,.08)}
-  .rcc-mitem .mn{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--cream,#F4ECDE)}
-  .rcc-mitem .mi{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.08em;color:var(--muted,#8C8170);margin-top:3px}
-  .rcc-mitem.on .mn{color:var(--accent,#E8A33D)}
+  .rcc-menu{position:absolute;z-index:20;top:62px;left:20px;min-width:260px;background:var(--card,#FFFFFF);border:1px solid var(--line-strong,#CABFAE);
+    border-radius:10px;padding:6px;box-shadow:0 18px 40px -20px rgba(23,19,16,.4);display:none}
+  .rcc-menu.open{display:block}
+  .rcc-mlabel{font-size:16px;letter-spacing:.02em;color:var(--ink-2,#3D352C);padding:8px 10px 6px;font-weight:600}
+  .rcc-mitem{display:block;width:100%;text-align:left;background:transparent;border:0;border-radius:8px;padding:11px 10px;min-height:48px;cursor:pointer;transition:.12s}
+  .rcc-mitem:hover{background:var(--bg-2,#F2EEE6)}
+  .rcc-mitem.on{background:#FBEFD8}
+  .rcc-mitem .mn{font-size:16px;letter-spacing:.02em;color:var(--ink,#171310);font-weight:600}
+  .rcc-mitem.on .mn{font-weight:800}
+  .rcc-mitem .mi{font-size:16px;color:var(--ink-2,#3D352C);margin-top:3px}
 
   .rcc-tabs{display:flex;flex-wrap:wrap;gap:8px;padding:16px 20px 0}
-  .rcc-tab{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.05em;color:var(--soft,#C9BEAD);
-    background:transparent;border:1px solid var(--line,rgba(244,236,222,.12));border-radius:5px;padding:9px 14px;cursor:pointer;transition:.2s}
-  .rcc-tab:hover{border-color:rgba(232,163,61,.5)}
-  .rcc-tab.on{border-color:var(--accent,#E8A33D);color:var(--accent,#E8A33D);background:rgba(232,163,61,.08)}
+  .rcc-tab{font-size:16px;font-weight:600;color:var(--ink,#171310);
+    background:var(--card,#FFFFFF);border:2px solid var(--line-strong,#CABFAE);border-radius:8px;padding:10px 16px;min-height:46px;cursor:pointer;transition:.15s}
+  .rcc-tab:hover{border-color:var(--ink,#171310)}
+  .rcc-tab.on{border-color:var(--accent,#E8A33D);color:var(--btn-ink,#1A1206);background:var(--accent,#E8A33D);font-weight:700}
 
-  .rcc-stage{position:relative;padding:22px 20px 26px;min-height:296px}
-  .rcc-view{display:none;animation:rccFade .4s ease both}
+  .rcc-stage{position:relative;padding:22px 20px 26px;min-height:300px}
+  .rcc-view{display:none}
   .rcc-view.on{display:block}
-  @keyframes rccFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-  .rcc-scan{position:absolute;inset:0;pointer-events:none;opacity:0;background:linear-gradient(100deg,transparent 30%,rgba(232,163,61,.10) 50%,transparent 70%);
-    background-size:220% 100%}
+  .rcc-scan{position:absolute;inset:0;pointer-events:none;opacity:0;background:linear-gradient(100deg,transparent 30%,rgba(232,163,61,.16) 50%,transparent 70%);background-size:220% 100%}
   .rcc-stage.scan .rcc-scan{opacity:1;animation:rccSweep .6s ease both}
   @keyframes rccSweep{from{background-position:140% 0}to{background-position:-40% 0}}
+  @media(prefers-reduced-motion:reduce){.rcc-stage.scan .rcc-scan{animation:none;opacity:0}}
 
-  .rcc-rail{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:16px}
-  .rcc-rlabel{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted,#8C8170);margin-right:4px}
-  .rcc-modchip{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;color:var(--muted,#8C8170);
-    background:transparent;border:1px dashed var(--line,rgba(244,236,222,.16));border-radius:99px;padding:6px 12px;cursor:pointer;transition:.18s;display:inline-flex;align-items:center;gap:7px}
-  .rcc-modchip:hover{border-color:rgba(232,163,61,.55);color:var(--soft,#C9BEAD)}
-  .rcc-modchip .mk{font-size:11px;line-height:1;opacity:.8}
-  .rcc-modchip.on{border-style:solid;border-color:var(--accent,#E8A33D);color:var(--accent,#E8A33D);background:rgba(232,163,61,.07)}
+  .rcc-rail{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-bottom:18px}
+  .rcc-rlabel{font-size:16px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2,#3D352C);margin-right:4px;font-weight:700}
+  .rcc-modchip{font-size:16px;font-weight:600;color:var(--ink-2,#3D352C);
+    background:var(--card,#FFFFFF);border:2px dashed var(--line-strong,#CABFAE);border-radius:999px;padding:8px 15px;min-height:44px;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:8px}
+  .rcc-modchip:hover{border-color:var(--ink,#171310);color:var(--ink,#171310)}
+  .rcc-modchip .mk{font-size:18px;line-height:1;font-weight:700}
+  .rcc-modchip.on{border-style:solid;border-color:var(--accent,#E8A33D);color:var(--btn-ink,#1A1206);background:#FBEFD8;font-weight:700}
 
   .rcc-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .rcc-kpi{background:var(--bg,#0F0C0A);border:1px solid var(--line-2,rgba(244,236,222,.07));border-radius:11px;padding:16px;animation:rccPop .35s ease both}
-  @keyframes rccPop{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
-  .rcc-kpi .l{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted,#8C8170)}
-  .rcc-kpi .v{font-family:'Archivo',sans-serif;font-weight:800;font-size:30px;letter-spacing:-.02em;margin:8px 0 3px;line-height:1}
-  .rcc-kpi .v .u{font-size:15px;font-weight:700}
-  .rcc-kpi .o{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--soft,#C9BEAD)}
-  .rcc-pbar{height:5px;background:rgba(244,236,222,.10);border-radius:99px;margin-top:12px;overflow:hidden}
-  .rcc-pbar i{display:block;height:100%;width:var(--w,0%);border-radius:99px;background:linear-gradient(90deg,var(--accent-2,#C9722B),var(--accent,#E8A33D));transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+  .rcc-kpi{background:var(--bg,#FBFAF8);border:1px solid var(--line,#E2DBD0);border-radius:11px;padding:18px}
+  .rcc-kpi .l{font-size:16px;letter-spacing:.02em;text-transform:uppercase;color:var(--ink-2,#3D352C);font-weight:700}
+  .rcc-kpi .v{font-weight:900;font-size:34px;letter-spacing:-.02em;margin:10px 0 4px;line-height:1;color:var(--ink,#171310)}
+  .rcc-kpi .v .u{font-size:18px;font-weight:800}
+  .rcc-kpi .o{font-size:16px;color:var(--ink-2,#3D352C);line-height:1.4}
+  .rcc-pbar{height:8px;background:#E7E0D5;border-radius:99px;margin-top:14px;overflow:hidden}
+  .rcc-pbar i{display:block;height:100%;width:var(--w,0%);border-radius:99px;background:var(--accent,#E8A33D);transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
 
-  .rcc-risk{display:flex;flex-direction:column;gap:10px}
-  .rcc-rrow{display:flex;gap:13px;align-items:flex-start;background:var(--bg,#0F0C0A);border:1px solid var(--line-2,rgba(244,236,222,.07));
-    border-left:3px solid var(--muted,#8C8170);border-radius:10px;padding:13px 15px;animation:rccPop .35s ease both}
-  .rcc-rrow.crit{border-left-color:#E2574A}.rcc-rrow.warn{border-left-color:var(--accent,#E8A33D)}.rcc-rrow.watch{border-left-color:var(--muted,#8C8170)}
-  .rcc-rdot{width:9px;height:9px;border-radius:50%;margin-top:5px;flex:0 0 auto;background:var(--muted,#8C8170)}
-  .rcc-rrow.crit .rcc-rdot{background:#E2574A;animation:rccPulse 2s infinite}
+  .rcc-risk{display:flex;flex-direction:column;gap:12px}
+  .rcc-rrow{display:flex;gap:14px;align-items:flex-start;background:var(--bg,#FBFAF8);border:1px solid var(--line,#E2DBD0);
+    border-left:6px solid var(--line-strong,#CABFAE);border-radius:10px;padding:15px 17px}
+  .rcc-rrow.crit{border-left-color:var(--crit,#B3261E)}.rcc-rrow.warn{border-left-color:var(--accent,#E8A33D)}.rcc-rrow.watch{border-left-color:var(--ink-2,#3D352C)}
+  .rcc-rdot{width:12px;height:12px;border-radius:50%;margin-top:6px;flex:0 0 auto;background:var(--ink-2,#3D352C)}
+  .rcc-rrow.crit .rcc-rdot{background:var(--crit,#B3261E)}
   .rcc-rrow.warn .rcc-rdot{background:var(--accent,#E8A33D)}
-  @keyframes rccPulse{0%{box-shadow:0 0 0 0 rgba(226,87,74,.5)}70%{box-shadow:0 0 0 9px rgba(226,87,74,0)}100%{box-shadow:0 0 0 0 rgba(226,87,74,0)}}
-  .rcc-rsev{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
-  .rcc-rrow.crit .rcc-rsev{color:#E2574A}.rcc-rrow.warn .rcc-rsev{color:var(--accent,#E8A33D)}.rcc-rrow.watch .rcc-rsev{color:var(--muted,#8C8170)}
-  .rcc-rtxt{font-size:14px;color:var(--cream,#F4ECDE);line-height:1.4}
-  .rcc-rmove{font-size:12.5px;color:var(--soft,#C9BEAD);margin-top:4px}
-  .rcc-rmove b{color:#74A878;font-weight:600}
+  .rcc-rsev{font-size:16px;letter-spacing:.04em;text-transform:uppercase;font-weight:800;color:var(--ink,#171310)}
+  .rcc-rtxt{font-size:18px;color:var(--ink,#171310);line-height:1.45;margin-top:3px}
+  .rcc-rmove{font-size:17px;color:var(--ink-2,#3D352C);margin-top:6px}
+  .rcc-rmove b{color:var(--ok,#2E6B33);font-weight:800}
 
-  .rcc-init{display:flex;flex-direction:column;gap:1px;background:var(--line-2,rgba(244,236,222,.07));border:1px solid var(--line-2,rgba(244,236,222,.07));border-radius:10px;overflow:hidden}
-  .rcc-irow{display:grid;grid-template-columns:1.6fr .8fr .8fr;gap:12px;align-items:center;background:var(--bg,#0F0C0A);padding:14px 16px}
-  .rcc-iname{font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;color:var(--cream,#F4ECDE)}
-  .rcc-iname small{display:block;font-family:'JetBrains Mono',monospace;font-weight:400;font-size:9.5px;letter-spacing:.06em;color:var(--muted,#8C8170);margin-top:3px}
-  .rcc-pill{justify-self:start;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:99px}
-  .rcc-pill.ok{color:#74A878;background:rgba(116,168,120,.13)}
-  .rcc-pill.risk{color:var(--accent,#E8A33D);background:rgba(232,163,61,.13)}
-  .rcc-pill.idle{color:var(--muted,#8C8170);background:rgba(140,129,112,.13)}
-  .rcc-mini{height:5px;background:rgba(244,236,222,.10);border-radius:99px;overflow:hidden}
-  .rcc-mini i{display:block;height:100%;width:var(--w,0%);border-radius:99px;background:linear-gradient(90deg,var(--accent-2,#C9722B),var(--accent,#E8A33D));transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+  .rcc-init{display:flex;flex-direction:column;gap:10px}
+  .rcc-irow{display:grid;grid-template-columns:1.6fr .8fr .8fr;gap:14px;align-items:center;background:var(--bg,#FBFAF8);border:1px solid var(--line,#E2DBD0);border-radius:10px;padding:16px 18px}
+  .rcc-iname{font-weight:700;font-size:18px;color:var(--ink,#171310)}
+  .rcc-iname small{display:block;font-weight:600;font-size:16px;color:var(--ink-2,#3D352C);margin-top:4px;text-transform:uppercase;letter-spacing:.03em}
+  .rcc-pill{justify-self:start;font-size:16px;letter-spacing:.02em;text-transform:uppercase;font-weight:700;padding:6px 12px;border-radius:999px}
+  .rcc-pill.ok{color:#1C5224;background:#E9F2EA}
+  .rcc-pill.risk{color:#6E480E;background:#F8EFDC}
+  .rcc-pill.idle{color:var(--ink-2,#3D352C);background:#ECE6DC}
+  .rcc-mini{height:8px;background:#E7E0D5;border-radius:99px;overflow:hidden}
+  .rcc-mini i{display:block;height:100%;width:var(--w,0%);border-radius:99px;background:var(--accent,#E8A33D);transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
 
-  .rcc-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:26px;
-    padding:22px 24px;background:radial-gradient(120% 160% at 85% 0%,#241a10,#0f0c0a);border:1px solid var(--line,rgba(244,236,222,.12));border-radius:14px}
-  .rcc-cta-txt{font-size:15px;color:var(--soft,#C9BEAD);max-width:58ch;line-height:1.5}
-  .rcc-cta-txt b{color:var(--cream,#F4ECDE);font-weight:600}
-  .rcc-btn{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.03em;padding:14px 22px;
-    border-radius:4px;cursor:pointer;white-space:nowrap;background:var(--accent,#E8A33D);color:#1a1206;border:1px solid var(--accent,#E8A33D);transition:.25s;text-decoration:none}
-  .rcc-btn:hover{background:transparent;color:var(--accent,#E8A33D)}
+  .rcc-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:24px;
+    padding:24px;background:var(--bg-2,#F2EEE6);border:1px solid var(--line,#E2DBD0);border-radius:12px}
+  .rcc-cta-txt{font-size:18px;color:var(--ink,#171310);max-width:60ch;line-height:1.5}
+  .rcc-cta-txt b{color:var(--ink,#171310);font-weight:800}
+  .rcc-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;font-size:17px;font-weight:700;padding:13px 24px;
+    border-radius:8px;cursor:pointer;white-space:nowrap;background:var(--accent,#E8A33D);color:var(--btn-ink,#1A1206);border:2px solid var(--accent,#E8A33D);transition:.2s;text-decoration:none}
+  .rcc-btn:hover{background:var(--accent-press,#CF8B27);border-color:var(--accent-press,#CF8B27)}
 
   @media(max-width:900px){
-    .rcc-grid2{grid-template-columns:1fr;gap:24px}.rcc-sticky{position:static}
+    .rcc-grid2{grid-template-columns:1fr;gap:22px}.rcc-sticky{position:static}
     .cfg-controls{grid-template-columns:1fr;gap:20px}
     .rcc-kpis{grid-template-columns:repeat(2,1fr)}
-    .rcc-irow{grid-template-columns:1.4fr .9fr;gap:10px}.rcc-irow .rcc-mini{display:none}
+    .rcc-irow{grid-template-columns:1.4fr .9fr;gap:12px}.rcc-irow .rcc-mini{display:none}
     .rcc-menu{left:20px;right:20px;min-width:0}
   }
-  @media(max-width:560px){.rcc-kpis{grid-template-columns:1fr 1fr}.rcc-wrap{padding:0 20px}
-    .rcc-hint{display:none}.rcc-meta{gap:8px}.rcc-sync{display:none}}
-  @media(prefers-reduced-motion:reduce){.rcc-live .ld,.rcc-rrow.crit .rcc-rdot{animation:none}}
+  @media(max-width:560px){.rcc-kpis{grid-template-columns:1fr}.rcc-wrap{padding:0 20px}}
 </style>
 
 <section id="cockpit" class="rcc-section">
   <div class="rcc-wrap">
     <div class="rcc-grid2">
-      <div class="rcc-sticky"><div class="rcc-eyebrow">A living surface</div></div>
+      <div class="rcc-sticky"><div class="rcc-eyebrow">Your business at a glance</div></div>
       <div>
-        <h2 class="rcc-head">Not a report you read. A surface you <em>run.</em></h2>
+        <h2 class="rcc-head">See your whole business on one screen.</h2>
         <div class="rcc-sub">
-          <p>Every object in ReCaptured — customers, projects, knowledge, the work itself — feeds one live surface, with AI flagging what needs attention before it breaks.</p>
-          <p>It's not a static snapshot. Shape it to your business below, switch the workspace, add or pull a module — and the whole view rebuilds on the spot. One surface, any business.</p>
+          <p>Your customers, projects, knowledge, and the work itself feed one clear screen — and the system flags what needs attention before it becomes a problem.</p>
+          <p>It's not a fixed report. Shape it to your business below, switch the workspace, or add and remove a module — and the whole view updates right away. One screen, any business.</p>
         </div>
-        <div class="rcc-try">↳ Try it live — <b>shape your workspace</b>, then <b>switch the workspace</b> or <b>tap a module on or off</b>. Same surface, reconfigured.</div>
+        <div class="rcc-try">↳ Try it: <b>shape your workspace</b>, then <b>switch the workspace</b> or <b>turn a module on or off</b>. Same screen, set up differently.</div>
       </div>
     </div>
 
     <div class="cfg reveal" id="configure">
-      <div class="cfg-badge"><span class="dot"></span> Shape Intelligent OS around your business</div>
-      <p class="cfg-lead">Pick your shape. The platform models the objects and workflows to match — then the command center below rebuilds to fit. No code, no rebuild: configuration only.</p>
+      <div class="cfg-badge"><span class="dot"></span> Shape ReCaptured around your business</div>
+      <p class="cfg-lead">Pick your shape. The platform sets up the right information and workflows to match — then the screen below updates to fit. No code, no rebuild: configuration only.</p>
       <div class="cfg-controls">
         <div class="cfg-field">
           <label>Your business</label>
@@ -527,27 +498,26 @@
         </div>
       </div>
       <button class="cfg-apply" id="cfgApply">Shape my workspace →</button>
-      <div class="cfg-note">Models live objects and workflows around how you actually operate — the same way your real workspace is stood up in a discovery session.</div>
+      <div class="cfg-note">Sets up the right information and workflows around how you actually work — the same way your real workspace is built in a discovery session.</div>
     </div>
 
     <div class="rcc-app" id="rccApp">
       <div class="rcc-bar">
         <span class="rcc-bdot"></span>
-        <span class="rcc-brand">RECAPTURED · INTELLIGENT OS</span>
+        <span class="rcc-brand">ReCaptured Intelligent OS</span>
         <button class="rcc-tenant" id="rccTenantBtn" aria-haspopup="true" aria-expanded="false">
-          <span id="rccTenantName">MERIDIAN GROUP</span><span class="car">▼</span>
+          <span id="rccTenantName">Meridian Group</span><span class="car" aria-hidden="true">▼</span>
         </button>
-        <span class="rcc-hint">← <b>switch workspace</b></span>
         <span class="rcc-meta">
           <span class="rcc-sync" id="rccSync">synced just now</span>
-          <span class="rcc-live"><span class="ld"></span>LIVE</span>
+          <span class="rcc-live"><span class="ld"></span>Live</span>
         </span>
 
         <div class="rcc-menu" id="rccMenu" role="menu">
-          <div class="rcc-mlabel">Sample workspaces — one surface, any business</div>
-          <button class="rcc-mitem on" data-t="meridian" role="menuitem"><span class="mn">MERIDIAN GROUP</span><span class="mi">Professional services · 12 people</span></button>
-          <button class="rcc-mitem" data-t="northwind" role="menuitem"><span class="mn">NORTHWIND LOGISTICS</span><span class="mi">Freight &amp; operations · 40 people</span></button>
-          <button class="rcc-mitem" data-t="atlas" role="menuitem"><span class="mn">ATLAS DENTAL PARTNERS</span><span class="mi">Multi-site healthcare · 5 locations</span></button>
+          <div class="rcc-mlabel">Sample workspaces — one screen, any business</div>
+          <button class="rcc-mitem on" data-t="meridian" role="menuitem"><span class="mn">Meridian Group</span><span class="mi">Professional services · 12 people</span></button>
+          <button class="rcc-mitem" data-t="northwind" role="menuitem"><span class="mn">Northwind Logistics</span><span class="mi">Freight &amp; operations · 40 people</span></button>
+          <button class="rcc-mitem" data-t="atlas" role="menuitem"><span class="mn">Atlas Dental Partners</span><span class="mi">Multi-site healthcare · 5 locations</span></button>
         </div>
       </div>
 
@@ -565,38 +535,38 @@
             <span class="rcc-rlabel">Modules</span>
           </div>
           <div class="rcc-kpis" id="rccKpis">
-            <div class="rcc-kpi"><div class="l">Open Deals</div><div class="v">38</div><div class="o">pipeline enriched &amp; current by AI</div><div class="rcc-pbar"><i style="--w:76%"></i></div></div>
+            <div class="rcc-kpi"><div class="l">Open Deals</div><div class="v">38</div><div class="o">pipeline kept current automatically</div><div class="rcc-pbar"><i style="--w:76%"></i></div></div>
             <div class="rcc-kpi"><div class="l">On-Time Delivery</div><div class="v">91<span class="u">%</span></div><div class="o">across active engagements</div><div class="rcc-pbar"><i style="--w:91%"></i></div></div>
             <div class="rcc-kpi"><div class="l">Knowledge Articles</div><div class="v">420</div><div class="o">answers grounded in your content</div><div class="rcc-pbar"><i style="--w:68%"></i></div></div>
-            <div class="rcc-kpi"><div class="l">AI Actions / wk</div><div class="v">240</div><div class="o">drafts, enrichments, recalls</div><div class="rcc-pbar"><i style="--w:72%"></i></div></div>
+            <div class="rcc-kpi"><div class="l">AI Actions / wk</div><div class="v">240</div><div class="o">drafts, updates, reminders</div><div class="rcc-pbar"><i style="--w:72%"></i></div></div>
           </div>
         </div>
 
         <div class="rcc-view" data-view="risk"><div class="rcc-risk" id="rccRisk">
           <div class="rcc-rrow crit"><span class="rcc-rdot"></span><div>
-            <div class="rcc-rsev">Flagged</div>
-            <div class="rcc-rtxt">2 deals untouched 14+ days — AI flagged lost momentum.</div>
-            <div class="rcc-rmove"><b>Move —</b> Re-engagement drafts are ready in each record; review &amp; send.</div></div></div>
+            <div class="rcc-rsev">Critical</div>
+            <div class="rcc-rtxt">2 deals untouched for 14+ days — the system flagged lost momentum.</div>
+            <div class="rcc-rmove"><b>Next step —</b> Re-engagement drafts are ready in each record; review and send.</div></div></div>
           <div class="rcc-rrow warn"><span class="rcc-rdot"></span><div>
-            <div class="rcc-rsev">Surfaced</div>
-            <div class="rcc-rtxt">Onboarding docs missing for 3 new clients.</div>
-            <div class="rcc-rmove"><b>Move —</b> Knowledge base generated the checklists; assign an owner.</div></div></div>
+            <div class="rcc-rsev">Elevated</div>
+            <div class="rcc-rtxt">Onboarding documents missing for 3 new clients.</div>
+            <div class="rcc-rmove"><b>Next step —</b> The knowledge base built the checklists; assign an owner.</div></div></div>
           <div class="rcc-rrow watch"><span class="rcc-rdot"></span><div>
-            <div class="rcc-rsev">Noted</div>
+            <div class="rcc-rsev">Watch</div>
             <div class="rcc-rtxt">4 meeting transcripts not yet linked to accounts.</div>
-            <div class="rcc-rmove"><b>Move —</b> Audio capture will attach them automatically on confirm.</div></div></div>
+            <div class="rcc-rmove"><b>Next step —</b> Audio capture will attach them automatically once confirmed.</div></div></div>
         </div></div>
 
         <div class="rcc-view" data-view="init"><div class="rcc-init" id="rccInit">
-          <div class="rcc-irow"><div class="rcc-iname">Client Onboarding Flow<small>OBJECT · PROJECTS</small></div><span class="rcc-pill ok">On Track</span><div class="rcc-mini"><i style="--w:72%"></i></div></div>
-          <div class="rcc-irow"><div class="rcc-iname">Q3 Pipeline Review<small>OBJECT · CRM</small></div><span class="rcc-pill risk">Needs Attention</span><div class="rcc-mini"><i style="--w:40%"></i></div></div>
-          <div class="rcc-irow"><div class="rcc-iname">Knowledge Base Cleanup<small>OBJECT · KNOWLEDGE</small></div><span class="rcc-pill idle">Queued</span><div class="rcc-mini"><i style="--w:12%"></i></div></div>
+          <div class="rcc-irow"><div class="rcc-iname">Client Onboarding Flow<small>Projects</small></div><span class="rcc-pill ok">On Track</span><div class="rcc-mini"><i style="--w:72%"></i></div></div>
+          <div class="rcc-irow"><div class="rcc-iname">Q3 Pipeline Review<small>CRM</small></div><span class="rcc-pill risk">Needs Attention</span><div class="rcc-mini"><i style="--w:40%"></i></div></div>
+          <div class="rcc-irow"><div class="rcc-iname">Knowledge Base Cleanup<small>Knowledge</small></div><span class="rcc-pill idle">Queued</span><div class="rcc-mini"><i style="--w:12%"></i></div></div>
         </div></div>
       </div>
     </div>
 
     <div class="rcc-cta">
-      <div class="rcc-cta-txt">This is the same surface your team runs on — <b>your objects, your workflows, your risks</b>, modeled around how you actually operate. Stood up in a 30-minute discovery session: no rebuild, no rip-and-replace, no lift on your team.</div>
+      <div class="rcc-cta-txt">This is the same screen your team would use — <b>your information, your workflows, your priorities</b>, set up around how you actually work. Built in a 30-minute discovery session: no rebuild, no rip-and-replace, no extra work for your team.</div>
       <a class="rcc-btn" href="https://calendly.com/carpenterlogan3/discovery-call" target="_blank" rel="noopener noreferrer">Book a call →</a>
     </div>
   </div>
@@ -614,59 +584,59 @@
       {id:'audio',label:'Audio'}
     ];
     var T={
-      meridian:{name:'MERIDIAN GROUP',
+      meridian:{name:'Meridian Group',
         kpi:{
-          crm:{l:'Open Deals',base:38,d:0,o:'pipeline enriched & current by AI',w:76,j:1},
+          crm:{l:'Open Deals',base:38,d:0,o:'pipeline kept current automatically',w:76,j:1},
           proj:{l:'On-Time Delivery',base:91,d:0,u:'%',o:'across active engagements',w:91,j:.6},
           know:{l:'Knowledge Articles',base:420,d:0,o:'answers grounded in your content',w:68,j:2},
-          mem:{l:'AI Actions / wk',base:240,d:0,o:'drafts, enrichments, recalls',w:72,j:4},
+          mem:{l:'AI Actions / wk',base:240,d:0,o:'drafts, updates, reminders',w:72,j:4},
           audio:{l:'Calls Transcribed',base:64,d:0,o:'auto-summarized this month',w:64,j:1}
         },
         risk:[
-          ['crit','Flagged','2 deals untouched 14+ days — AI flagged lost momentum.','Re-engagement drafts are ready in each record; review &amp; send.'],
-          ['warn','Surfaced','Onboarding docs missing for 3 new clients.','Knowledge base generated the checklists; assign an owner.'],
-          ['watch','Noted','4 meeting transcripts not yet linked to accounts.','Audio capture will attach them automatically on confirm.']
+          ['crit','Critical','2 deals untouched for 14+ days — the system flagged lost momentum.','Re-engagement drafts are ready in each record; review and send.'],
+          ['warn','Elevated','Onboarding documents missing for 3 new clients.','The knowledge base built the checklists; assign an owner.'],
+          ['watch','Watch','4 meeting transcripts not yet linked to accounts.','Audio capture will attach them automatically once confirmed.']
         ],
         init:[
-          ['Client Onboarding Flow','PROJECTS','ok','On Track',72],
+          ['Client Onboarding Flow','Projects','ok','On Track',72],
           ['Q3 Pipeline Review','CRM','risk','Needs Attention',40],
-          ['Knowledge Base Cleanup','KNOWLEDGE','idle','Queued',12]
+          ['Knowledge Base Cleanup','Knowledge','idle','Queued',12]
         ]},
-      northwind:{name:'NORTHWIND LOGISTICS',
+      northwind:{name:'Northwind Logistics',
         kpi:{
-          crm:{l:'Active Contracts',base:21,d:0,o:'accounts auto-enriched',w:58,j:1},
+          crm:{l:'Active Contracts',base:21,d:0,o:'accounts updated automatically',w:58,j:1},
           proj:{l:'On-Time Freight',base:96,d:0,u:'%',o:'jobs tracked end to end',w:96,j:.4},
           know:{l:'SOPs & Documents',base:880,d:0,o:'searchable in plain language',w:74,j:3},
-          mem:{l:'AI Actions / wk',base:510,d:0,o:'records filled & updated',w:80,j:6},
-          audio:{l:'Site Visits Logged',base:38,d:0,o:'field audio → records',w:60,j:1}
+          mem:{l:'AI Actions / wk',base:510,d:0,o:'records filled and updated',w:80,j:6},
+          audio:{l:'Site Visits Logged',base:38,d:0,o:'field audio turned into records',w:60,j:1}
         },
         risk:[
-          ['crit','Flagged','Carrier gap on Lane 7 — 4 loads unassigned next week.','Platform surfaced 3 backup carriers from your records.'],
-          ['warn','Surfaced','Rate cards stale on 12 active contracts.','Drafted updates are queued; confirm to push.'],
-          ['watch','Noted','Dispatch SOPs last reviewed 90 days ago.','Knowledge base flagged them for refresh.']
+          ['crit','Critical','Carrier gap on Lane 7 — 4 loads unassigned next week.','The system found 3 backup carriers in your records.'],
+          ['warn','Elevated','Rate cards out of date on 12 active contracts.','Updated drafts are queued; confirm to send.'],
+          ['watch','Watch','Dispatch procedures last reviewed 90 days ago.','The knowledge base flagged them for a refresh.']
         ],
         init:[
-          ['TMS Rollout','PROJECTS','ok','On Track',81],
+          ['TMS Rollout','Projects','ok','On Track',81],
           ['Carrier Scorecards','CRM','risk','Needs Attention',35],
-          ['Lane Expansion Plan','KNOWLEDGE','idle','Queued',12]
+          ['Lane Expansion Plan','Knowledge','idle','Queued',12]
         ]},
-      atlas:{name:'ATLAS DENTAL PARTNERS',
+      atlas:{name:'Atlas Dental Partners',
         kpi:{
           crm:{l:'Active Patients',base:7.6,d:1,u:'K',o:'unified across 5 sites',w:83,j:.05},
           proj:{l:'Chair Utilization',base:88,d:0,u:'%',o:'scheduled across sites',w:88,j:.5},
           know:{l:'Protocols & Docs',base:610,d:0,o:'answers grounded in your content',w:70,j:2},
-          mem:{l:'AI Actions / wk',base:360,d:0,o:'records & recalls automated',w:75,j:5},
+          mem:{l:'AI Actions / wk',base:360,d:0,o:'records and reminders automated',w:75,j:5},
           audio:{l:'Visits Transcribed',base:120,d:0,o:'summarized to the chart',w:66,j:2}
         },
         risk:[
-          ['crit','Flagged','Hygiene recall down 18% across 3 sites.','Automated recall sequence is staged; confirm to launch.'],
-          ['warn','Surfaced','New-site credentialing stalled 21 days.','Platform set a weekly check-in and an owner.'],
-          ['watch','Noted','Patient notes unlinked at 2 locations.','Audio capture attaches them on confirm.']
+          ['crit','Critical','Hygiene recall down 18% across 3 sites.','The automated recall sequence is ready; confirm to start.'],
+          ['warn','Elevated','New-site credentialing stalled 21 days.','The system set a weekly check-in and an owner.'],
+          ['watch','Watch','Patient notes unlinked at 2 locations.','Audio capture attaches them once confirmed.']
         ],
         init:[
-          ['Centralized Scheduling','PROJECTS','ok','On Track',78],
+          ['Centralized Scheduling','Projects','ok','On Track',78],
           ['Recall & Reactivation','CRM','risk','Needs Attention',44],
-          ['Site #6 Onboarding','PROJECTS','idle','Queued',9]
+          ['Site #6 Onboarding','Projects','idle','Queued',9]
         ]}
     };
 
@@ -686,7 +656,7 @@
       var html='<span class="rcc-rlabel">Modules</span>';
       MODS.forEach(function(m){
         var on=active[m.id]?' on':'';
-        html+='<button class="rcc-modchip'+on+'" data-mod="'+m.id+'"><span class="mk">'+(active[m.id]?'−':'+')+'</span>'+m.label+'</button>';
+        html+='<button class="rcc-modchip'+on+'" data-mod="'+m.id+'"><span class="mk" aria-hidden="true">'+(active[m.id]?'−':'+')+'</span>'+m.label+'</button>';
       });
       railEl.innerHTML=html;
     }
@@ -708,14 +678,14 @@
         html+='<div class="rcc-rrow '+r[0]+'"><span class="rcc-rdot"></span><div>'+
               '<div class="rcc-rsev">'+r[1]+'</div>'+
               '<div class="rcc-rtxt">'+r[2]+'</div>'+
-              '<div class="rcc-rmove"><b>Move —</b> '+r[3]+'</div></div></div>';
+              '<div class="rcc-rmove"><b>Next step —</b> '+r[3]+'</div></div></div>';
       });
       riskEl.innerHTML=html;
     }
     function renderInit(){
       var html='';
       T[cur].init.forEach(function(i){
-        html+='<div class="rcc-irow"><div class="rcc-iname">'+i[0]+'<small>OBJECT · '+i[1]+'</small></div>'+
+        html+='<div class="rcc-irow"><div class="rcc-iname">'+i[0]+'<small>'+i[1]+'</small></div>'+
               '<span class="rcc-pill '+i[2]+'">'+i[3]+'</span>'+
               '<div class="rcc-mini"><i data-w="'+i[4]+'" style="--w:0%"></i></div></div>';
       });
@@ -751,7 +721,6 @@
       scan(); renderRail(); renderKpis(); syncModuleUI();
     }
 
-    /* tenant switching */
     tbtn.addEventListener('click',function(e){ e.stopPropagation();
       var open=menu.classList.toggle('open'); tbtn.classList.toggle('open',open); tbtn.setAttribute('aria-expanded',open);
     });
@@ -760,12 +729,10 @@
     });
     document.addEventListener('click',function(){ menu.classList.remove('open'); tbtn.classList.remove('open'); tbtn.setAttribute('aria-expanded',false); });
 
-    /* module toggling from the in-app rail */
     railEl.addEventListener('click',function(e){ var b=e.target.closest('.rcc-modchip'); if(!b)return;
       toggleModule(b.getAttribute('data-mod'));
     });
 
-    /* configurator drives the same surface */
     if(cfgInd) cfgInd.addEventListener('click',function(e){ var b=e.target.closest('.cfg-opt'); if(!b)return; setTenant(b.getAttribute('data-ind')); });
     if(cfgMods) cfgMods.addEventListener('click',function(e){ var b=e.target.closest('.cfg-opt'); if(!b)return; toggleModule(b.getAttribute('data-mod')); });
     var applyBtn=$('#cfgApply');
@@ -773,14 +740,12 @@
       scan(); var app=$('#rccApp'); if(app) app.scrollIntoView({behavior:'smooth',block:'center'});
     });
 
-    /* tabs */
     var tabs=sec.querySelectorAll('.rcc-tab'), views=sec.querySelectorAll('.rcc-view');
     tabs.forEach(function(t){ t.addEventListener('click',function(){
       tabs.forEach(function(x){x.classList.remove('on')}); t.classList.add('on');
       views.forEach(function(v){ v.classList.toggle('on', v.getAttribute('data-view')===t.getAttribute('data-v')); });
     });});
 
-    /* breathing: tick values + sync clock */
     var syncT=0;
     function markSync(n){ syncT=n; paintSync(); }
     function paintSync(){ if(!syncEl) return; syncEl.textContent = syncT<=0?'synced just now':'synced '+syncT+'s ago'; }
@@ -800,7 +765,6 @@
       iSync=setInterval(function(){ if(!document.hidden){ syncT++; paintSync(); } },1000);
     }
 
-    /* boot */
     renderAll();
     function live(){ sec.classList.add('is-live'); fillBars(kpisEl); fillBars(initEl); startLife(); }
     try{
@@ -822,25 +786,25 @@
         <div class="eyebrow reveal d1">Built for global business</div>
       </div>
       <div>
-        <h2 class="sec-head reveal">One platform for <em>every market</em> you operate in.</h2>
-        <div class="body-lg reveal d1" style="margin-top:30px"><p>Multi-language interfaces, multi-currency handling, and on-the-fly translation let your teams and clients work in their own language and currency. One platform serves every market you operate in — without a separate system per region.</p></div>
+        <h2 class="sec-head reveal">Work in any language and currency.</h2>
+        <div class="body-lg reveal d1" style="margin-top:26px"><p>Multi-language screens, multi-currency handling, and on-the-fly translation let your teams and clients work in their own language and currency. One platform serves every market you operate in — without a separate system for each region.</p></div>
       </div>
     </div>
     <div class="feats three">
       <div class="feat reveal">
         <div class="fk">Multi-language</div>
         <h3>Work in your own language</h3>
-        <p>Multi-language interfaces let your teams and clients work in the language they're most fluent in — across every region you serve.</p>
+        <p>Multi-language screens let your teams and clients work in the language they know best — across every region you serve.</p>
       </div>
       <div class="feat reveal d1">
         <div class="fk">Multi-currency</div>
         <h3>One system, every currency</h3>
-        <p>Multi-currency handling means deals, projects, and reporting stay accurate everywhere you do business — no separate system per region.</p>
+        <p>Multi-currency handling keeps deals, projects, and reporting accurate everywhere you do business — no separate system for each region.</p>
       </div>
       <div class="feat reveal d2">
         <div class="fk">Real translation</div>
-        <h3>On-the-fly across borders</h3>
-        <p>On-the-fly translation bridges teams and clients in real time, so language never blocks the work or fragments the record.</p>
+        <h3>Across borders, on the fly</h3>
+        <p>On-the-fly translation connects teams and clients in real time, so language never blocks the work or splits the record.</p>
       </div>
     </div>
   </div>
@@ -854,8 +818,8 @@
         <div class="eyebrow reveal d1">Enterprise-grade by design</div>
       </div>
       <div>
-        <h2 class="sec-head reveal">Engineered to the standards <em>you're held to.</em></h2>
-        <div class="body-lg reveal d1" style="margin-top:30px"><p>ReCaptured is built to satisfy the controls behind the frameworks below — encryption, role-based access, tamper-evident audit trails, and disciplined data handling are part of the platform from day one, not afterthoughts.</p></div>
+        <h2 class="sec-head reveal">Built to meet the security standards you're held to.</h2>
+        <div class="body-lg reveal d1" style="margin-top:26px"><p>ReCaptured is built to satisfy the controls behind the frameworks below — encryption, role-based access, tamper-evident audit trails, and disciplined data handling are part of the platform from day one, not afterthoughts.</p></div>
         <div class="pills reveal d2">
           <span class="pill">SOC 2</span>
           <span class="pill">ISO 27001</span>
@@ -871,22 +835,22 @@
 <section id="summary" class="summary">
   <div class="wrap">
     <div class="sum-grid">
-      <div class="sum-cell reveal"><div class="sum-k">All-in-one</div><div class="sum-v">CRM · Projects · &amp; more</div></div>
-      <div class="sum-cell reveal d1"><div class="sum-k">AI-first</div><div class="sum-v">Intelligence at the core</div></div>
-      <div class="sum-cell reveal d2"><div class="sum-k">Global</div><div class="sum-v">Language · Currency</div></div>
-      <div class="sum-cell reveal d3"><div class="sum-k">Days</div><div class="sum-v">To adapt, not months</div></div>
+      <div class="sum-cell reveal"><div class="sum-k">All-in-one</div><div class="sum-v">CRM · projects · &amp; more</div></div>
+      <div class="sum-cell reveal d1"><div class="sum-k">Smart</div><div class="sum-v">AI handles the busywork</div></div>
+      <div class="sum-cell reveal d2"><div class="sum-k">Global</div><div class="sum-v">Any language · any currency</div></div>
+      <div class="sum-cell reveal d3"><div class="sum-k">Fast</div><div class="sum-v">Set up in days, not months</div></div>
     </div>
   </div>
 </section>
 
 <section id="book" class="final">
   <div class="wrap">
-    <div class="eyebrow reveal" style="display:block;margin-bottom:24px">Let's talk</div>
-    <h2 class="reveal d1">See what <em>one intelligent system</em> can do for your team.</h2>
-    <p class="reveal d2">We'll show you ReCaptured Intelligent OS shaped around your business — your data, your workflows, your terminology — and how quickly we can stand it up.</p>
+    <div class="eyebrow reveal" style="margin-bottom:22px">Let's talk</div>
+    <h2 class="reveal d1">See ReCaptured set up for your business.</h2>
+    <p class="reveal d2">We'll show you ReCaptured Intelligent OS shaped around your business — your data, your workflows, your terminology — and how quickly we can get it running.</p>
     <div class="final-cta reveal d3">
-      <a href="https://calendly.com/carpenterlogan3/discovery-call" target="_blank" rel="noopener noreferrer" class="btn btn-solid" style="font-size:15px;padding:17px 34px">Book a call</a>
-      <a href="mailto:logan@recaptured.io" class="btn btn-ghost" style="font-size:15px;padding:17px 34px">Email logan@recaptured.io</a>
+      <a href="https://calendly.com/carpenterlogan3/discovery-call" target="_blank" rel="noopener noreferrer" class="btn btn-solid">Book a call</a>
+      <a href="mailto:logan@recaptured.io" class="btn btn-ghost">Email logan@recaptured.io</a>
     </div>
   </div>
 </section>
@@ -895,16 +859,15 @@
   <div class="wrap foot-in">
     <div class="logo-lockup">
       <img class="logo-mark" src="recaptured-logo-80.png"
-           srcset="recaptured-logo-40.png 1x, recaptured-logo-80.png 2x" width="32" height="32" alt="" style="width:32px;height:32px">
+           srcset="recaptured-logo-40.png 1x, recaptured-logo-80.png 2x" width="34" height="34" alt="" style="width:34px;height:34px">
       <span class="logo">Re<b>Captured</b></span>
     </div>
     <div>RECAPTURED LLC · © 2026</div>
-    <a href="mailto:logan@recaptured.io" style="color:var(--soft)">logan@recaptured.io →</a>
+    <a href="mailto:logan@recaptured.io" class="textlink">logan@recaptured.io →</a>
   </div>
 </footer>
 
 <script>
-  // Reveal-on-scroll, built to never leave content hidden on iOS.
   (function(){
     var nodes = [].slice.call(document.querySelectorAll('.reveal:not(.in)'));
     function check(){
@@ -921,7 +884,7 @@
     window.addEventListener('load', check);
     setTimeout(function(){
       document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ el.classList.add('in'); });
-    }, 2200);
+    }, 2000);
   })();
 </script>
 </body>
