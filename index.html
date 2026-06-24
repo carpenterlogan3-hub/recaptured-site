@@ -3,35 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<title>ReCaptured — The operating system for lean, ambitious teams</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>ReCaptured Intelligent OS — CRM, projects & whatever your business needs next</title>
+<meta name="description" content="ReCaptured Intelligent OS unifies CRM, project management, and your company knowledge in a single AI-first workspace — built on a flexible data model that grows with you. Days, not months.">
 <link rel="canonical" href="https://recaptured.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://recaptured.io/">
-<meta property="og:title" content="ReCaptured — The operating system for lean, ambitious teams">
-<meta property="og:description" content="We install the systems, playbooks, and automations that let a small team operate like a much larger one.">
+<meta property="og:title" content="ReCaptured Intelligent OS — one intelligent system for your whole business">
+<meta property="og:description" content="CRM, projects — and whatever your business needs next — in one AI-first workspace. New capabilities are configuration, not another tool to buy and bolt on.">
 <meta property="og:image" content="https://recaptured.io/og-image.png">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ReCaptured — The operating system for lean, ambitious teams">
-<meta name="twitter:description" content="We install the systems, playbooks, and automations that let a small team operate like a much larger one.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ReCaptured Intelligent OS">
+<meta name="twitter:description" content="CRM, projects — and whatever your business needs next — in one AI-first workspace.">
 <meta name="twitter:image" content="https://recaptured.io/og-image.png">
-<link rel="apple-touch-icon" href="og-image.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["Organization", "ProfessionalService"],
-  "name": "ReCaptured",
-  "legalName": "Recaptured LLC",
+  "@type": "SoftwareApplication",
+  "name": "ReCaptured Intelligent OS",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
   "url": "https://recaptured.io/",
-  "logo": "https://recaptured.io/og-image.png",
-  "image": "https://recaptured.io/og-image.png",
-  "description": "We install the systems, playbooks, and automations that let a small team operate like a much larger one.",
-  "email": "carpenterlogan3@gmail.com"
+  "image": "https://recaptured.io/apple-touch-icon.png",
+  "description": "ReCaptured Intelligent OS unifies CRM, project management, and company knowledge in a single AI-first workspace, built on a flexible data model so new fields, objects, and workflows are configuration, not code.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ReCaptured",
+    "legalName": "Recaptured LLC",
+    "url": "https://recaptured.io/",
+    "email": "logan@recaptured.io"
+  }
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Schibsted+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Schibsted+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.className+=' js';</script>
 <style>
   :root{
@@ -45,6 +53,7 @@
     --accent-2:#C9722B;
     --line:rgba(244,236,222,.12);
     --line-2:rgba(244,236,222,.07);
+    --font-serif:'Playfair Display',Georgia,serif;
     --maxw:1200px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
@@ -60,6 +69,9 @@
   }
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 36px}
   h1,h2,h3{font-family:'Archivo',sans-serif;font-weight:800;line-height:1.02;letter-spacing:-.025em}
+  /* high-contrast serif for display headlines, with gold italic emphasis */
+  h1.hero,.sec-head,.rcc-head,.proof h2,.final h2{font-family:var(--font-serif);font-weight:700;letter-spacing:-.01em;line-height:1.06}
+  h1.hero em,.sec-head em,.rcc-head em,.proof h2 em,.final h2 em{font-style:italic;color:var(--accent);font-weight:700}
   .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:500}
   a{color:inherit;text-decoration:none}
   .accent{color:var(--accent)}
@@ -72,8 +84,12 @@
   /* nav */
   nav{position:sticky;top:0;z-index:100;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line-2)}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .logo{font-family:'Archivo',sans-serif;font-weight:800;font-size:23px;letter-spacing:-.03em}
+  .logo-lockup{display:inline-flex;align-items:center;gap:12px}
+  .logo-mark{width:40px;height:40px;border-radius:9px;display:block;flex:none}
+  .logo-words{display:flex;flex-direction:column;line-height:1}
+  .logo-words .logo{font-family:'Archivo',sans-serif;font-weight:800;font-size:21px;letter-spacing:-.03em}
   .logo b{color:var(--accent);font-weight:800}
+  .logo-os{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.22em;color:var(--accent);margin-top:5px}
   .btn{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.03em;padding:13px 24px;border-radius:3px;transition:.28s ease;cursor:pointer;border:1px solid transparent}
   .btn-solid{background:var(--accent);color:#1a1206;font-weight:500}
   .btn-solid:hover{background:var(--cream);transform:translateY(-1px)}
@@ -88,9 +104,8 @@
   @keyframes drift{to{transform:translate(-60px,40px) scale(1.1)}}
   @keyframes drift2{to{transform:translate(70px,-30px) scale(1.05)}}
   header .wrap{position:relative;z-index:1}
-  h1.hero{font-size:clamp(46px,8vw,112px);font-weight:800;max-width:15ch;margin-top:26px}
-  h1.hero em{font-style:normal;color:var(--accent)}
-  .hero-sub{font-size:clamp(18px,1.9vw,23px);color:var(--soft);max-width:54ch;margin-top:34px}
+  h1.hero{font-size:clamp(44px,7.6vw,104px);max-width:16ch;margin-top:26px}
+  .hero-sub{font-size:clamp(18px,1.9vw,23px);color:var(--soft);max-width:58ch;margin-top:34px}
   .hero-cta{margin-top:44px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
   .hero-cta .scroll{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.03em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:3px;transition:.25s}
   .hero-cta .scroll:hover{color:var(--accent);border-color:var(--accent)}
@@ -105,119 +120,70 @@
   .body-lg{color:var(--soft);font-size:clamp(17px,1.4vw,21px)}
   .body-lg p+p{margin-top:20px}
   .sticky-label{position:sticky;top:120px}
+  .signum{font-family:var(--font-serif);font-size:clamp(48px,6vw,86px);font-weight:800;color:var(--accent);line-height:1;margin-bottom:12px}
 
-  /* system viz */
-  .system{margin-top:30px;background:linear-gradient(160deg,var(--bg-2),var(--bg));border:1px solid var(--line);border-radius:10px;padding:30px;overflow:hidden}
-  .system svg{width:100%;height:auto;display:block}
-  .flow{fill:var(--accent)}
-  .nodeC{fill:var(--panel);stroke:var(--line);stroke-width:1.5}
-  .nodeLbl{fill:var(--soft);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em}
-  .engine{fill:url(#eg);stroke:var(--accent);stroke-width:1.5}
-  .engLbl{fill:var(--cream);font-family:'Archivo',sans-serif;font-weight:700;font-size:15px}
-  .path{fill:none;stroke:var(--line);stroke-width:1.5}
-  .path.lit{stroke:rgba(232,163,61,.35)}
+  /* proof band */
+  .proof{text-align:center;background:linear-gradient(180deg,var(--bg-2),var(--bg))}
+  .proof h2{font-size:clamp(34px,5vw,64px);max-width:20ch;margin:18px auto 0}
+  .proof-sub{color:var(--soft);max-width:62ch;margin:24px auto 0;font-size:clamp(16px,1.4vw,20px)}
+  .proof-stat{margin-top:42px;display:inline-flex;align-items:center;gap:24px;text-align:left;border:1px solid var(--line);border-radius:14px;padding:24px 36px;background:var(--bg-2)}
+  .proof-stat .big{font-family:var(--font-serif);font-size:clamp(60px,9vw,104px);font-weight:900;color:var(--accent);line-height:.85}
+  .proof-stat .stat-cap{color:var(--soft);max-width:24ch;font-size:15px;line-height:1.45}
 
-  /* capabilities */
+  /* capabilities / pillars */
   .caps{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2);border-radius:10px;overflow:hidden;margin-top:56px}
   .cap{background:var(--bg);padding:40px 34px;transition:background .35s}
   .cap:hover{background:var(--bg-2)}
   .cap .k{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--accent)}
-  .cap h3{font-size:27px;margin:16px 0 12px;font-weight:600}
+  .cap h3{font-size:25px;margin:16px 0 12px;font-weight:600}
   .cap p{color:var(--soft);font-size:16px}
+  .cap .eg{margin-top:18px;padding-top:16px;border-top:1px solid var(--line-2);font-size:14.5px;color:var(--muted);line-height:1.5}
+  .cap .eg b{color:var(--accent);font-weight:500;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;display:block;margin-bottom:6px}
 
-  /* diagnostic */
-  #diagnostic{background:linear-gradient(180deg,var(--bg-2),var(--bg))}
-  .diag-card{background:linear-gradient(155deg,#1d1711,#130f0b);border:1px solid var(--line);border-radius:16px;padding:clamp(30px,4vw,52px);margin-top:48px;position:relative;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
-  .diag-card .badge{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
-  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);animation:pulse 1.8s infinite}
-  @keyframes pulse{50%{opacity:.35}}
-  .diag-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
-  .field{display:flex;flex-direction:column;gap:8px}
-  .field.full{grid-column:1/-1}
-  .field label{font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:500;letter-spacing:.1em;color:var(--soft);text-transform:uppercase}
-  .field input,.field textarea,.field select{background:#0d0b09;border:1px solid var(--line);border-radius:8px;color:var(--cream);font-family:'Schibsted Grotesk',sans-serif;font-size:16px;padding:13px 15px;transition:.25s;resize:vertical}
-  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent)}
-  .field textarea{min-height:92px}
-  #runBtn{margin-top:22px;width:100%;justify-content:center;font-size:14px;padding:16px}
-  #runBtn:disabled{opacity:.55;cursor:wait}
-  .result{margin-top:30px;border-top:1px solid var(--line);padding-top:30px;display:none}
-  .result.show{display:block;animation:rise .6s ease}
-  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-  .r-headline{font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(24px,3vw,34px);letter-spacing:-.02em;line-height:1.08}
-  .r-section{margin-top:24px}
-  .r-section .rk{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
-  .r-section p{color:var(--soft);margin-top:8px}
-  .lev{list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:10px}
-  .lev li{display:flex;gap:14px;color:var(--cream);align-items:baseline}
-  .lev li span{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:13px}
-  .loading{display:flex;align-items:center;gap:12px;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:13px;margin-top:26px}
-  .spin{width:16px;height:16px;border:2px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:sp .8s linear infinite}
-  @keyframes sp{to{transform:rotate(360deg)}}
-  .r-cta{margin-top:30px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
-  .disclaimer{margin-top:18px;font-size:13px;color:var(--muted)}
+  /* feature cards (intelligence / audio) */
+  .feats{display:grid;gap:1px;background:var(--line-2);border:1px solid var(--line-2);border-radius:10px;overflow:hidden;margin-top:48px}
+  .feats.two{grid-template-columns:repeat(2,1fr)}
+  .feats.three{grid-template-columns:repeat(3,1fr)}
+  .feat{background:var(--bg);padding:34px 30px;transition:background .35s}
+  .feat:hover{background:var(--bg-2)}
+  .feat .fk{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
+  .feat h3{font-size:21px;font-weight:600;margin:14px 0 10px;letter-spacing:-.01em}
+  .feat p{color:var(--soft);font-size:15.5px;line-height:1.55}
 
-  /* wedge */
-  .wedge{background:radial-gradient(120% 140% at 80% 0%,#241a10,#0f0c0a);border:1px solid var(--line);border-radius:14px;padding:clamp(46px,6vw,84px)}
-  .wedge h2{font-size:clamp(36px,5.4vw,72px);margin:20px 0 26px}
-  .wedge h2 em{font-style:normal;color:var(--accent)}
-  .wedge p{color:var(--soft);max-width:56ch;font-size:clamp(17px,1.5vw,21px)}
+  /* compliance pills */
+  .pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+  .pill{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:99px;padding:11px 22px;background:rgba(232,163,61,.05)}
+  .pill-note{margin-top:20px;font-size:14.5px;color:var(--muted);font-style:italic}
 
-  /* steps */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:42px;margin-top:56px}
-  .step .num{font-family:'Archivo',sans-serif;font-weight:800;font-size:62px;color:var(--accent);line-height:1}
-  .step h3{font-size:24px;margin:14px 0 10px;font-weight:600}
-  .step p{color:var(--soft);font-size:16px}
+  /* summary band */
+  .summary .sum-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2);border-radius:10px;overflow:hidden}
+  .sum-cell{background:var(--bg);padding:38px 30px}
+  .sum-k{font-family:var(--font-serif);font-size:clamp(26px,3.2vw,38px);font-weight:800;color:var(--cream)}
+  .sum-v{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-top:14px;line-height:1.5}
 
   /* final */
   .final{text-align:center;background:linear-gradient(180deg,var(--bg),#120d09)}
-  .final h2{font-size:clamp(40px,6.5vw,88px);max-width:15ch;margin:0 auto 26px;font-weight:800}
-  .final p{color:var(--soft);max-width:48ch;margin:0 auto 40px;font-size:20px}
+  .final h2{font-size:clamp(38px,6vw,82px);max-width:16ch;margin:0 auto 26px}
+  .final p{color:var(--soft);max-width:54ch;margin:0 auto 40px;font-size:20px}
+  .final-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
   footer{border-top:1px solid var(--line-2);padding:46px 0}
   .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.05em;color:var(--muted)}
-  .foot-in .logo{color:var(--cream)}
+  .foot-in .logo{font-family:'Archivo',sans-serif;font-weight:800;font-size:18px;letter-spacing:-.03em;color:var(--cream)}
 
-  /* engine anatomy facets */
-  .facets{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
-  .facet{background:var(--bg);border:1px solid var(--line-2);border-radius:10px;padding:24px 22px}
-  .facet svg{width:100%;height:60px;display:block;margin-bottom:14px}
-  .facet .ftitle{font-family:'Archivo',sans-serif;font-weight:600;font-size:18px;letter-spacing:-.01em}
-  .facet p{color:var(--soft);font-size:14.5px;margin-top:8px;line-height:1.5}
-  .colhead{fill:var(--muted);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em}
-  .out-cats{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-  .out-cat{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.06em;color:var(--soft);background:transparent;border:1px solid var(--line);border-radius:4px;padding:10px 14px;cursor:pointer;transition:.2s}
-  .out-cat:hover{border-color:rgba(232,163,61,.5)}
-  .out-cat.on{border-color:var(--accent);color:var(--accent);background:rgba(232,163,61,.07)}
-  .out-detail{margin-top:18px;border-top:1px solid var(--line-2);padding-top:20px}
-  .out-detail .dt{font-family:'Archivo',sans-serif;font-weight:800;font-size:21px;color:var(--cream);letter-spacing:-.01em}
-  .out-detail .row{margin-top:14px}
-  .out-detail .k{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-  .out-detail .k.p{color:var(--accent)}
-  .out-detail .k.r{color:var(--muted)}
-  .out-detail .v{color:var(--soft);font-size:15.5px;line-height:1.55;margin-top:5px}
-  /* field instance tiles */
-  .insts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2);border-radius:10px;overflow:hidden;margin-top:54px}
-  .inst{background:var(--bg);padding:34px 30px;display:flex;flex-direction:column;transition:background .35s}
-  .inst:hover{background:var(--bg-2)}
-  .inst .tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--accent)}
-  .inst h3{font-size:22px;font-weight:600;margin:14px 0 10px;letter-spacing:-.01em;line-height:1.14}
-  .inst p{color:var(--soft);font-size:15px;flex:1}
-  .inst .scale{margin-top:18px;padding-top:14px;border-top:1px solid var(--line-2);font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.04em;color:var(--muted)}
-  .withheld{margin-top:24px;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
   @media(max-width:820px){
-    .facets{grid-template-columns:1fr}
-    .insts{grid-template-columns:1fr}
+    .feats.two,.feats.three{grid-template-columns:1fr}
     .grid2{grid-template-columns:1fr;gap:24px}
     .sticky-label{position:static}
     .caps{grid-template-columns:1fr}
-    .diag-grid{grid-template-columns:1fr}
-    .steps{grid-template-columns:1fr;gap:36px}
+    .summary .sum-grid{grid-template-columns:1fr 1fr}
   }
   @media(max-width:480px){
     body{font-size:16px}
     .wrap{padding:0 20px}
-    .nav-in{height:60px}
-    .logo{font-size:20px}
+    .nav-in{height:64px}
+    .logo-mark{width:34px;height:34px}
+    .logo-words .logo{font-size:18px}
     .nav-in .btn{padding:11px 16px}
     header{padding:60px 0 54px}
     h1.hero{font-size:clamp(34px,11vw,46px);margin-top:18px}
@@ -227,47 +193,28 @@
     section{padding:54px 0}
     .sec-head{font-size:clamp(27px,8vw,34px)}
     .body-lg{font-size:17px}
-    .system{padding:18px}
-    .facet{padding:20px 18px}
     .cap{padding:30px 24px}
-    .cap h3{font-size:23px}
-    .inst{padding:28px 24px}
-    .inst h3{font-size:21px}
-    .diag-card{padding:26px 20px}
-    .wedge{padding:40px 26px}
-    .wedge h2{font-size:clamp(32px,9vw,46px)}
-    .steps .num{font-size:52px}
-    .final h2{font-size:clamp(36px,11vw,54px)}
+    .cap h3{font-size:22px}
+    .feat{padding:28px 24px}
+    .proof-stat{flex-direction:column;align-items:flex-start;gap:14px;padding:24px 26px}
+    .final h2{font-size:clamp(34px,11vw,52px)}
     .final p{font-size:18px}
     .foot-in{gap:12px;font-size:11px}
   }
-.logo-lockup{display:inline-flex;align-items:center;gap:11px}
-.logo-lockup .logo{line-height:1}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="wrap nav-in">
-    <a href="#" class="logo-lockup" aria-label="ReCaptured home">
-      <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true" style="flex:none">
-        <rect x="1.5" y="1.5" width="45" height="45" rx="10" fill="#16110D" stroke="rgba(244,236,222,.16)" stroke-width="1"/>
-        <text x="8" y="34" font-family="Archivo,sans-serif" font-weight="800" font-size="27" fill="#E8A33D">R</text>
-        <g stroke="#E8A33D" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".9">
-          <path d="M28.5 25 C34 25 35 11 40 11"/>
-          <path d="M28.5 25 C34 25 35 18 40 18"/>
-          <path d="M28.5 25 C35 25 37 25 41.5 25"/>
-          <path d="M28.5 25 C34 25 35 32 40 32"/>
-          <path d="M28.5 25 C34 25 35 39 40 39"/>
-        </g>
-        <circle cx="27" cy="25" r="2.2" fill="#E8A33D"/>
-        <circle cx="40" cy="11" r="2.2" fill="#F4ECDE"/>
-        <circle cx="40" cy="18" r="2.2" fill="#F4ECDE"/>
-        <circle cx="41.5" cy="25" r="2.2" fill="#E8A33D"/>
-        <circle cx="40" cy="32" r="2.2" fill="#F4ECDE"/>
-        <circle cx="40" cy="39" r="2.2" fill="#F4ECDE"/>
-      </svg>
-      <span class="logo">Re<b>Captured</b></span>
+    <a href="#" class="logo-lockup" aria-label="ReCaptured Intelligent OS home">
+      <img class="logo-mark" src="recaptured-logo-80.png"
+           srcset="recaptured-logo-40.png 1x, recaptured-logo-80.png 2x, recaptured-logo-120.png 3x"
+           width="40" height="40" alt="ReCaptured">
+      <span class="logo-words">
+        <span class="logo">Re<b>Captured</b></span>
+        <span class="logo-os">Intelligent OS</span>
+      </span>
     </a>
     <a href="https://calendly.com/carpenterlogan3/discovery-call" target="_blank" rel="noopener noreferrer" class="btn btn-solid">Book a call</a>
   </div>
@@ -277,129 +224,163 @@
   <div class="glow a"></div>
   <div class="glow b"></div>
   <div class="wrap">
-    <div class="eyebrow reveal in">The operating system for lean, ambitious teams</div>
-    <h1 class="hero reveal in d1">Make a small team operate like a <em>much larger one.</em></h1>
-    <p class="hero-sub reveal in d2">ReCaptured designs and installs the systems, playbooks, and automations that let a company of ten move like a company of fifty — hitting growth targets without funding the headcount those targets usually demand. Anchored in revenue. Extended across how you run. Priced on what it produces.</p>
+    <div class="eyebrow reveal in">One platform · CRM, projects &amp; whatever you need next</div>
+    <h1 class="hero reveal in d1">CRM, projects — and <em>whatever your business needs next</em> — in one intelligent system.</h1>
+    <p class="hero-sub reveal in d2">ReCaptured Intelligent OS unifies CRM, project management, and your company knowledge in a single AI-first workspace — then keeps going. Because it's built on a flexible data model, the platform isn't boxed into a fixed set of features: it takes on the objects, fields, and workflows your business needs and grows right alongside you. No more stitching together five disconnected tools, and no more outgrowing your software.</p>
     <div class="hero-cta reveal in d3">
-      <a href="#diagnostic" class="btn btn-solid">Run the leverage diagnostic</a>
-      <a href="#system" class="scroll">See how the engine works ↓</a>
+      <a href="https://calendly.com/carpenterlogan3/discovery-call" target="_blank" rel="noopener noreferrer" class="btn btn-solid">Book a call</a>
+      <a href="#configure" class="scroll">Shape it around your business ↓</a>
     </div>
     <div class="hero-meta reveal in d4">
-      <div><b>Systems</b> over headcount</div>
-      <div><b>AI &amp; automation</b> at the core</div>
-      <div><b>Performance-priced</b> — We win when you do</div>
+      <div><b>All-in-one</b> — CRM, projects &amp; more</div>
+      <div><b>AI-first</b> — from the data layer up</div>
+      <div><b>Days, not months</b> — to adapt</div>
     </div>
   </div>
 </header>
 
-<section id="thesis">
-  <div class="wrap grid2">
-    <div class="sticky-label"><div class="eyebrow reveal">The thesis</div></div>
-    <div>
-      <h2 class="sec-head wide reveal">Growth shouldn't require an army.</h2>
-      <div class="body-lg reveal d1" style="margin-top:30px">
-        <p>Every ambitious company eventually hits the same wall: the goals demand more capacity than the team can deliver, and the obvious answer — hire — is slow, expensive, and a bet you can't easily unwind. So work piles onto the few people you have, the founder most of all, and momentum stalls at the edge of everyone's bandwidth.</p>
-        <p>The constraint is almost never effort. It's leverage. Give a small team the right systems — defined processes, reusable playbooks, automation that does the repetitive heavy lifting — and its effective output multiplies without a single new salary. That is the entire discipline of this firm.</p>
-      </div>
+<section id="proof" class="proof">
+  <div class="wrap">
+    <div class="eyebrow reveal">Grows with you</div>
+    <h2 class="reveal d1">Grows with you. <em>Days, not months.</em></h2>
+    <p class="proof-sub reveal d2">As your business expands into new lines, teams, and processes, ReCaptured expands with it. Built on a flexible data model, most new fields, objects, and workflows are configuration — not code — so new needs go live in days, with no rip-and-replace.</p>
+    <div class="proof-stat reveal d3">
+      <div class="big">0</div>
+      <div class="stat-cap">code changes needed for the majority of new requirements</div>
     </div>
   </div>
 </section>
 
-<section id="system">
+<section id="pillars">
   <div class="wrap">
     <div class="grid2">
-      <div class="sticky-label"><div class="eyebrow reveal">Anatomy of the engine</div></div>
+      <div class="sticky-label">
+        <div class="signum reveal">01</div>
+        <div class="eyebrow reveal d1">CRM, Projects &amp; whatever you need next</div>
+      </div>
       <div>
-        <h2 class="sec-head reveal">One system. Built to multiply, not just organize.</h2>
-        <div class="body-lg reveal d1" style="margin-top:30px">
-          <p>Leads, requests, and recurring work flow into a designed layer of structure and automation. What comes out isn't just tidier — it's multiplied: the same inputs turned into far more finished output than your headcount could produce by hand. Tap any output to see what it produces, and what it replaces.</p>
-        </div>
+        <h2 class="sec-head reveal">Start with the essentials. <em>Extend to anything.</em></h2>
+        <div class="body-lg reveal d1" style="margin-top:30px"><p>Start with the essentials below — then extend the very same system to anything else you run. New capabilities are added as configuration, not another tool to buy and bolt on.</p></div>
       </div>
     </div>
-    <div class="system reveal d2">
-      <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" aria-label="Inputs flowing through an operating system into multiplied output">
-        <defs><radialGradient id="eg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#3a2a14"/><stop offset="100%" stop-color="#1d1610"/></radialGradient></defs>
-        <text class="colhead" x="95" y="26" text-anchor="middle">RAW INPUTS</text>
-        <text class="colhead" x="820" y="26" text-anchor="middle">MULTIPLIED OUTPUT</text>
-        <path class="path" d="M168 60 C290 60 330 160 440 160"/>
-        <path class="path" d="M168 110 C290 110 350 160 440 160"/>
-        <path class="path" d="M168 160 C290 160 350 160 440 160"/>
-        <path class="path" d="M168 210 C290 210 350 160 440 160"/>
-        <path class="path" d="M168 260 C290 260 330 160 440 160"/>
-        <path id="p0" fill="none" stroke="rgba(232,163,61,.2)" stroke-width="1.5" d="M590 160 C710 160 730 70 820 70"/>
-        <path id="p1" fill="none" stroke="rgba(232,163,61,.2)" stroke-width="1.5" d="M590 160 C710 160 730 115 820 115"/>
-        <path id="p2" fill="none" stroke="rgba(232,163,61,.2)" stroke-width="1.5" d="M590 160 C710 160 760 160 820 160"/>
-        <path id="p3" fill="none" stroke="rgba(232,163,61,.2)" stroke-width="1.5" d="M590 160 C710 160 730 205 820 205"/>
-        <path id="p4" fill="none" stroke="rgba(232,163,61,.2)" stroke-width="1.5" d="M590 160 C710 160 730 250 820 250"/>
-        <g><circle class="nodeC" cx="150" cy="60" r="18"/><text class="nodeLbl" x="120" y="64" text-anchor="end" font-size="11">LEADS</text></g>
-        <g><circle class="nodeC" cx="150" cy="110" r="18"/><text class="nodeLbl" x="120" y="114" text-anchor="end" font-size="11">CONVERSATIONS</text></g>
-        <g><circle class="nodeC" cx="150" cy="160" r="18"/><text class="nodeLbl" x="120" y="164" text-anchor="end" font-size="11">PROPOSALS</text></g>
-        <g><circle class="nodeC" cx="150" cy="210" r="18"/><text class="nodeLbl" x="120" y="214" text-anchor="end" font-size="11">OPERATIONS</text></g>
-        <g><circle class="nodeC" cx="150" cy="260" r="18"/><text class="nodeLbl" x="120" y="264" text-anchor="end" font-size="11">SCATTERED DATA</text></g>
-        <rect class="engine" x="440" y="120" width="150" height="80" rx="14"/>
-        <text class="engLbl" x="515" y="153" text-anchor="middle">OPERATING</text>
-        <text class="engLbl" x="515" y="172" text-anchor="middle">SYSTEM</text>
-        <text class="nodeLbl" x="515" y="190" text-anchor="middle">structure · automation</text>
-        <circle id="d0" class="nodeC" cx="820" cy="70" r="12"/>
-        <circle id="d1" class="nodeC" cx="820" cy="115" r="12"/>
-        <circle id="d2" class="nodeC" cx="820" cy="160" r="12"/>
-        <circle id="d3" class="nodeC" cx="820" cy="205" r="12"/>
-        <circle id="d4" class="nodeC" cx="820" cy="250" r="12"/>
-        <circle class="flow" r="4"><animateMotion dur="3s" repeatCount="indefinite" path="M168 60 C290 60 330 160 440 160"/></circle>
-        <circle class="flow" r="4"><animateMotion dur="3s" begin="1s" repeatCount="indefinite" path="M168 160 C290 160 350 160 440 160"/></circle>
-        <circle class="flow" r="4"><animateMotion dur="3s" begin="2s" repeatCount="indefinite" path="M168 260 C290 260 330 160 440 160"/></circle>
-      </svg>
-      <div class="out-cats" id="outCats">
-        <button class="out-cat on" data-i="0">Revenue motion</button>
-        <button class="out-cat" data-i="1">Market path</button>
-        <button class="out-cat" data-i="2">Expansion plays</button>
-        <button class="out-cat" data-i="3">Daily throughput</button>
-        <button class="out-cat" data-i="4">Decision intelligence</button>
+    <div class="caps">
+      <div class="cap reveal">
+        <div class="k">i — CRM</div>
+        <h3>CRM that knows your customers</h3>
+        <p>Companies, contacts, deals, and every interaction in one connected graph — enriched and kept current by AI so your team always works from the truth.</p>
+        <div class="eg"><b>In practice</b>Model an entire buying committee as a connected graph — every buyer, blocker, and silent veto — to surface the one relationship that moves a deal.</div>
       </div>
-      <div class="out-detail" id="outDetail">
-        <div class="dt">Revenue motion</div>
-        <div class="row"><div class="k p">What it produces</div><div class="v">A repeatable selling process anyone on the team can run.</div></div>
-        <div class="row"><div class="k r">What it replaces</div><div class="v">Deals that only move when the founder personally pushes them.</div></div>
+      <div class="cap reveal d1">
+        <div class="k">ii — PROJECTS</div>
+        <h3>Project &amp; work management</h3>
+        <p>Projects, tasks, milestones, and workloads live beside your customer data — with boards, calendars, timelines, and dashboards out of the box.</p>
+        <div class="eg"><b>In practice</b>Run a deal through a stage-gated system where every stage is owned and gated, so nothing slips and work only moves forward once it's earned.</div>
       </div>
-    </div>
-    <div class="facets reveal d3">
-      <div class="facet">
-        <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg"><line x1="38" y1="30" x2="74" y2="18" stroke="var(--line)" stroke-width="1.5"/><line x1="38" y1="30" x2="74" y2="44" stroke="var(--line)" stroke-width="1.5"/><line x1="38" y1="30" x2="118" y2="30" stroke="var(--line)" stroke-width="1.5"/><rect x="8" y="15" width="30" height="30" rx="6" fill="var(--accent)"/><rect x="74" y="7" width="20" height="20" rx="5" fill="none" stroke="var(--soft)" stroke-width="1.5"/><rect x="74" y="33" width="20" height="20" rx="5" fill="none" stroke="var(--soft)" stroke-width="1.5"/><rect x="118" y="20" width="20" height="20" rx="5" fill="none" stroke="var(--soft)" stroke-width="1.5"/></svg>
-        <div class="ftitle">One engine, many instances</div>
-        <p>A system that's already been built and proven, then recalibrated to your business — never rebuilt from scratch.</p>
+      <div class="cap reveal">
+        <div class="k">iii — KNOWLEDGE</div>
+        <h3>A living knowledge base</h3>
+        <p>Documents, notes, and files become searchable institutional memory. Ask in plain language and get answers grounded in your own content.</p>
+        <div class="eg"><b>In practice</b>Ask a plain-language question and get a source-cited answer in seconds instead of a day of digging through people and documents.</div>
       </div>
-      <div class="facet">
-        <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg"><line x1="16" y1="30" x2="184" y2="30" stroke="var(--line)" stroke-width="2"/><line x1="37" y1="22" x2="37" y2="38" stroke="var(--line)" stroke-width="1.5"/><line x1="79" y1="22" x2="79" y2="38" stroke="var(--line)" stroke-width="1.5"/><line x1="121" y1="22" x2="121" y2="38" stroke="var(--line)" stroke-width="1.5"/><line x1="163" y1="22" x2="163" y2="38" stroke="var(--line)" stroke-width="1.5"/><circle cx="16" cy="30" r="7" fill="var(--accent)"/><circle cx="58" cy="30" r="7" fill="var(--accent)"/><circle cx="100" cy="30" r="7" fill="var(--accent)"/><circle cx="142" cy="30" r="7" fill="none" stroke="var(--soft)" stroke-width="1.5"/><circle cx="184" cy="30" r="7" fill="none" stroke="var(--soft)" stroke-width="1.5"/></svg>
-        <div class="ftitle">Stage-gated, start to close</div>
-        <p>Every stage is owned and gated, so work only moves forward once it's genuinely earned.</p>
-      </div>
-      <div class="facet">
-        <svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="14" r="3" fill="var(--soft)"/><circle cx="30" cy="38" r="3" fill="var(--soft)"/><circle cx="18" cy="50" r="3" fill="var(--soft)"/><circle cx="38" cy="20" r="3" fill="var(--soft)"/><circle cx="8" cy="32" r="3" fill="var(--soft)"/><path d="M50,30 h16 m-5,-4 l5,4 l-5,4" stroke="var(--line)" stroke-width="1.5" fill="none"/><g fill="none" stroke="var(--soft)" stroke-width="1.5"><rect x="82" y="14" width="14" height="14"/><rect x="100" y="14" width="14" height="14"/><rect x="82" y="32" width="14" height="14"/><rect x="100" y="32" width="14" height="14"/></g><path d="M126,30 h16 m-5,-4 l5,4 l-5,4" stroke="var(--line)" stroke-width="1.5" fill="none"/><g fill="var(--accent)"><rect x="158" y="34" width="9" height="16"/><rect x="173" y="24" width="9" height="26"/><rect x="188" y="13" width="9" height="37"/><rect x="203" y="29" width="9" height="21"/></g></svg>
-        <div class="ftitle">Capture → structure → surface</div>
-        <p>Scattered conversation and data become structured intelligence — then a decision-ready view.</p>
+      <div class="cap reveal d1">
+        <div class="k">iv — MEMORY</div>
+        <h3>Memory &amp; learning built in</h3>
+        <p>The system captures what happens, distills it into durable knowledge, and gets smarter with every interaction — insight compounds instead of walking out the door.</p>
+        <div class="eg"><b>In practice</b>Outreach across every inbox becomes one shared, structured record automatically — no double entry, no behavior change, full capture.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =========  RECAPTURED · COMMAND CENTER  (v2 · LIVING)  —  START OF EMBED BLOCK  ============= -->
-<!-- ============================================================================================ -->
+<section id="intelligence">
+  <div class="wrap">
+    <div class="grid2">
+      <div class="sticky-label">
+        <div class="signum reveal">02</div>
+        <div class="eyebrow reveal d1">Intelligence at the core</div>
+      </div>
+      <div>
+        <h2 class="sec-head reveal">Built <em>AI-first</em> — from the data layer up.</h2>
+        <div class="body-lg reveal d1" style="margin-top:30px"><p>Most software bolted on a chatbot. ReCaptured was built AI-first from the data layer up — intelligence runs through your CRM, projects, and knowledge as a teammate that drafts, enriches, recalls, and acts, always with your confirmation.</p></div>
+      </div>
+    </div>
+    <div class="feats two">
+      <div class="feat reveal">
+        <div class="fk">AI-first, end to end</div>
+        <h3>A teammate inside the work</h3>
+        <p>Auto-fill records, draft updates, surface the right context, and turn a voice note or meeting into clean, structured data — inside the flow of work, with full provenance on every change.</p>
+      </div>
+      <div class="feat reveal d1">
+        <div class="fk">Memory that compounds</div>
+        <h3>Never re-learn what you knew</h3>
+        <p>ReCaptured remembers decisions, customers, and what worked — consolidating day-to-day activity into lasting knowledge so your team never re-learns what the company already knew.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="audio">
+  <div class="wrap">
+    <div class="grid2">
+      <div class="sticky-label">
+        <div class="signum reveal">03</div>
+        <div class="eyebrow reveal d1">Capture every word — built-in audio</div>
+      </div>
+      <div>
+        <h2 class="sec-head reveal">Every conversation, <em>captured and structured.</em></h2>
+        <div class="body-lg reveal d1" style="margin-top:30px"><p>Conversations, meetings, and site visits become clean, structured records automatically — transcribed and summarized in-platform, then sealed as a defensible system of record.</p></div>
+      </div>
+    </div>
+    <div class="feats three">
+      <div class="feat reveal">
+        <div class="fk">Transcription &amp; summarization, included</div>
+        <h3>Audio becomes records</h3>
+        <p>Conversations, meetings, and site visits become clean, structured records automatically. ReCaptured transcribes and summarizes audio in-platform, then drops the key points straight onto the right customer, project, or note.</p>
+      </div>
+      <div class="feat reveal d1">
+        <div class="fk">Optional field recording device</div>
+        <h3>So nothing is missed</h3>
+        <p>An optional hands-free field audio device captures discussions out in the world, where notes never get written. Walk a site, run a meeting, take a call — it's all captured and turned into records back in the platform.</p>
+      </div>
+      <div class="feat reveal d2">
+        <div class="fk">Immutable transcripts</div>
+        <h3>A defensible audit trail</h3>
+        <p>Every transcript is sealed and tamper-evident — a permanent, content-verified system of record. Corrections are tracked separately, never overwritten, giving you a complete and defensible history of what was said.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========  RECAPTURED · INTELLIGENT OS  ·  CONFIGURE + COMMAND CENTER  —  START  ========= -->
 <style>
-  /* Scoped to .rcc-* so it can never collide with your existing styles.
-     Uses var(--token, fallback) so it matches your site live, and still renders if pasted anywhere. */
   .rcc-section{position:relative;padding:clamp(72px,10vw,130px) 0;border-top:1px solid var(--line-2,rgba(244,236,222,.07))}
   .rcc-wrap{max-width:var(--maxw,1200px);margin:0 auto;padding:0 36px}
   .rcc-grid2{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(30px,6vw,90px);align-items:start}
   .rcc-sticky{position:sticky;top:120px}
   .rcc-eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#E8A33D);font-weight:500}
-  .rcc-head{font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:-.025em;line-height:1.02;font-size:clamp(32px,4.4vw,58px);max-width:16ch}
   .rcc-sub{color:var(--soft,#C9BEAD);font-size:clamp(17px,1.4vw,21px);margin-top:30px;line-height:1.6}
   .rcc-sub p+p{margin-top:16px}
   .rcc-try{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.05em;color:var(--muted,#8C8170);margin-top:22px;line-height:1.7}
   .rcc-try b{color:var(--accent,#E8A33D);font-weight:500}
 
+  /* configurator */
+  .cfg{margin-top:48px;background:linear-gradient(155deg,#1d1711,#130f0b);border:1px solid var(--line,rgba(244,236,222,.12));border-radius:16px;padding:clamp(28px,4vw,44px);box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+  .cfg-badge{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--accent,#E8A33D);text-transform:uppercase}
+  .cfg-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--accent,#E8A33D);box-shadow:0 0 10px var(--accent,#E8A33D);animation:rccPulse2 1.8s infinite}
+  @keyframes rccPulse2{50%{opacity:.35}}
+  .cfg-lead{color:var(--soft,#C9BEAD);font-size:clamp(16px,1.4vw,19px);margin-top:14px;max-width:62ch;line-height:1.55}
+  .cfg-controls{display:grid;grid-template-columns:1fr 1.5fr;gap:26px;margin-top:30px}
+  .cfg-field label{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft,#C9BEAD);margin-bottom:13px}
+  .cfg-opts{display:flex;flex-wrap:wrap;gap:9px}
+  .cfg-opt{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.03em;color:var(--soft,#C9BEAD);background:#0d0b09;border:1px solid var(--line,rgba(244,236,222,.12));border-radius:6px;padding:10px 14px;cursor:pointer;transition:.2s}
+  .cfg-opt:hover{border-color:rgba(232,163,61,.55);color:var(--cream,#F4ECDE)}
+  .cfg-opt.on{border-color:var(--accent,#E8A33D);color:var(--accent,#E8A33D);background:rgba(232,163,61,.08)}
+  .cfg-apply{margin-top:26px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.03em;padding:14px 24px;border-radius:3px;cursor:pointer;background:var(--accent,#E8A33D);color:#1a1206;border:1px solid var(--accent,#E8A33D);font-weight:500;transition:.25s}
+  .cfg-apply:hover{background:var(--cream,#F4ECDE)}
+  .cfg-note{margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.04em;color:var(--muted,#8C8170)}
+
   /* the product window */
-  .rcc-app{margin-top:48px;background:linear-gradient(155deg,#1d1711,#120e0a);border:1px solid var(--line,rgba(244,236,222,.12));
+  .rcc-app{margin-top:30px;background:linear-gradient(155deg,#1d1711,#120e0a);border:1px solid var(--line,rgba(244,236,222,.12));
     border-radius:16px;overflow:hidden;box-shadow:0 50px 90px -45px rgba(0,0,0,.8);opacity:1;transform:none}
   .rcc-section.js-rcc .rcc-app{opacity:0;transform:translateY(26px);transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1)}
   .rcc-section.js-rcc.is-live .rcc-app{opacity:1;transform:none}
@@ -407,7 +388,6 @@
   .rcc-bar{position:relative;display:flex;align-items:center;gap:11px;padding:15px 20px;border-bottom:1px solid var(--line-2,rgba(244,236,222,.07));background:rgba(0,0,0,.22)}
   .rcc-bdot{width:9px;height:9px;border-radius:50%;background:var(--accent,#E8A33D);box-shadow:0 0 0 3px rgba(232,163,61,.16)}
   .rcc-brand{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.18em;color:var(--cream,#F4ECDE)}
-  /* tenant is now an interactive switcher */
   .rcc-tenant{display:inline-flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
     color:var(--soft,#C9BEAD);background:transparent;border:1px solid var(--line,rgba(244,236,222,.12));border-radius:5px;padding:4px 9px;margin-left:6px;cursor:pointer;transition:.2s}
   .rcc-tenant:hover{border-color:rgba(232,163,61,.55);color:var(--cream,#F4ECDE)}
@@ -421,7 +401,6 @@
   @keyframes rccBreathe{0%,100%{box-shadow:0 0 0 0 rgba(116,168,120,.55)}50%{box-shadow:0 0 0 6px rgba(116,168,120,0)}}
   .rcc-sync{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:var(--muted,#8C8170)}
 
-  /* tenant menu */
   .rcc-menu{position:absolute;z-index:20;top:48px;left:170px;min-width:240px;background:#161009;border:1px solid var(--line,rgba(244,236,222,.12));
     border-radius:10px;padding:6px;box-shadow:0 24px 50px -22px rgba(0,0,0,.85);display:none}
   .rcc-menu.open{display:block;animation:rccFade .22s ease both}
@@ -442,13 +421,11 @@
   .rcc-view{display:none;animation:rccFade .4s ease both}
   .rcc-view.on{display:block}
   @keyframes rccFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-  /* re-scan shimmer when the surface reconfigures */
   .rcc-scan{position:absolute;inset:0;pointer-events:none;opacity:0;background:linear-gradient(100deg,transparent 30%,rgba(232,163,61,.10) 50%,transparent 70%);
     background-size:220% 100%}
   .rcc-stage.scan .rcc-scan{opacity:1;animation:rccSweep .6s ease both}
   @keyframes rccSweep{from{background-position:140% 0}to{background-position:-40% 0}}
 
-  /* module rail — the malleable part */
   .rcc-rail{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:16px}
   .rcc-rlabel{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted,#8C8170);margin-right:4px}
   .rcc-modchip{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;color:var(--muted,#8C8170);
@@ -457,7 +434,6 @@
   .rcc-modchip .mk{font-size:11px;line-height:1;opacity:.8}
   .rcc-modchip.on{border-style:solid;border-color:var(--accent,#E8A33D);color:var(--accent,#E8A33D);background:rgba(232,163,61,.07)}
 
-  /* mission control KPIs */
   .rcc-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
   .rcc-kpi{background:var(--bg,#0F0C0A);border:1px solid var(--line-2,rgba(244,236,222,.07));border-radius:11px;padding:16px;animation:rccPop .35s ease both}
   @keyframes rccPop{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
@@ -468,7 +444,6 @@
   .rcc-pbar{height:5px;background:rgba(244,236,222,.10);border-radius:99px;margin-top:12px;overflow:hidden}
   .rcc-pbar i{display:block;height:100%;width:var(--w,0%);border-radius:99px;background:linear-gradient(90deg,var(--accent-2,#C9722B),var(--accent,#E8A33D));transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
 
-  /* risk radar */
   .rcc-risk{display:flex;flex-direction:column;gap:10px}
   .rcc-rrow{display:flex;gap:13px;align-items:flex-start;background:var(--bg,#0F0C0A);border:1px solid var(--line-2,rgba(244,236,222,.07));
     border-left:3px solid var(--muted,#8C8170);border-radius:10px;padding:13px 15px;animation:rccPop .35s ease both}
@@ -483,7 +458,6 @@
   .rcc-rmove{font-size:12.5px;color:var(--soft,#C9BEAD);margin-top:4px}
   .rcc-rmove b{color:#74A878;font-weight:600}
 
-  /* initiatives */
   .rcc-init{display:flex;flex-direction:column;gap:1px;background:var(--line-2,rgba(244,236,222,.07));border:1px solid var(--line-2,rgba(244,236,222,.07));border-radius:10px;overflow:hidden}
   .rcc-irow{display:grid;grid-template-columns:1.6fr .8fr .8fr;gap:12px;align-items:center;background:var(--bg,#0F0C0A);padding:14px 16px}
   .rcc-iname{font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;color:var(--cream,#F4ECDE)}
@@ -495,7 +469,6 @@
   .rcc-mini{height:5px;background:rgba(244,236,222,.10);border-radius:99px;overflow:hidden}
   .rcc-mini i{display:block;height:100%;width:var(--w,0%);border-radius:99px;background:linear-gradient(90deg,var(--accent-2,#C9722B),var(--accent,#E8A33D));transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
 
-  /* CTA */
   .rcc-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:26px;
     padding:22px 24px;background:radial-gradient(120% 160% at 85% 0%,#241a10,#0f0c0a);border:1px solid var(--line,rgba(244,236,222,.12));border-radius:14px}
   .rcc-cta-txt{font-size:15px;color:var(--soft,#C9BEAD);max-width:58ch;line-height:1.5}
@@ -506,6 +479,7 @@
 
   @media(max-width:900px){
     .rcc-grid2{grid-template-columns:1fr;gap:24px}.rcc-sticky{position:static}
+    .cfg-controls{grid-template-columns:1fr;gap:20px}
     .rcc-kpis{grid-template-columns:repeat(2,1fr)}
     .rcc-irow{grid-template-columns:1.4fr .9fr;gap:10px}.rcc-irow .rcc-mini{display:none}
     .rcc-menu{left:20px;right:20px;min-width:0}
@@ -520,33 +494,59 @@
     <div class="rcc-grid2">
       <div class="rcc-sticky"><div class="rcc-eyebrow">A living surface</div></div>
       <div>
-        <h2 class="rcc-head">Not a report you read. A surface you run.</h2>
+        <h2 class="rcc-head">Not a report you read. A surface you <em>run.</em></h2>
         <div class="rcc-sub">
-          <p>Every system we install feeds one command center — your whole operation in a single view, with a radar that flags what's about to break before it does.</p>
-          <p>It's not a static snapshot. It's a living surface you reshape as the business shifts: swap the tenant, add or pull a module, and the whole view rebuilds on the spot. Below is a sample tenant — yours is assembled around your real numbers in a single 30-minute discovery session.</p>
+          <p>Every object in ReCaptured — customers, projects, knowledge, the work itself — feeds one live surface, with AI flagging what needs attention before it breaks.</p>
+          <p>It's not a static snapshot. Shape it to your business below, switch the workspace, add or pull a module — and the whole view rebuilds on the spot. One surface, any business.</p>
         </div>
-        <div class="rcc-try">↳ Try it live below — <b>switch the tenant</b>, <b>tap a module on or off</b>. Same surface, reconfigured.</div>
+        <div class="rcc-try">↳ Try it live — <b>shape your workspace</b>, then <b>switch the workspace</b> or <b>tap a module on or off</b>. Same surface, reconfigured.</div>
       </div>
+    </div>
+
+    <div class="cfg reveal" id="configure">
+      <div class="cfg-badge"><span class="dot"></span> Shape Intelligent OS around your business</div>
+      <p class="cfg-lead">Pick your shape. The platform models the objects and workflows to match — then the command center below rebuilds to fit. No code, no rebuild: configuration only.</p>
+      <div class="cfg-controls">
+        <div class="cfg-field">
+          <label>Your business</label>
+          <div class="cfg-opts" id="cfgIndustry">
+            <button class="cfg-opt on" data-ind="meridian">Professional services</button>
+            <button class="cfg-opt" data-ind="northwind">Logistics &amp; operations</button>
+            <button class="cfg-opt" data-ind="atlas">Multi-site healthcare</button>
+          </div>
+        </div>
+        <div class="cfg-field">
+          <label>What you run on it</label>
+          <div class="cfg-opts" id="cfgMods">
+            <button class="cfg-opt on" data-mod="crm">CRM</button>
+            <button class="cfg-opt on" data-mod="proj">Projects</button>
+            <button class="cfg-opt on" data-mod="know">Knowledge</button>
+            <button class="cfg-opt on" data-mod="mem">Memory &amp; AI</button>
+            <button class="cfg-opt on" data-mod="audio">Audio</button>
+          </div>
+        </div>
+      </div>
+      <button class="cfg-apply" id="cfgApply">Shape my workspace →</button>
+      <div class="cfg-note">Models live objects and workflows around how you actually operate — the same way your real workspace is stood up in a discovery session.</div>
     </div>
 
     <div class="rcc-app" id="rccApp">
       <div class="rcc-bar">
         <span class="rcc-bdot"></span>
-        <span class="rcc-brand">RECAPTURED · COMMAND CENTER</span>
+        <span class="rcc-brand">RECAPTURED · INTELLIGENT OS</span>
         <button class="rcc-tenant" id="rccTenantBtn" aria-haspopup="true" aria-expanded="false">
           <span id="rccTenantName">MERIDIAN GROUP</span><span class="car">▼</span>
         </button>
-        <span class="rcc-hint">← <b>switch tenant</b></span>
+        <span class="rcc-hint">← <b>switch workspace</b></span>
         <span class="rcc-meta">
           <span class="rcc-sync" id="rccSync">synced just now</span>
           <span class="rcc-live"><span class="ld"></span>LIVE</span>
         </span>
 
-        <!-- tenant menu -->
         <div class="rcc-menu" id="rccMenu" role="menu">
-          <div class="rcc-mlabel">Sample tenants — one surface, any business</div>
+          <div class="rcc-mlabel">Sample workspaces — one surface, any business</div>
           <button class="rcc-mitem on" data-t="meridian" role="menuitem"><span class="mn">MERIDIAN GROUP</span><span class="mi">Professional services · 12 people</span></button>
-          <button class="rcc-mitem" data-t="northwind" role="menuitem"><span class="mn">NORTHWIND LOGISTICS</span><span class="mi">Freight & operations · 40 people</span></button>
+          <button class="rcc-mitem" data-t="northwind" role="menuitem"><span class="mn">NORTHWIND LOGISTICS</span><span class="mi">Freight &amp; operations · 40 people</span></button>
           <button class="rcc-mitem" data-t="atlas" role="menuitem"><span class="mn">ATLAS DENTAL PARTNERS</span><span class="mi">Multi-site healthcare · 5 locations</span></button>
         </div>
       </div>
@@ -560,48 +560,44 @@
       <div class="rcc-stage" id="rccStage">
         <div class="rcc-scan"></div>
 
-        <!-- MISSION CONTROL -->
         <div class="rcc-view on" data-view="mc">
           <div class="rcc-rail" id="rccRail" aria-label="Modules — tap to add or remove">
             <span class="rcc-rlabel">Modules</span>
-            <!-- populated by JS; static fallback below for no-JS -->
           </div>
           <div class="rcc-kpis" id="rccKpis">
-            <div class="rcc-kpi"><div class="l">Revenue Run-Rate</div><div class="v">$4.2<span class="u">M</span></div><div class="o">70% to $6M target</div><div class="rcc-pbar"><i style="--w:70%"></i></div></div>
-            <div class="rcc-kpi"><div class="l">Active Deals</div><div class="v">38</div><div class="o">76% of quarter quota</div><div class="rcc-pbar"><i style="--w:76%"></i></div></div>
-            <div class="rcc-kpi"><div class="l">On-Time Delivery</div><div class="v">91<span class="u">%</span></div><div class="o">vs 95% goal</div><div class="rcc-pbar"><i style="--w:91%"></i></div></div>
-            <div class="rcc-kpi"><div class="l">Cash Runway</div><div class="v">14<span class="u"> mo</span></div><div class="o">healthy</div><div class="rcc-pbar"><i style="--w:78%"></i></div></div>
+            <div class="rcc-kpi"><div class="l">Open Deals</div><div class="v">38</div><div class="o">pipeline enriched &amp; current by AI</div><div class="rcc-pbar"><i style="--w:76%"></i></div></div>
+            <div class="rcc-kpi"><div class="l">On-Time Delivery</div><div class="v">91<span class="u">%</span></div><div class="o">across active engagements</div><div class="rcc-pbar"><i style="--w:91%"></i></div></div>
+            <div class="rcc-kpi"><div class="l">Knowledge Articles</div><div class="v">420</div><div class="o">answers grounded in your content</div><div class="rcc-pbar"><i style="--w:68%"></i></div></div>
+            <div class="rcc-kpi"><div class="l">AI Actions / wk</div><div class="v">240</div><div class="o">drafts, enrichments, recalls</div><div class="rcc-pbar"><i style="--w:72%"></i></div></div>
           </div>
         </div>
 
-        <!-- RISK RADAR -->
         <div class="rcc-view" data-view="risk"><div class="rcc-risk" id="rccRisk">
           <div class="rcc-rrow crit"><span class="rcc-rdot"></span><div>
-            <div class="rcc-rsev">Critical</div>
-            <div class="rcc-rtxt">2 deals stalled 14+ days in "Proposal" — <b>$180K</b> at risk.</div>
-            <div class="rcc-rmove"><b>Move —</b> Founder re-engages both personally this week.</div></div></div>
+            <div class="rcc-rsev">Flagged</div>
+            <div class="rcc-rtxt">2 deals untouched 14+ days — AI flagged lost momentum.</div>
+            <div class="rcc-rmove"><b>Move —</b> Re-engagement drafts are ready in each record; review &amp; send.</div></div></div>
           <div class="rcc-rrow warn"><span class="rcc-rdot"></span><div>
-            <div class="rcc-rsev">Elevated</div>
-            <div class="rcc-rtxt">Onboarding backlog building — 3 new clients awaiting kickoff.</div>
-            <div class="rcc-rmove"><b>Move —</b> Assign a kickoff owner; cap work-in-progress at 2.</div></div></div>
+            <div class="rcc-rsev">Surfaced</div>
+            <div class="rcc-rtxt">Onboarding docs missing for 3 new clients.</div>
+            <div class="rcc-rmove"><b>Move —</b> Knowledge base generated the checklists; assign an owner.</div></div></div>
           <div class="rcc-rrow watch"><span class="rcc-rdot"></span><div>
-            <div class="rcc-rsev">Watch</div>
-            <div class="rcc-rtxt">Founder is owner on 6 of 9 active priorities.</div>
-            <div class="rcc-rmove"><b>Move —</b> Delegate two before the next sprint.</div></div></div>
+            <div class="rcc-rsev">Noted</div>
+            <div class="rcc-rtxt">4 meeting transcripts not yet linked to accounts.</div>
+            <div class="rcc-rmove"><b>Move —</b> Audio capture will attach them automatically on confirm.</div></div></div>
         </div></div>
 
-        <!-- INITIATIVES -->
         <div class="rcc-view" data-view="init"><div class="rcc-init" id="rccInit">
-          <div class="rcc-irow"><div class="rcc-iname">Q3 Sales System Rollout<small>OWNER · OPS</small></div><span class="rcc-pill ok">On Track</span><div class="rcc-mini"><i style="--w:72%"></i></div></div>
-          <div class="rcc-irow"><div class="rcc-iname">New Client Onboarding Flow<small>OWNER · YOU</small></div><span class="rcc-pill risk">At Risk</span><div class="rcc-mini"><i style="--w:40%"></i></div></div>
-          <div class="rcc-irow"><div class="rcc-iname">Referral Program Launch<small>OWNER · UNASSIGNED</small></div><span class="rcc-pill idle">Not Started</span><div class="rcc-mini"><i style="--w:6%"></i></div></div>
+          <div class="rcc-irow"><div class="rcc-iname">Client Onboarding Flow<small>OBJECT · PROJECTS</small></div><span class="rcc-pill ok">On Track</span><div class="rcc-mini"><i style="--w:72%"></i></div></div>
+          <div class="rcc-irow"><div class="rcc-iname">Q3 Pipeline Review<small>OBJECT · CRM</small></div><span class="rcc-pill risk">Needs Attention</span><div class="rcc-mini"><i style="--w:40%"></i></div></div>
+          <div class="rcc-irow"><div class="rcc-iname">Knowledge Base Cleanup<small>OBJECT · KNOWLEDGE</small></div><span class="rcc-pill idle">Queued</span><div class="rcc-mini"><i style="--w:12%"></i></div></div>
         </div></div>
       </div>
     </div>
 
     <div class="rcc-cta">
-      <div class="rcc-cta-txt">What you just reconfigured by hand, we configure around your real operation. <b>Same living surface — your numbers, your modules, your risks</b> — stood up in a 30-minute discovery session, no rebuild and no lift on your team.</div>
-      <a class="rcc-btn" href="https://calendly.com/carpenterlogan3/discovery-call" target="_blank" rel="noopener noreferrer">Build your command center →</a>
+      <div class="rcc-cta-txt">This is the same surface your team runs on — <b>your objects, your workflows, your risks</b>, modeled around how you actually operate. Stood up in a 30-minute discovery session: no rebuild, no rip-and-replace, no lift on your team.</div>
+      <a class="rcc-btn" href="https://calendly.com/carpenterlogan3/discovery-call" target="_blank" rel="noopener noreferrer">Book a call →</a>
     </div>
   </div>
 
@@ -610,84 +606,81 @@
     var sec=document.getElementById('cockpit'); if(!sec) return;
     sec.classList.add('js-rcc');
 
-    /* ---- data: one surface, any business ---- */
-    var MODS=[ /* order + labels for the rail */
-      {id:'rev',  label:'Revenue'},
-      {id:'deals',label:'Pipeline'},
-      {id:'del',  label:'Delivery'},
-      {id:'cash', label:'Cash'},
-      {id:'team', label:'Team Load'},
-      {id:'nps',  label:'Client Health'}
+    var MODS=[
+      {id:'crm',  label:'CRM'},
+      {id:'proj', label:'Projects'},
+      {id:'know', label:'Knowledge'},
+      {id:'mem',  label:'Memory & AI'},
+      {id:'audio',label:'Audio'}
     ];
     var T={
       meridian:{name:'MERIDIAN GROUP',
         kpi:{
-          rev:{l:'Revenue Run-Rate',p:'$',base:4.2,d:1,u:'M',o:'70% to $6M target',w:70,j:.04},
-          deals:{l:'Active Deals',base:38,d:0,o:'76% of quarter quota',w:76,j:1},
-          del:{l:'On-Time Delivery',base:91,d:0,u:'%',o:'vs 95% goal',w:91,j:.6},
-          cash:{l:'Cash Runway',base:14,d:0,u:' mo',o:'healthy',w:78,j:0},
-          team:{l:'Founder Load',base:67,d:0,u:'%',o:'owner on 6 of 9 priorities',w:67,j:1},
-          nps:{l:'Client Health',base:72,d:0,o:'+8 vs last quarter',w:72,j:1}
+          crm:{l:'Open Deals',base:38,d:0,o:'pipeline enriched & current by AI',w:76,j:1},
+          proj:{l:'On-Time Delivery',base:91,d:0,u:'%',o:'across active engagements',w:91,j:.6},
+          know:{l:'Knowledge Articles',base:420,d:0,o:'answers grounded in your content',w:68,j:2},
+          mem:{l:'AI Actions / wk',base:240,d:0,o:'drafts, enrichments, recalls',w:72,j:4},
+          audio:{l:'Calls Transcribed',base:64,d:0,o:'auto-summarized this month',w:64,j:1}
         },
         risk:[
-          ['crit','Critical','2 deals stalled 14+ days in "Proposal" — <b>$180K</b> at risk.','Founder re-engages both personally this week.'],
-          ['warn','Elevated','Onboarding backlog building — 3 new clients awaiting kickoff.','Assign a kickoff owner; cap work-in-progress at 2.'],
-          ['watch','Watch','Founder is owner on 6 of 9 active priorities.','Delegate two before the next sprint.']
+          ['crit','Flagged','2 deals untouched 14+ days — AI flagged lost momentum.','Re-engagement drafts are ready in each record; review &amp; send.'],
+          ['warn','Surfaced','Onboarding docs missing for 3 new clients.','Knowledge base generated the checklists; assign an owner.'],
+          ['watch','Noted','4 meeting transcripts not yet linked to accounts.','Audio capture will attach them automatically on confirm.']
         ],
         init:[
-          ['Q3 Sales System Rollout','OPS','ok','On Track',72],
-          ['New Client Onboarding Flow','YOU','risk','At Risk',40],
-          ['Referral Program Launch','UNASSIGNED','idle','Not Started',6]
+          ['Client Onboarding Flow','PROJECTS','ok','On Track',72],
+          ['Q3 Pipeline Review','CRM','risk','Needs Attention',40],
+          ['Knowledge Base Cleanup','KNOWLEDGE','idle','Queued',12]
         ]},
       northwind:{name:'NORTHWIND LOGISTICS',
         kpi:{
-          rev:{l:'Revenue Run-Rate',p:'$',base:11.8,d:1,u:'M',o:'64% to $18M target',w:64,j:.05},
-          deals:{l:'Contracts in Play',base:21,d:0,o:'58% of quota',w:58,j:1},
-          del:{l:'On-Time Freight',base:96,d:0,u:'%',o:'vs 97% goal',w:96,j:.4},
-          cash:{l:'Cash Runway',base:9,d:0,u:' mo',o:'watch',w:52,j:0},
-          team:{l:'Dispatch Load',base:81,d:0,u:'%',o:'no slack for surges',w:81,j:1},
-          nps:{l:'Client Health',base:64,d:0,o:'-3 vs last quarter',w:64,j:1}
+          crm:{l:'Active Contracts',base:21,d:0,o:'accounts auto-enriched',w:58,j:1},
+          proj:{l:'On-Time Freight',base:96,d:0,u:'%',o:'jobs tracked end to end',w:96,j:.4},
+          know:{l:'SOPs & Documents',base:880,d:0,o:'searchable in plain language',w:74,j:3},
+          mem:{l:'AI Actions / wk',base:510,d:0,o:'records filled & updated',w:80,j:6},
+          audio:{l:'Site Visits Logged',base:38,d:0,o:'field audio → records',w:60,j:1}
         },
         risk:[
-          ['crit','Critical','Carrier gap on Lane 7 — 4 loads unassigned next week.','Lock a backup carrier contract by Friday.'],
-          ['warn','Elevated','Fuel surcharge not repriced on 12 active contracts.','Push updated rate cards this billing cycle.'],
-          ['watch','Watch','Dispatch team at 81% utilization — surge-fragile.','Cross-train two CSRs on dispatch.']
+          ['crit','Flagged','Carrier gap on Lane 7 — 4 loads unassigned next week.','Platform surfaced 3 backup carriers from your records.'],
+          ['warn','Surfaced','Rate cards stale on 12 active contracts.','Drafted updates are queued; confirm to push.'],
+          ['watch','Noted','Dispatch SOPs last reviewed 90 days ago.','Knowledge base flagged them for refresh.']
         ],
         init:[
-          ['TMS Automation Rollout','OPS','ok','On Track',81],
-          ['Carrier Scorecard System','YOU','risk','At Risk',35],
-          ['Regional Lane Expansion','UNASSIGNED','idle','Not Started',12]
+          ['TMS Rollout','PROJECTS','ok','On Track',81],
+          ['Carrier Scorecards','CRM','risk','Needs Attention',35],
+          ['Lane Expansion Plan','KNOWLEDGE','idle','Queued',12]
         ]},
       atlas:{name:'ATLAS DENTAL PARTNERS',
         kpi:{
-          rev:{l:'Revenue Run-Rate',p:'$',base:7.6,d:1,u:'M',o:'83% to $9M target',w:83,j:.04},
-          deals:{l:'Locations in Pipeline',base:6,d:0,o:'50% of expansion target',w:50,j:0},
-          del:{l:'Chair Utilization',base:88,d:0,u:'%',o:'vs 90% goal',w:88,j:.5},
-          cash:{l:'Cash Runway',base:18,d:0,u:' mo',o:'strong',w:88,j:0},
-          team:{l:'Ops Lead Load',base:59,d:0,u:'%',o:'spread across 5 sites',w:59,j:1},
-          nps:{l:'Patient Health',base:79,d:0,o:'+5 vs last quarter',w:79,j:1}
+          crm:{l:'Active Patients',base:7.6,d:1,u:'K',o:'unified across 5 sites',w:83,j:.05},
+          proj:{l:'Chair Utilization',base:88,d:0,u:'%',o:'scheduled across sites',w:88,j:.5},
+          know:{l:'Protocols & Docs',base:610,d:0,o:'answers grounded in your content',w:70,j:2},
+          mem:{l:'AI Actions / wk',base:360,d:0,o:'records & recalls automated',w:75,j:5},
+          audio:{l:'Visits Transcribed',base:120,d:0,o:'summarized to the chart',w:66,j:2}
         },
         risk:[
-          ['crit','Critical','Hygiene recall down 18% across 3 sites — <b>$120K/yr</b> drift.','Re-launch the automated recall sequence now.'],
-          ['warn','Elevated','New-location credentialing stalled 21 days.','Escalate to payer rep; set a weekly check-in.'],
-          ['watch','Watch','Ops lead is single point of contact for 5 sites.','Stand up a site-manager tier this quarter.']
+          ['crit','Flagged','Hygiene recall down 18% across 3 sites.','Automated recall sequence is staged; confirm to launch.'],
+          ['warn','Surfaced','New-site credentialing stalled 21 days.','Platform set a weekly check-in and an owner.'],
+          ['watch','Noted','Patient notes unlinked at 2 locations.','Audio capture attaches them on confirm.']
         ],
         init:[
-          ['Centralized Scheduling System','OPS','ok','On Track',78],
-          ['Recall & Reactivation Engine','YOU','risk','At Risk',44],
-          ['Site #6 Onboarding Playbook','UNASSIGNED','idle','Not Started',9]
+          ['Centralized Scheduling','PROJECTS','ok','On Track',78],
+          ['Recall & Reactivation','CRM','risk','Needs Attention',44],
+          ['Site #6 Onboarding','PROJECTS','idle','Queued',9]
         ]}
     };
 
     var cur='meridian';
-    var active={rev:1,deals:1,del:1,cash:1}; /* default 4 modules on */
+    var active={crm:1,proj:1,know:1,mem:1,audio:1};
 
     var $=function(s){return sec.querySelector(s);};
     var stage=$('#rccStage'), railEl=$('#rccRail'), kpisEl=$('#rccKpis'),
         riskEl=$('#rccRisk'), initEl=$('#rccInit'), nameEl=$('#rccTenantName'),
-        menu=$('#rccMenu'), tbtn=$('#rccTenantBtn'), syncEl=$('#rccSync');
+        menu=$('#rccMenu'), tbtn=$('#rccTenantBtn'), syncEl=$('#rccSync'),
+        cfgInd=$('#cfgIndustry'), cfgMods=$('#cfgMods');
 
     function fmtKpi(k){ var n=k.base; var s=k.d? n.toFixed(k.d): String(Math.round(n)); return (k.p||'')+s; }
+    function modCount(){ var c=0; for(var k in active){ if(active[k]) c++; } return c; }
 
     function renderRail(){
       var html='<span class="rcc-rlabel">Modules</span>';
@@ -722,14 +715,14 @@
     function renderInit(){
       var html='';
       T[cur].init.forEach(function(i){
-        html+='<div class="rcc-irow"><div class="rcc-iname">'+i[0]+'<small>OWNER · '+i[1]+'</small></div>'+
+        html+='<div class="rcc-irow"><div class="rcc-iname">'+i[0]+'<small>OBJECT · '+i[1]+'</small></div>'+
               '<span class="rcc-pill '+i[2]+'">'+i[3]+'</span>'+
               '<div class="rcc-mini"><i data-w="'+i[4]+'" style="--w:0%"></i></div></div>';
       });
       initEl.innerHTML=html;
       fillBars(initEl);
     }
-    function fillBars(scope){ /* animate 0 -> target */
+    function fillBars(scope){
       var bars=scope.querySelectorAll('i[data-w]');
       requestAnimationFrame(function(){ requestAnimationFrame(function(){
         bars.forEach(function(b){ b.style.setProperty('--w', b.getAttribute('data-w')+'%'); });
@@ -737,15 +730,28 @@
     }
     function scan(){ stage.classList.remove('scan'); void stage.offsetWidth; stage.classList.add('scan'); }
 
-    function renderAll(){ renderRail(); renderKpis(); renderRisk(); renderInit(); markSync(0); }
+    function syncIndustryUI(){
+      if(cfgInd) cfgInd.querySelectorAll('.cfg-opt').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-ind')===cur); });
+      menu.querySelectorAll('.rcc-mitem').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-t')===cur); });
+      nameEl.textContent=T[cur].name;
+    }
+    function syncModuleUI(){
+      if(cfgMods) cfgMods.querySelectorAll('.cfg-opt').forEach(function(b){ b.classList.toggle('on', !!active[b.getAttribute('data-mod')]); });
+    }
 
-    /* tenant switching */
+    function renderAll(){ renderRail(); renderKpis(); renderRisk(); renderInit(); syncIndustryUI(); syncModuleUI(); markSync(0); }
+
     function setTenant(id){
       if(!T[id]) return; cur=id;
-      nameEl.textContent=T[id].name;
-      menu.querySelectorAll('.rcc-mitem').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-t')===id); });
+      syncIndustryUI();
       scan(); renderKpis(); renderRisk(); renderInit(); markSync(0);
     }
+    function toggleModule(id){
+      if(active[id]){ if(modCount()<=1) return; delete active[id]; } else { active[id]=1; }
+      scan(); renderRail(); renderKpis(); syncModuleUI();
+    }
+
+    /* tenant switching */
     tbtn.addEventListener('click',function(e){ e.stopPropagation();
       var open=menu.classList.toggle('open'); tbtn.classList.toggle('open',open); tbtn.setAttribute('aria-expanded',open);
     });
@@ -754,11 +760,17 @@
     });
     document.addEventListener('click',function(){ menu.classList.remove('open'); tbtn.classList.remove('open'); tbtn.setAttribute('aria-expanded',false); });
 
-    /* module toggling */
+    /* module toggling from the in-app rail */
     railEl.addEventListener('click',function(e){ var b=e.target.closest('.rcc-modchip'); if(!b)return;
-      var id=b.getAttribute('data-mod'); var onCount=Object.keys(active).length;
-      if(active[id]){ if(onCount<=1) return; delete active[id]; } else { active[id]=1; }
-      scan(); renderRail(); renderKpis();
+      toggleModule(b.getAttribute('data-mod'));
+    });
+
+    /* configurator drives the same surface */
+    if(cfgInd) cfgInd.addEventListener('click',function(e){ var b=e.target.closest('.cfg-opt'); if(!b)return; setTenant(b.getAttribute('data-ind')); });
+    if(cfgMods) cfgMods.addEventListener('click',function(e){ var b=e.target.closest('.cfg-opt'); if(!b)return; toggleModule(b.getAttribute('data-mod')); });
+    var applyBtn=$('#cfgApply');
+    if(applyBtn) applyBtn.addEventListener('click',function(){
+      scan(); var app=$('#rccApp'); if(app) app.scrollIntoView({behavior:'smooth',block:'center'});
     });
 
     /* tabs */
@@ -800,196 +812,69 @@
   })();
   </script>
 </section>
-<!-- ============================================================================================ -->
-<!-- ==========  RECAPTURED · COMMAND CENTER  (v2 · LIVING)  —  END OF EMBED BLOCK  ============== -->
-<section id="caps">
+<!-- =========  RECAPTURED · INTELLIGENT OS  ·  CONFIGURE + COMMAND CENTER  —  END  ========= -->
+
+<section id="global">
   <div class="wrap">
     <div class="grid2">
-      <div class="sticky-label"><div class="eyebrow reveal">Capabilities</div></div>
+      <div class="sticky-label">
+        <div class="signum reveal">04</div>
+        <div class="eyebrow reveal d1">Built for global business</div>
+      </div>
       <div>
-        <h2 class="sec-head reveal">Where the system gets installed.</h2>
-        <div class="body-lg reveal d1" style="margin-top:30px"><p>One discipline, applied where leverage compounds fastest. It begins with revenue and extends across the operation — each area a place where the right structure turns a few people into the output of many.</p></div>
+        <h2 class="sec-head reveal">One platform for <em>every market</em> you operate in.</h2>
+        <div class="body-lg reveal d1" style="margin-top:30px"><p>Multi-language interfaces, multi-currency handling, and on-the-fly translation let your teams and clients work in their own language and currency. One platform serves every market you operate in — without a separate system per region.</p></div>
       </div>
     </div>
-    <div class="caps">
-      <div class="cap reveal">
-        <div class="k">01 — SALES SYSTEMS</div>
-        <h3>A repeatable revenue engine</h3>
-        <p>Ad-hoc selling becomes a defined, documented motion anyone on the team can run — qualification, stages, follow-through, and the automation that keeps deals moving without the founder driving every one. Selling stops being a personality and becomes a process.</p>
+    <div class="feats three">
+      <div class="feat reveal">
+        <div class="fk">Multi-language</div>
+        <h3>Work in your own language</h3>
+        <p>Multi-language interfaces let your teams and clients work in the language they're most fluent in — across every region you serve.</p>
       </div>
-      <div class="cap reveal d1">
-        <div class="k">02 — GO-TO-MARKET</div>
-        <h3>A clear path from first touch to closed</h3>
-        <p>Targeting, messaging, and conversion designed as one coherent motion, so the right prospects hear the right thing at the right moment. No more guessing which channel or message is carrying the weight — the path is mapped and measurable.</p>
+      <div class="feat reveal d1">
+        <div class="fk">Multi-currency</div>
+        <h3>One system, every currency</h3>
+        <p>Multi-currency handling means deals, projects, and reporting stay accurate everywhere you do business — no separate system per region.</p>
       </div>
-      <div class="cap reveal">
-        <div class="k">03 — EXPANSION</div>
-        <h3>Growth without starting from zero</h3>
-        <p>Playbooks for entering new segments, markets, and accounts so each push builds on the last instead of reinventing the approach. Repeatable expansion mechanics mean the second market is faster than the first, and the third faster still.</p>
-      </div>
-      <div class="cap reveal d1">
-        <div class="k">04 — DAILY OPERATIONS</div>
-        <h3>Work that doesn't live in one head</h3>
-        <p>The connective workflows and automation that keep the business running when attention is elsewhere — handoffs, recurring tasks, and reporting wired so the operation doesn't stall the moment a key person is busy or away.</p>
+      <div class="feat reveal d2">
+        <div class="fk">Real translation</div>
+        <h3>On-the-fly across borders</h3>
+        <p>On-the-fly translation bridges teams and clients in real time, so language never blocks the work or fragments the record.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="field">
+<section id="enterprise">
   <div class="wrap">
     <div class="grid2">
-      <div class="sticky-label"><div class="eyebrow reveal">The engine in the field</div></div>
+      <div class="sticky-label">
+        <div class="signum reveal">05</div>
+        <div class="eyebrow reveal d1">Enterprise-grade by design</div>
+      </div>
       <div>
-        <h2 class="sec-head reveal">What the engine has produced.</h2>
-        <div class="body-lg reveal d1" style="margin-top:30px"><p>A few of the systems built and running — described by what they do and what they replaced, never by how they work. The mechanics stay where they belong: with the clients who own them.</p></div>
+        <h2 class="sec-head reveal">Engineered to the standards <em>you're held to.</em></h2>
+        <div class="body-lg reveal d1" style="margin-top:30px"><p>ReCaptured is built to satisfy the controls behind the frameworks below — encryption, role-based access, tamper-evident audit trails, and disciplined data handling are part of the platform from day one, not afterthoughts.</p></div>
+        <div class="pills reveal d2">
+          <span class="pill">SOC 2</span>
+          <span class="pill">ISO 27001</span>
+          <span class="pill">HIPAA</span>
+          <span class="pill">GDPR</span>
+        </div>
+        <p class="pill-note reveal d3">Built to comply — formal certifications are in progress.</p>
       </div>
     </div>
-    <div class="insts">
-      <div class="inst reveal">
-        <div class="tag">DECISION GRAPH</div>
-        <h3>The path to a top-tier "yes"</h3>
-        <p>A major financial institution's leadership modeled as a decision network — every buyer, blocker, and silent veto — to surface the one reachable relationship that could move a nine-figure initiative.</p>
-        <div class="scale">30+ stakeholders → one leveraged path</div>
-      </div>
-      <div class="inst reveal d1">
-        <div class="tag">REGULATORY COMMAND CENTER</div>
-        <h3>Three-day legal calls, answered in ninety seconds</h3>
-        <p>For a regulated multi-state operator, an on-demand system returns source-cited verdicts in under a minute — and escalates to an expert only when a question is genuinely novel.</p>
-        <div class="scale">$400/hr calls → 90-second answers</div>
-      </div>
-      <div class="inst reveal d2">
-        <div class="tag">SALES OPERATING SYSTEM</div>
-        <h3>A multimillion-dollar deal, fully instrumented</h3>
-        <p>A live enterprise opportunity run through a stage-gated operating system — every stage owned and gated, every value scenario modeled — so nothing slips and nothing is guessed.</p>
-        <div class="scale">Conservative / base / upside, mapped</div>
-      </div>
-      <div class="inst reveal">
-        <div class="tag">PROSPECTING ENGINE</div>
-        <h3>Thousands of prospects, one deterministic motion</h3>
-        <p>A capital firm's prospect base segmented into archetypes and routed into personalized, automated outreach that pauses and hands off the instant a live reply lands.</p>
-        <div class="scale">2,000+ prospects · 8-figure pipeline modeled</div>
-      </div>
-      <div class="inst reveal d1">
-        <div class="tag">INTELLIGENCE CAPTURE</div>
-        <h3>Every inbox, one shared memory</h3>
-        <p>Outreach across multiple principals becomes a single structured record automatically — no workflow change, no double entry — making the firm legible to itself.</p>
-        <div class="scale">Zero behavior change · full capture</div>
-      </div>
-      <div class="inst reveal d2">
-        <div class="tag">CONTENT AMPLIFICATION</div>
-        <h3>Routine updates into on-brand reach</h3>
-        <p>Leadership updates that already happen are mined, filtered, and drafted into approved, on-voice posts through a single human gate — turning quiet work into visible momentum.</p>
-        <div class="scale">One approval gate · fully logged</div>
-      </div>
-    </div>
-    <div class="withheld">Client identities and system internals withheld by design.</div>
   </div>
 </section>
 
-<section id="diagnostic">
+<section id="summary" class="summary">
   <div class="wrap">
-    <div class="grid2">
-      <div class="sticky-label"><div class="eyebrow reveal">Live diagnostic</div></div>
-      <div>
-        <h2 class="sec-head reveal">Find your leverage in 30 seconds.</h2>
-        <div class="body-lg reveal d1" style="margin-top:30px"><p>Tell the engine your pain points. It returns a sharp read on your real constraint and where systems would multiply your team — the same lens we bring to every engagement, running live, right here.</p></div>
-      </div>
-    </div>
-
-    <div class="diag-card reveal d2">
-      <div class="badge"><span class="dot"></span> ReCaptured Leverage Engine</div>
-      <div class="diag-grid">
-        <div class="field">
-          <label for="company">What does your company do?</label>
-          <input id="company" type="text" placeholder="e.g. B2B onboarding software for clinics" />
-        </div>
-        <div class="field">
-          <label for="team">Team size</label>
-          <select id="team">
-            <option>Just me (founder)</option>
-            <option>2–4 people</option>
-            <option>5–10 people</option>
-            <option>11–25 people</option>
-          </select>
-        </div>
-        <div class="field full">
-          <label for="painPoints">What are your pain points?</label>
-          <textarea id="painPoints" placeholder="e.g. Every deal runs through me. I can't keep up with follow-ups and onboarding at the same time, so the pipeline leaks."></textarea>
-        </div>
-      </div>
-      <button id="runBtn" class="btn btn-solid">Find my leverage →</button>
-
-      <div id="loading" class="loading" style="display:none"><span class="spin"></span> Analyzing your operating model…</div>
-
-      <div id="result" class="result">
-        <div id="fitResult">
-          <div class="r-headline" id="rHeadline"></div>
-          <div class="r-section">
-            <div class="rk">Your likely constraint</div>
-            <p id="rConstraint"></p>
-          </div>
-          <div class="r-section">
-            <div class="rk">Where the leverage is</div>
-            <ul class="lev" id="rLeverage"></ul>
-          </div>
-          <div class="r-section">
-            <div class="rk">What we'd build from our playbooks</div>
-            <p id="rSystem"></p>
-          </div>
-          <div class="r-cta">
-            <a id="resultBook" href="https://calendly.com/carpenterlogan3/discovery-call" target="_blank" rel="noopener noreferrer" class="btn btn-solid">Book a call to install this</a>
-            <span class="disclaimer">A directional read — the real map comes from a conversation.</span>
-          </div>
-        </div>
-        <div id="novelResult" style="display:none">
-          <div class="r-headline">A new one — let's talk it through.</div>
-          <div class="r-section">
-            <p>This is something we haven't seen before, and we're eager to hear more about it. If you'd like to take the discussion a step further, book a call with our founder to see whether your needs align with our capabilities.</p>
-          </div>
-          <div class="r-cta">
-            <a id="novelBook" href="https://calendly.com/carpenterlogan3/discovery-call" target="_blank" rel="noopener noreferrer" class="btn btn-solid">Book a call with our founder</a>
-          </div>
-        </div>
-      </div>
-      <div id="error" class="disclaimer" style="display:none;color:var(--accent)"></div>
-    </div>
-  </div>
-</section>
-
-<section id="wedge">
-  <div class="wrap">
-    <div class="wedge reveal">
-      <div class="eyebrow">The preferred fee structure for all parties</div>
-      <h2>We get paid <em>when it works.</em></h2>
-      <p>Most consultants bill a retainer whether you grow or not. We price differently: a base fee, plus a share of the new revenue the system actually generates. If the engine doesn't produce, we don't win. That isn't a discount — it's the clearest signal we can give of how much we trust the work to perform.</p>
-    </div>
-  </div>
-</section>
-
-<section id="signal">
-  <div class="wrap grid2">
-    <div class="sticky-label"><div class="eyebrow reveal">Early signal</div></div>
-    <div>
-      <h2 class="sec-head reveal">New firm. Real traction.</h2>
-      <div class="body-lg reveal d1" style="margin-top:30px">
-        <p>ReCaptured is young by design — built lean, the same way we build for the companies we work with. The systems above are the proof that matters: real infrastructure, running in real businesses, described without a single client name or internal mechanic exposed.</p>
-        <p>We'd rather show you the shape of the work — and let the live engine above speak for itself — than ask you to take a testimonial on faith.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="how">
-  <div class="wrap">
-    <div class="grid2">
-      <div class="sticky-label"><div class="eyebrow reveal">The engagement</div></div>
-      <div><h2 class="sec-head reveal">Three moves.</h2></div>
-    </div>
-    <div class="steps">
-      <div class="step reveal"><div class="num">01</div><h3>Map</h3><p>We pinpoint where your growth is genuinely constrained — not where it merely feels busy. Diagnosis before prescription, always.</p></div>
-      <div class="step reveal d1"><div class="num">02</div><h3>Install</h3><p>We design and embed the systems, playbooks, and automation your team will actually run — built into how you work, not bolted on.</p></div>
-      <div class="step reveal d2"><div class="num">03</div><h3>Compound</h3><p>The engine keeps producing after we step back, and we tune it as you scale. Leverage that grows with you.</p></div>
+    <div class="sum-grid">
+      <div class="sum-cell reveal"><div class="sum-k">All-in-one</div><div class="sum-v">CRM · Projects · &amp; more</div></div>
+      <div class="sum-cell reveal d1"><div class="sum-k">AI-first</div><div class="sum-v">Intelligence at the core</div></div>
+      <div class="sum-cell reveal d2"><div class="sum-k">Global</div><div class="sum-v">Language · Currency</div></div>
+      <div class="sum-cell reveal d3"><div class="sum-k">Days</div><div class="sum-v">To adapt, not months</div></div>
     </div>
   </div>
 </section>
@@ -997,25 +882,29 @@
 <section id="book" class="final">
   <div class="wrap">
     <div class="eyebrow reveal" style="display:block;margin-bottom:24px">Let's talk</div>
-    <h2 class="reveal d1">Let's find your leverage.</h2>
-    <p class="reveal d2">A 30-minute discovery call. We'll map where systems could multiply your team — no pitch, no obligation.</p>
-    <a id="finalBook" href="https://calendly.com/carpenterlogan3/discovery-call" target="_blank" rel="noopener noreferrer" class="btn btn-solid reveal d3" style="font-size:15px;padding:17px 34px">Book a discovery call</a>
+    <h2 class="reveal d1">See what <em>one intelligent system</em> can do for your team.</h2>
+    <p class="reveal d2">We'll show you ReCaptured Intelligent OS shaped around your business — your data, your workflows, your terminology — and how quickly we can stand it up.</p>
+    <div class="final-cta reveal d3">
+      <a href="https://calendly.com/carpenterlogan3/discovery-call" target="_blank" rel="noopener noreferrer" class="btn btn-solid" style="font-size:15px;padding:17px 34px">Book a call</a>
+      <a href="mailto:logan@recaptured.io" class="btn btn-ghost" style="font-size:15px;padding:17px 34px">Email logan@recaptured.io</a>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap foot-in">
-    <div class="logo">Re<b>Captured</b></div>
+    <div class="logo-lockup">
+      <img class="logo-mark" src="recaptured-logo-80.png"
+           srcset="recaptured-logo-40.png 1x, recaptured-logo-80.png 2x" width="32" height="32" alt="" style="width:32px;height:32px">
+      <span class="logo">Re<b>Captured</b></span>
+    </div>
     <div>RECAPTURED LLC · © 2026</div>
-    <a href="https://calendly.com/carpenterlogan3/discovery-call" target="_blank" rel="noopener noreferrer" style="color:var(--soft)">Book a call →</a>
+    <a href="mailto:logan@recaptured.io" style="color:var(--soft)">logan@recaptured.io →</a>
   </div>
 </footer>
 
 <script>
-  // scroll reveals
   // Reveal-on-scroll, built to never leave content hidden on iOS.
-  // Uses a scroll/resize check (reliable in mobile Safari & Quick Look),
-  // with a hard safety net that reveals everything regardless after a beat.
   (function(){
     var nodes = [].slice.call(document.querySelectorAll('.reveal:not(.in)'));
     function check(){
@@ -1030,223 +919,10 @@
     window.addEventListener('scroll', check, {passive:true});
     window.addEventListener('resize', check);
     window.addEventListener('load', check);
-    // safety net: nothing may ever stay invisible
     setTimeout(function(){
       document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ el.classList.add('in'); });
     }, 2200);
   })();
-
-  // ---- Booking (Calendly) ----
-  // Replace CALENDLY_URL with your real Calendly event link once it exists.
-  // For prefill to land, set up THREE custom questions on that event, in order:
-  //   1) What does your company do?   2) Team size   3) What are your pain points?
-  // Calendly maps them to a1 / a2 / a3 below.
-  const CALENDLY_URL = "https://calendly.com/recaptured/discovery";
-  function buildCalendlyLink(company, team, painPoints){
-    try{
-      const u = new URL(CALENDLY_URL);
-      if(company)    u.searchParams.set('a1', company);
-      if(team)       u.searchParams.set('a2', team);
-      if(painPoints) u.searchParams.set('a3', painPoints);
-      u.searchParams.set('utm_source','recaptured-site');
-      return u.toString();
-    }catch(_){ return CALENDLY_URL; }
-  }
-  function openLink(el, href){ if(!el) return; el.href=href; el.target="_blank"; el.rel="noopener"; }
-  openLink(document.getElementById('finalBook'), CALENDLY_URL);
-
-  // ---- Live Leverage Engine (Claude-powered) ----
-  // NOTE: This calls the Anthropic API directly, which works inside Claude's
-  // artifact preview. For your hosted site, route this through a small backend
-  // that holds your API key (see the chat notes). Swap the fetch in callEngine().
-  const runBtn=document.getElementById('runBtn');
-  const loading=document.getElementById('loading');
-  const result=document.getElementById('result');
-  const errEl=document.getElementById('error');
-  const fitResult=document.getElementById('fitResult');
-  const novelResult=document.getElementById('novelResult');
-
-  async function callEngine(company,team,painPoints){
-    const prompt=`You are the Leverage Engine for ReCaptured, a firm that installs operating systems, playbooks, and automations so lean teams (usually under ~10 people, under ~$1M revenue) produce the output of a much larger team.
-
-ReCaptured works from a library of proven, reusable templates and playbooks covering four areas:
-- Sales systems (repeatable revenue processes)
-- Go-to-market (targeting, messaging, conversion)
-- Expansion (entering new segments, markets, accounts)
-- Daily operations (workflows + automation that keep the business running)
-
-A visitor submitted:
-- Company: ${company||"(not specified)"}
-- Team size: ${team}
-- Pain points: ${painPoints||"(not specified)"}
-
-First decide: can ReCaptured serve this need by assembling and adapting its existing templates and playbooks across those four areas (often paired with automation)?
-
-If YES, return JSON:
-{
- "status":"fit",
- "headline":"a punchy 6-10 word verdict",
- "constraint":"one sharp sentence naming their real underlying bottleneck",
- "leverage_points":["three specific places a system/automation would multiply their output, each under 18 words"],
- "system_sketch":"2-3 sentences describing the system ReCaptured would assemble from its existing playbooks/templates for this client, concrete and tailored. Reference that it is built from proven playbooks."
-}
-
-If the need is genuinely OUTSIDE that scope (e.g. it requires specialized domain software, hardware, real-time GPS/fleet tracking, or capabilities those four playbook areas do not cover), return JSON:
-{ "status":"novel" }
-
-Return ONLY valid JSON — no markdown, no backticks, no preamble. Be specific to their input, confident, and systems-oriented (never 'just hire more people'). Do not invent metrics, results, or guarantees.`;
-
-    const ctrl=new AbortController(); const to=setTimeout(()=>ctrl.abort(),9000);
-    let res;
-    try{
-      res=await fetch("https://api.anthropic.com/v1/messages",{
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({model:"claude-sonnet-4-20250514",max_tokens:1000,messages:[{role:"user",content:prompt}]}),
-        signal:ctrl.signal
-      });
-    } finally { clearTimeout(to); }
-    if(!res.ok) throw new Error("Engine unavailable ("+res.status+")");
-    const data=await res.json();
-    let text=data.content.filter(b=>b.type==="text").map(b=>b.text).join("").trim();
-    const s=text.indexOf('{'), e=text.lastIndexOf('}');
-    if(s!==-1 && e!==-1 && e>s) text=text.slice(s,e+1);
-    return JSON.parse(text);
-  }
-
-  // ---- Local fallback engine ----
-  // Runs entirely in the page. Used whenever the live call can't be reached
-  // (i.e. until the backend is deployed). Always returns a result, never throws.
-  function localEngine(company, team, painPoints){
-    const t = ((company||"") + " " + (painPoints||"")).toLowerCase();
-    const has = (arr)=>arr.some(k=>t.includes(k));
-    // genuinely out-of-scope → novel
-    if(has(["gps","fleet","driver","dispatch","vehicle","real-time track","hardware","firmware","manufactur","defect","iot","sensor","medical device","diagnos","build an app","app development"])){
-      return { status:"novel" };
-    }
-    const buckets = [
-      { k:["sued","permit","license","compliance","regulat","legal","paperwork","onboard","hire","employee","staff","location","franchis","store","shop","consistency","standardiz","quality"],
-        headline:"Your operation is outrunning its systems.",
-        constraint:"Growth has outpaced the processes meant to keep every location consistent and compliant.",
-        leverage:[
-          "A single source of truth for permits, licenses, and renewals — each with an owner and a date.",
-          "Standardized onboarding and operating checklists every location runs the same way.",
-          "Automated reminders and logging so nothing critical depends on memory."],
-        system:"Drawing on our operations and compliance playbooks, we'd build a command center that tracks every regulatory and onboarding requirement across your locations — statuses, owners, and deadlines in one place — so the same standard runs everywhere and nothing slips through." },
-      { k:["sell","sales","deal","pipeline","close","lead","prospect","revenue","quota","follow up","follow-up","outreach","cold","quote","proposal"],
-        headline:"Revenue depends on you, not a system.",
-        constraint:"Selling runs through you personally, so the pipeline stalls the moment your attention is elsewhere.",
-        leverage:[
-          "A defined sales process with stages and exit criteria anyone can run.",
-          "Automated follow-up so no lead goes cold while you're heads-down.",
-          "One pipeline view showing exactly where every deal stands."],
-        system:"From our sales-system playbooks, we'd install a repeatable revenue engine — staged, documented, and automated — so deals move forward without you driving each one." },
-      { k:["inbound","calls","call","message","respond","keep up","overwhelm","too many","miss","voicemail","booking","schedul","appointment","reply","email volume"],
-        headline:"You're the bottleneck every request runs through.",
-        constraint:"Every inbound depends on your personal bandwidth, so what needs you competes with what doesn't.",
-        leverage:[
-          "Automated triage that routes, answers, and captures every inbound.",
-          "Templated responses for the common cases, freeing you for the rest.",
-          "A capture layer so nothing falls through between channels."],
-        system:"Using our operations playbooks, we'd build an intake system that fields, sorts, and answers inbound automatically — keeping you on only the decisions that need your judgment." },
-      { k:["marketing","content","social","brand","awareness","audience","post","seo","ads","instagram","newsletter"],
-        headline:"Your reach is capped by hand-built effort.",
-        constraint:"Marketing happens in bursts because it depends on someone finding time, not on a system.",
-        leverage:[
-          "A repeatable content engine that turns work you already do into output.",
-          "A defined audience and message so every post pulls one direction.",
-          "Automated scheduling and approval so publishing never stalls."],
-        system:"From our go-to-market playbooks, we'd build a content and outreach system that runs on a cadence — sourcing, drafting, and publishing through a light approval gate — so visibility compounds instead of spiking." },
-      { k:["data","report","dashboard","visibility","metrics","spreadsheet","track","status","where things","don't know","cant see","can't see"],
-        headline:"You can't act on what you can't see.",
-        constraint:"Decisions wait on information scattered across tools and people's heads.",
-        leverage:[
-          "One dashboard pulling the numbers that actually drive decisions.",
-          "Automated capture so data lands structured, not in a backlog.",
-          "Clear ownership and status on every moving piece."],
-        system:"Drawing on our capture-and-surface playbooks, we'd consolidate your key signals into a single decision-ready view, fed automatically — so the business becomes legible at a glance." }
-    ];
-    const b = buckets.find(b=>has(b.k)) || {
-      headline:"There's leverage hiding in your day-to-day.",
-      constraint:"Your team's output is capped by manual, repeatable work a system should be carrying.",
-      leverage:[
-        "Map the repeatable work that eats time and automate the heaviest pieces.",
-        "Turn how-we-do-it knowledge into playbooks anyone can run.",
-        "Wire in capture and reminders so nothing depends on memory."],
-      system:"From our operating-system playbooks, we'd find where your team spends effort a system could carry, then install the structure and automation to multiply what the people you already have can produce."
-    };
-    return { status:"fit", headline:b.headline, constraint:b.constraint, leverage_points:b.leverage, system_sketch:b.system };
-  }
-
-  runBtn.addEventListener('click',async()=>{
-    const company=document.getElementById('company').value.trim();
-    const team=document.getElementById('team').value;
-    const painPoints=document.getElementById('painPoints').value.trim();
-    if(!company && !painPoints){errEl.style.display='block';errEl.textContent="Add a line or two about your company and your pain points.";return;}
-    errEl.style.display='none';result.classList.remove('show');runBtn.disabled=true;loading.style.display='flex';
-    const link=buildCalendlyLink(company,team,painPoints);
-    let r;
-    try{ r=await callEngine(company,team,painPoints); }
-    catch(e){ r=localEngine(company,team,painPoints); }
-    try{
-      if(r.status==="novel"){
-        fitResult.style.display='none';
-        novelResult.style.display='block';
-        openLink(document.getElementById('novelBook'), link);
-      }else{
-        novelResult.style.display='none';
-        fitResult.style.display='block';
-        document.getElementById('rHeadline').textContent=r.headline||"";
-        document.getElementById('rConstraint').textContent=r.constraint||"";
-        document.getElementById('rSystem').textContent=r.system_sketch||"";
-        const ul=document.getElementById('rLeverage');ul.innerHTML="";
-        (r.leverage_points||[]).forEach((p,i)=>{const li=document.createElement('li');li.innerHTML='<span>0'+(i+1)+'</span><div></div>';li.lastChild.textContent=p;ul.appendChild(li);});
-        openLink(document.getElementById('resultBook'), link);
-      }
-      loading.style.display='none';result.classList.add('show');
-      result.scrollIntoView({behavior:'smooth',block:'nearest'});
-    }catch(e){
-      // last-resort safety net — render the local result directly
-      const f=localEngine(company,team,painPoints);
-      novelResult.style.display='none';fitResult.style.display='block';
-      document.getElementById('rHeadline').textContent=f.headline;
-      document.getElementById('rConstraint').textContent=f.constraint;
-      document.getElementById('rSystem').textContent=f.system_sketch;
-      const ul=document.getElementById('rLeverage');ul.innerHTML="";
-      f.leverage_points.forEach((p,i)=>{const li=document.createElement('li');li.innerHTML='<span>0'+(i+1)+'</span><div></div>';li.lastChild.textContent=p;ul.appendChild(li);});
-      openLink(document.getElementById('resultBook'), link);
-      loading.style.display='none';result.classList.add('show');
-    }finally{runBtn.disabled=false;}
-  });
-</script>
-<script>
-(function(){
-  var DATA=[
-    {t:"Revenue motion",p:"A repeatable selling process anyone on the team can run.",r:"Deals that only move when the founder personally pushes them."},
-    {t:"Market path",p:"One coherent motion from first touch to closed, measurable end to end.",r:"Guessing which channel or message is actually carrying the weight."},
-    {t:"Expansion plays",p:"A repeatable way into new segments, markets, and accounts.",r:"Reinventing the approach from scratch every time you grow."},
-    {t:"Daily throughput",p:"Handoffs, recurring work, and reporting that keep running without you.",r:"An operation that stalls the moment a key person is busy or away."},
-    {t:"Decision intelligence",p:"A decision-ready view of the business, fed automatically.",r:"Answers scattered across tools and people's heads."}
-  ];
-  var cats=document.getElementById('outCats'), detail=document.getElementById('outDetail');
-  if(!cats||!detail) return;
-  var btns=[].slice.call(cats.querySelectorAll('.out-cat'));
-  function render(sel){
-    btns.forEach(function(b,i){ b.className='out-cat'+(i===sel?' on':''); });
-    for(var i=0;i<5;i++){
-      var p=document.getElementById('p'+i), dot=document.getElementById('d'+i);
-      if(!p||!dot) continue;
-      if(i===sel){ p.setAttribute('stroke','#E8A33D'); p.setAttribute('stroke-width','2.4'); dot.setAttribute('fill','#E8A33D'); dot.setAttribute('r','13'); }
-      else{ p.setAttribute('stroke','rgba(232,163,61,.18)'); p.setAttribute('stroke-width','1.5'); dot.setAttribute('fill','var(--panel)'); dot.setAttribute('r','12'); }
-    }
-    var d=DATA[sel];
-    detail.innerHTML='<div class="dt">'+d.t+'</div>'+
-      '<div class="row"><div class="k p">What it produces</div><div class="v">'+d.p+'</div></div>'+
-      '<div class="row"><div class="k r">What it replaces</div><div class="v">'+d.r+'</div></div>';
-  }
-  btns.forEach(function(b){ b.addEventListener('click',function(){ render(parseInt(b.getAttribute('data-i'),10)); }); });
-  render(0);
-})();
 </script>
 </body>
 </html>
