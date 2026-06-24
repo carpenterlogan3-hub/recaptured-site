@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Fallback vector redraw of the ReCaptured mark. NOT referenced live:
+       all visible logos (nav, favicon, apple-touch) are rastered from the
+       1024px GIF master (recaptured-logo-master.gif) for exact fidelity.
+       Replace with a designer-exported SVG of the master when available. -->
+  <rect x="0" y="0" width="48" height="48" rx="9" fill="#000000"/>
+  <path d="M37.8 37.8 A19.5 19.5 0 0 1 7.5 13.7" fill="none" stroke="#E09A2E" stroke-width="2" stroke-linecap="round"/>
+  <path d="M12.0 8.6 A19.5 19.5 0 0 1 37.8 10.2" fill="none" stroke="#E09A2E" stroke-width="2" stroke-linecap="round"/>
+  <text x="4.5" y="35.5" font-family="'Arial Black','Archivo',sans-serif" font-weight="900" font-size="30" fill="#E09A2E">R</text>
+  <g stroke="#E09A2E" stroke-width="2.1" fill="none" stroke-linecap="round">
+    <path d="M23 19 H30.4"/>
+    <path d="M23 24 H32.9"/>
+    <path d="M23 29 H28.9"/>
+  </g>
+  <circle cx="33.5" cy="19" r="3.1" fill="#F2E8D4"/>
+  <circle cx="35.5" cy="24" r="2.6" fill="#E09A2E"/>
+  <circle cx="32" cy="29" r="3.1" fill="#F2E8D4"/>
+  <circle cx="37.8" cy="10.2" r="3.6" fill="#F2E8D4"/>
+  <circle cx="37.8" cy="37.8" r="3.6" fill="#F2E8D4"/>
+</svg>
