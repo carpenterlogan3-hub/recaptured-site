@@ -269,6 +269,8 @@ h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.02em;color
   border-left:3px solid var(--brand);padding-left:22px;
 }
 .audio-quote span{display:block;font-family:var(--body);font-size:.84rem;color:var(--muted);margin-top:10px;font-weight:400}
+.audio-consent{max-width:680px;margin-top:28px;font-size:.92rem;color:var(--muted);line-height:1.65}
+.audio-consent b{color:var(--ink);font-weight:600}
 
 /* ============ STORIES ============ */
 .stories{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -287,19 +289,13 @@ h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.02em;color
 .ge-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
 .ge-card h3{font-size:1.15rem;margin-bottom:10px}
 .ge-card>p{color:var(--muted);font-size:.94rem;margin-bottom:20px}
+.ge-card>p b{color:var(--ink);font-weight:600}
 .pills{display:flex;flex-wrap:wrap;gap:9px}
 .pill{
   font-size:.8rem;font-weight:600;color:var(--text);border:1px solid var(--border-strong);
   border-radius:100px;padding:7px 15px;background:var(--panel);
 }
-.frameworks{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}
-.fw{
-  border:1px solid var(--border-strong);border-radius:10px;padding:14px 16px;background:var(--panel);
-  display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:600;font-size:.92rem;color:var(--ink);
-}
-.fw svg{width:17px;height:17px;stroke:var(--brand-ink);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-.fw-note{font-size:.8rem;color:var(--muted)}
-.fw-note b{color:var(--brand-ink);font-weight:600}
+.fw-note{font-size:.84rem;color:var(--muted);line-height:1.6}
 
 /* ============ ENGAGEMENTS ============ */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:step}
@@ -361,7 +357,6 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
 @media(max-width:480px){
   .cap-grid,.stories,.audio-grid,.ind-grid{grid-template-columns:1fr}
   .hero-ctas .btn{width:100%;justify-content:center}
-  .frameworks{grid-template-columns:1fr}
 }
 
 /* ============ REDUCED MOTION ============ */
@@ -574,6 +569,7 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
         <p>Field recordings carry where and when — mapped to the site, queued for review, and auditable. A record of the walk, not just the words.</p>
       </div>
     </div>
+    <p class="audio-consent reveal"><b>Consent, handled deliberately.</b> Recording laws differ by state and by country — several, including California, require every participant's consent rather than only yours. The platform provides consent prompts and participant notice at the point of recording. Determining and obtaining the consent your jurisdiction requires remains the customer's responsibility. See our <a href="/legal/acceptable-use">Acceptable Use Policy</a>.</p>
     <blockquote class="audio-quote reveal">
       When a question comes up six months later, you don't reconstruct the conversation from memory. You open the record.
       <span>Transcripts are sealed and tamper-evident — a defensible account, not a best recollection.</span>
@@ -638,14 +634,8 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
       </div>
       <div class="ge-card reveal">
         <h3>Enterprise-grade by design</h3>
-        <p>Architected to the control requirements behind the frameworks your clients and regulators care about — encryption, role-based access, tamper-evident audit trails, and disciplined data handling.</p>
-        <div class="frameworks">
-          <div class="fw"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>SOC 2</div>
-          <div class="fw"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>ISO 27001</div>
-          <div class="fw"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>HIPAA</div>
-          <div class="fw"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>GDPR</div>
-        </div>
-        <p class="fw-note"><b>Built to comply</b> — formal certifications in progress.</p>
+        <p><b>Architected to the control requirements behind SOC 2, ISO 27001, GDPR and HIPAA</b> — encryption, role-based access, tamper-evident audit trails, and disciplined data handling.</p>
+        <p class="fw-note">We are not currently certified against these frameworks. Formal audit is on our roadmap, and this page will say so when that changes. If you have a specific control requirement, bring it to the discovery call — walking through it is exactly what that call is for.</p>
       </div>
       <div class="ge-card reveal">
         <h3>Multi-entity by design</h3>
@@ -769,7 +759,7 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
     </a>
     <a href="mailto:logan@recaptured.io">logan@recaptured.io</a>
     <a href="https://calendly.com/carpenterlogan3/discovery-call">Book a call</a>
-    <span>© 2026 ReCaptured LLC</span>
+    <span>© 2026 ReCaptured LLC&nbsp;&nbsp;·&nbsp;&nbsp;<a href="/legal/acceptable-use">Acceptable Use</a></span>
   </div>
 </footer>
 
