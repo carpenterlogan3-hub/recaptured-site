@@ -95,6 +95,8 @@ h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.02em;color
 .nav-inner{max-width:var(--max);margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;gap:28px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);flex-shrink:0}
 .brand img{width:32px;height:32px;border-radius:8px;display:block}
+/* Header logo: clean pre-rounded tile asset — no CSS rounding/padding needed */
+.nav .brand img{width:40px;height:40px;border-radius:0}
 .brand span{font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:-.01em}
 .nav-links{display:flex;gap:2px;flex:1;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
 .nav-links::-webkit-scrollbar{display:none}
@@ -178,7 +180,11 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
 <header class="nav">
   <div class="nav-inner">
     <a class="brand" href="/" aria-label="ReCaptured home">
-      <img src="/recaptured-logo-80.png" alt="ReCaptured" width="32" height="32">
+      <img src="/assets/logo/logo-tile-40.png"
+           srcset="/assets/logo/logo-tile-40.png 1x,
+                   /assets/logo/logo-tile-80.png 2x,
+                   /assets/logo/logo-tile-120.png 3x"
+           alt="ReCaptured" width="40" height="40">
       <span>ReCaptured</span>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
