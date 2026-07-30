@@ -157,15 +157,22 @@ h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.02em;color
 .contact a{font-weight:600}
 
 /* ============ FOOTER ============ */
-footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
-.foot-inner{
-  max-width:var(--max);margin:0 auto;padding:0 24px;
-  display:flex;align-items:center;gap:20px;flex-wrap:wrap;font-size:.85rem;color:var(--muted);
+footer{border-top:1px solid var(--border);padding:44px 0 34px;background:#fff}
+.foot-inner{max-width:var(--max);margin:0 auto;padding:0 24px;font-size:.85rem;color:var(--muted)}
+.foot-top{
+  display:flex;flex-wrap:wrap;gap:32px 48px;justify-content:space-between;
+  padding-bottom:28px;margin-bottom:22px;border-bottom:1px solid var(--border);
 }
-.foot-inner .brand{margin-right:auto}
+.foot-inner .brand img{width:36px;height:36px;border-radius:0}
+.foot-cols{display:flex;flex-wrap:wrap;gap:36px 48px}
+.foot-col{display:flex;flex-direction:column;gap:9px;min-width:150px}
+.foot-col h3{
+  font-family:var(--display);font-size:.7rem;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--faint);margin-bottom:2px;
+}
 .foot-inner a{color:var(--muted);text-decoration:none}
 .foot-inner a:hover{color:var(--brand-ink)}
-.foot-legal{display:flex;flex-direction:column;gap:3px;line-height:1.5}
+.foot-legal{display:flex;flex-direction:column;gap:4px;line-height:1.5}
 
 @media(max-width:640px){
   .legal{padding:calc(var(--nav-h) + 40px) 0 72px}
@@ -196,6 +203,7 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
       <a href="/#enterprise">Enterprise</a>
       <a href="/#engagements">Engagements</a>
       <a href="/#faq">FAQ</a>
+      <a href="/contact/">Contact</a>
     </nav>
     <a class="btn btn-primary btn-sm nav-cta" href="https://calendly.com/recaptured/discovery-call">Book a call</a>
   </div>
@@ -276,8 +284,7 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
           <p>We may update this policy. Customers will be notified of material changes.</p>
         </section>
 
-        <!-- TEMP: dedicated legal@ alias not yet provisioned; using the logan@ address so the contact does not bounce. Switch data-u back to "legal" once the alias exists and is monitored. -->
-        <p class="contact">Questions: <a class="js-email" data-u="logan" data-d="recaptured.io" aria-label="Email ReCaptured">email us</a></p>
+        <p class="contact">Questions about this policy: <a href="mailto:legal@recaptured.io">legal@recaptured.io</a></p>
       </div>
     </div>
   </div>
@@ -285,31 +292,42 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
 
 <footer>
   <div class="foot-inner">
-    <a class="brand" href="/">
-      <img src="/recaptured-logo-80.png" alt="ReCaptured" width="28" height="28" style="width:28px;height:28px">
-      <span>ReCaptured</span>
-    </a>
-    <a class="js-email" data-u="logan" data-d="recaptured.io" aria-label="Email ReCaptured">email us</a>
-    <a href="https://calendly.com/recaptured/discovery-call">Book a call</a>
+    <div class="foot-top">
+      <a class="brand" href="/">
+        <img src="/assets/logo/logo-tile-40.png"
+             srcset="/assets/logo/logo-tile-40.png 1x,
+                     /assets/logo/logo-tile-80.png 2x,
+                     /assets/logo/logo-tile-120.png 3x"
+             alt="ReCaptured" width="36" height="36">
+        <span>ReCaptured</span>
+      </a>
+      <nav class="foot-cols" aria-label="Footer">
+        <div class="foot-col">
+          <h3>Contact</h3>
+          <a href="mailto:info@recaptured.io">info@recaptured.io</a>
+          <a href="mailto:sales@recaptured.io">sales@recaptured.io</a>
+          <a href="mailto:support@recaptured.io">support@recaptured.io</a>
+          <a href="/contact/">All contacts &rarr;</a>
+        </div>
+        <div class="foot-col">
+          <h3>Legal</h3>
+          <a href="/legal/acceptable-use">Acceptable Use</a>
+          <a href="mailto:legal@recaptured.io">legal@recaptured.io</a>
+          <a href="mailto:privacy@recaptured.io">privacy@recaptured.io</a>
+        </div>
+        <div class="foot-col">
+          <h3>Security</h3>
+          <a href="mailto:security@recaptured.io">security@recaptured.io</a>
+          <a href="/.well-known/security.txt">security.txt</a>
+        </div>
+      </nav>
+    </div>
     <div class="foot-legal">
-      <span>ReCaptured LLC&nbsp;·&nbsp;2305 Pennsylvania Avenue, Wilmington, DE 19806, United States</span>
-      <!-- TEMP: dedicated security@ alias not yet provisioned; using the logan@ address so the contact does not bounce. Switch data-u back to "security" once the alias exists and is monitored. -->
-      <span>© 2026 ReCaptured LLC&nbsp;·&nbsp;<a href="/legal/acceptable-use">Acceptable Use</a>&nbsp;·&nbsp;<a class="js-email" data-u="logan" data-d="recaptured.io" aria-label="Email ReCaptured">email us</a></span>
+      <span>ReCaptured LLC&nbsp;&middot;&nbsp;2305 Pennsylvania Avenue, Wilmington, DE 19806, United States</span>
+      <span>&copy; 2026 ReCaptured LLC</span>
     </div>
   </div>
 </footer>
-
-<script>
-/* ================= EMAIL OBFUSCATION ================= */
-(function(){
-  document.querySelectorAll(".js-email").forEach(function(el){
-    var addr = el.dataset.u + "@" + el.dataset.d;
-    el.setAttribute("href", "mailto:" + addr);
-    var t = el.textContent.trim();
-    if(!t || t === "email us") el.textContent = addr;
-  });
-})();
-</script>
 
 </body>
 </html>
