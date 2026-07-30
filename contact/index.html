@@ -164,15 +164,17 @@ h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.02em;color
   text-transform:uppercase;color:var(--faint);border-bottom:1px solid var(--border-strong);
 }
 .routing td:first-child{color:var(--text);width:56%}
-.routing td a{color:var(--brand-ink);font-weight:600;text-decoration:none;word-break:break-word}
+.routing td a{color:var(--brand-ink);font-weight:600;text-decoration:none;overflow-wrap:break-word}
 .routing td a:hover{text-decoration:underline}
 .routing tbody tr:last-child td{border-bottom:0}
 .contact-cta{color:var(--muted);font-size:1rem;margin-bottom:20px}
 .contact-cta a{font-weight:600}
 .contact-entity{font-family:var(--display);font-weight:600;color:var(--ink);font-size:.95rem}
 @media(max-width:520px){
-  .routing td:first-child{width:auto}
-  .routing th,.routing td{padding:12px 10px}
+  .routing{font-size:.9rem}
+  .routing th,.routing td{padding:12px 8px}
+  .routing td:first-child{width:44%}
+  .routing td a{overflow-wrap:anywhere}
 }
 
 /* ============ FOOTER ============ */
