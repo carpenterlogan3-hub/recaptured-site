@@ -2,9 +2,9 @@
 # https://recaptured.io/.well-known/security.txt
 # Format: RFC 9116
 
-# TEMP: dedicated security@recaptured.io alias not yet provisioned — using
-# logan@recaptured.io so the contact does not bounce. Switch back to
-# security@recaptured.io once that alias exists and is monitored.
+# TEMP: dedicated security@ alias not yet provisioned — using the logan@
+# address below so the contact does not bounce. Switch the Contact line
+# back to the security@ alias once it exists and is monitored.
 Contact: mailto:logan@recaptured.io
 Expires: 2027-07-30T23:59:59.000Z
 Preferred-Languages: en

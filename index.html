@@ -429,8 +429,8 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
 <!-- ============ STAT STRIP ============ -->
 <div class="stats" role="region" aria-label="Platform at a glance">
   <div class="stats-inner">
-    <div class="stat reveal"><div class="num"><span class="count" data-to="1">1</span></div><div class="lbl">system for the whole business</div></div>
-    <div class="stat reveal"><div class="num"><span class="count" data-to="26">26</span><span class="plus" aria-hidden="true">+</span></div><div class="lbl">disconnected tools it replaces</div></div>
+    <div class="stat reveal"><div class="num"><span class="count" data-target="1">1</span></div><div class="lbl">system for the whole business</div></div>
+    <div class="stat reveal"><div class="num"><span class="count" data-target="26">26</span><span class="plus" aria-hidden="true">+</span></div><div class="lbl">disconnected tools it replaces</div></div>
     <div class="stat reveal"><div class="num">Days</div><div class="lbl">to go live — not months</div></div>
   </div>
 </div>
@@ -777,7 +777,7 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
     <a href="https://calendly.com/carpenterlogan3/discovery-call">Book a call</a>
     <div class="foot-legal">
       <span>ReCaptured LLC&nbsp;·&nbsp;2305 Pennsylvania Avenue, Wilmington, DE 19806, United States</span>
-      <!-- TEMP: security@recaptured.io alias not yet provisioned — using logan@ so it does not bounce. Switch data-u back to "security" once the alias exists. -->
+      <!-- TEMP: dedicated security@ alias not yet provisioned; using the logan@ address so the contact does not bounce. Switch data-u back to "security" once the alias exists and is monitored. -->
       <span>© 2026 ReCaptured LLC&nbsp;·&nbsp;<a href="/legal/acceptable-use">Acceptable Use</a>&nbsp;·&nbsp;<a class="js-email" data-u="logan" data-d="recaptured.io" aria-label="Email ReCaptured">email us</a></span>
     </div>
   </div>
@@ -829,7 +829,7 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function runCounter(el){
-    var to = parseInt(el.getAttribute("data-to") || el.textContent, 10) || 0;
+    var to = parseInt(el.getAttribute("data-target") || el.textContent, 10) || 0;
     if(reduce || to===0){ el.textContent = to; return; }
     var start = null, dur = 900;
     function tick(ts){
