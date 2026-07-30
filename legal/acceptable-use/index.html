@@ -13,9 +13,15 @@
 <meta property="og:title" content="Acceptable Use Policy — ReCaptured">
 <meta property="og:description" content="The ReCaptured Acceptable Use Policy: recording consent and notice, protected health information, prohibited uses, and enforcement.">
 <meta property="og:site_name" content="ReCaptured">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Acceptable Use Policy — ReCaptured">
 <meta name="twitter:description" content="The ReCaptured Acceptable Use Policy: recording consent and notice, protected health information, prohibited uses, and enforcement.">
+<!-- Social preview -->
+<meta property="og:image" content="https://recaptured.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ReCaptured Intelligent OS — run your entire business on one intelligent system.">
+<meta name="twitter:image" content="https://recaptured.io/assets/og-image.png">
 <link rel="icon" href="/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,6 +72,13 @@ h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.02em;color
 }
 .eyebrow::before{content:"";width:22px;height:2px;background:var(--brand)}
 :where(a,button,summary):focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+.skip-link{
+  position:absolute;left:16px;top:-56px;z-index:200;
+  background:var(--brand);color:#1a1206;padding:11px 18px;border-radius:8px;
+  font-family:var(--display);font-weight:600;font-size:.9rem;text-decoration:none;
+  transition:top .15s ease;
+}
+.skip-link:focus{top:16px}
 
 /* ============ NAV ============ */
 .nav{
@@ -139,11 +152,12 @@ h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.02em;color
 footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
 .foot-inner{
   max-width:var(--max);margin:0 auto;padding:0 24px;
-  display:flex;align-items:center;gap:20px;flex-wrap:wrap;font-size:.85rem;color:var(--faint);
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;font-size:.85rem;color:var(--muted);
 }
 .foot-inner .brand{margin-right:auto}
 .foot-inner a{color:var(--muted);text-decoration:none}
 .foot-inner a:hover{color:var(--brand-ink)}
+.foot-legal{display:flex;flex-direction:column;gap:3px;line-height:1.5}
 
 @media(max-width:640px){
   .legal{padding:calc(var(--nav-h) + 40px) 0 72px}
@@ -152,12 +166,13 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 
 <!-- ============ NAV ============ -->
 <header class="nav">
   <div class="nav-inner">
     <a class="brand" href="/" aria-label="ReCaptured home">
-      <img src="/recaptured-logo-80.png" alt="ReCaptured logo" width="32" height="32">
+      <img src="/recaptured-logo-80.png" alt="ReCaptured" width="32" height="32">
       <span>ReCaptured</span>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
@@ -174,7 +189,7 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
   </div>
 </header>
 
-<main class="legal">
+<main class="legal" id="top" tabindex="-1">
   <div class="wrap">
     <div class="measure">
       <div class="doc-head">
@@ -249,7 +264,7 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
           <p>We may update this policy. Customers will be notified of material changes.</p>
         </section>
 
-        <p class="contact">Questions: <a href="mailto:legal@recaptured.io">legal@recaptured.io</a></p>
+        <p class="contact">Questions: <a class="js-email" data-u="legal" data-d="recaptured.io" aria-label="Email ReCaptured legal">email us</a></p>
       </div>
     </div>
   </div>
@@ -258,14 +273,29 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
 <footer>
   <div class="foot-inner">
     <a class="brand" href="/">
-      <img src="/recaptured-logo-80.png" alt="ReCaptured logo" width="28" height="28" style="width:28px;height:28px">
+      <img src="/recaptured-logo-80.png" alt="ReCaptured" width="28" height="28" style="width:28px;height:28px">
       <span>ReCaptured</span>
     </a>
-    <a href="mailto:logan@recaptured.io">logan@recaptured.io</a>
+    <a class="js-email" data-u="logan" data-d="recaptured.io" aria-label="Email ReCaptured">email us</a>
     <a href="https://calendly.com/carpenterlogan3/discovery-call">Book a call</a>
-    <span>© 2026 ReCaptured LLC&nbsp;&nbsp;·&nbsp;&nbsp;<a href="/legal/acceptable-use">Acceptable Use</a></span>
+    <div class="foot-legal">
+      <span>ReCaptured LLC&nbsp;·&nbsp;2305 Pennsylvania Avenue, Wilmington, DE 19806, United States</span>
+      <span>© 2026 ReCaptured LLC&nbsp;·&nbsp;<a href="/legal/acceptable-use">Acceptable Use</a>&nbsp;·&nbsp;<a class="js-email" data-u="security" data-d="recaptured.io" aria-label="Email ReCaptured security team">email us</a></span>
+    </div>
   </div>
 </footer>
+
+<script>
+/* ================= EMAIL OBFUSCATION ================= */
+(function(){
+  document.querySelectorAll(".js-email").forEach(function(el){
+    var addr = el.dataset.u + "@" + el.dataset.d;
+    el.setAttribute("href", "mailto:" + addr);
+    var t = el.textContent.trim();
+    if(!t || t === "email us") el.textContent = addr;
+  });
+})();
+</script>
 
 </body>
 </html>

@@ -1,0 +1,19 @@
+# ReCaptured LLC — Security Contact
+# https://recaptured.io/.well-known/security.txt
+# Format: RFC 9116
+
+Contact: mailto:security@recaptured.io
+Expires: 2027-07-30T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://recaptured.io/.well-known/security.txt
+
+# If you believe you have found a security vulnerability in ReCaptured,
+# please report it to the address above. We aim to acknowledge reports
+# within two business days.
+#
+# Please do not access, modify or exfiltrate data belonging to others,
+# degrade the availability of the service, or publicly disclose an issue
+# before we have had a reasonable opportunity to remediate it.
+#
+# We do not currently operate a paid bug bounty programme, but we are
+# glad to credit researchers who report issues responsibly.
