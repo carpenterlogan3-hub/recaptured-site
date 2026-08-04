@@ -72,7 +72,8 @@
 <!-- Preload above-the-fold latin font files (variable woff2, one per family). Refresh URLs if the Google Fonts version changes. -->
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/sora/v17/xMQ9uFFYT72X5wkB_18qmnndmSdSnh2BAfO5mnuyOo1lfiQwV6-xo6eeIw.woff2">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"></noscript>
 <!-- Third-party origin hints: analytics + scheduling -->
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
@@ -206,7 +207,7 @@ h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.02em;color
 .routing th,.routing td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--border);vertical-align:top}
 .routing thead th{
   font-family:var(--display);font-size:.72rem;font-weight:600;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--faint);border-bottom:1px solid var(--border-strong);
+  text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border-strong);
 }
 .routing td:first-child{color:var(--text);width:56%}
 .routing td a{color:var(--brand-ink);font-weight:600;text-decoration:none;overflow-wrap:break-word}
@@ -234,7 +235,7 @@ footer{border-top:1px solid var(--border);padding:44px 0 34px;background:#fff}
 .foot-col{display:flex;flex-direction:column;gap:9px;min-width:150px}
 .foot-col h3{
   font-family:var(--display);font-size:.7rem;font-weight:600;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--faint);margin-bottom:2px;
+  text-transform:uppercase;color:var(--muted);margin-bottom:2px;
 }
 .foot-inner a{color:var(--muted);text-decoration:none}
 .foot-inner a:hover{color:var(--brand-ink)}
@@ -257,7 +258,7 @@ footer{border-top:1px solid var(--border);padding:44px 0 34px;background:#fff}
            srcset="/assets/logo/logo-tile-40.png 1x,
                    /assets/logo/logo-tile-80.png 2x,
                    /assets/logo/logo-tile-120.png 3x"
-           alt="ReCaptured" width="40" height="40">
+           alt="" width="40" height="40">
       <span>ReCaptured</span>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
@@ -317,7 +318,7 @@ footer{border-top:1px solid var(--border);padding:44px 0 34px;background:#fff}
              srcset="/assets/logo/logo-tile-40.png 1x,
                      /assets/logo/logo-tile-80.png 2x,
                      /assets/logo/logo-tile-120.png 3x"
-             alt="ReCaptured" width="36" height="36" loading="lazy" decoding="async">
+             alt="" width="36" height="36" loading="lazy" decoding="async">
         <span>ReCaptured</span>
       </a>
       <nav class="foot-cols" aria-label="Footer">
