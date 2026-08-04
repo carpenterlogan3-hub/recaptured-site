@@ -1,0 +1,54 @@
+# ReCaptured
+
+> ReCaptured is an AI-first operating system that runs an entire business on one intelligent system. It unifies CRM, projects and programs, documents and e-signature, communications, scheduling, time and workforce, invoicing, and institutional memory into a single configurable platform — and shapes itself to how each business actually works, from the jobsite to the courtroom to the event floor. Operated by ReCaptured LLC (Wilmington, DE, USA).
+
+## What ReCaptured is
+
+ReCaptured replaces 26+ disconnected tools with one system. Instead of stitching together separate apps for customers, work, files, and communication, a business runs on a single platform where records, conversations, documents, and decisions live together. An AI teammate drafts the tedious work (updates, logs, follow-ups, summaries), recalls the right context on demand, and runs plain-English workflows — but always confirms before it changes anything, with full audit history on every action. The workspace is delivered and shaped for each customer, uses their terminology, and is adjusted as their needs change — no IT staff or development project required. It typically goes live in days, not months.
+
+## Who it's for
+
+ReCaptured is built for operating businesses that run on customers, work, and knowledge worth keeping. It is shaped to each business, but common fits include nine industries:
+
+- **Construction & Field Trades** — RFIs, submittals, change orders, drawings, daily logs, punch lists, cost-code job costing
+- **Law Firms** — matters, documents, communications, and institutional memory in one record
+- **Event Planning & Production** — clients, vendors, schedules, and on-the-floor coordination
+- **Clubs & Membership Orgs** — members, communications, events, and dues
+- **Insurance Brokerages** — clients, policies, renewals, and documents
+- **Professional Services** — clients, projects, time, and billing
+- **Multi-Site Healthcare** — coordination across locations with disciplined data handling
+- **Logistics & Freight** — operations, documents, and communications on one system
+- **E-Commerce & Product** — orders, customers, and operations unified
+
+If an industry isn't listed, that's the point: any operating business can be mapped in a discovery session and the platform is shaped to its work, workflows, and vocabulary.
+
+## Core capabilities
+
+- **Customers & Deals** — leads, pipelines, quotes, deal stages, activity timelines, self-enriching records
+- **Projects & Programs** — boards, phases, schedules, budgets, dependencies; charters, stage gates, risk registers, portfolio roll-ups
+- **Tasks & Automation** — assignments, approvals, and recurring work, plus plain-English automations with logging and approvals
+- **Documents & Files** — version history, restore, virus scanning, password-protected external sharing, activity logs
+- **E-Signature** — send, sign, and file from the record; sealed and tamper-evident, no per-envelope bill
+- **Communications** — one thread per relationship across email, text, and transcribed calls; built-in meetings with recording and summaries; guests join by link with no login or license
+- **Audio & Memory** — built-in transcription and summarization, hands-free field recording, sealed tamper-evident transcripts placed on the right record
+- **Scheduling, Time & Money** — shared and unified calendars, timesheets and workforce management, invoicing and payments in sync with existing accounting tools
+- **Reporting & Views** — any record as a table, board, or calendar; live dashboards of real work
+- **AI teammate** — drafts, recalls, runs routines, and compounds institutional memory; always confirms before acting, with full history
+- **Integrations** — mirrors Slack/Teams, Gmail/Outlook, Google/Outlook calendars, and QuickBooks/Xero so consolidation happens on your schedule
+- **Enterprise & multi-entity** — global by default, enterprise-grade controls, multiple companies/brands/subsidiaries each under their own brand and domain, with leadership visibility across all
+
+## Key pages
+
+- [Homepage](https://recaptured.io/): what ReCaptured is, industries, capabilities, AI and memory, audio, enterprise, engagements, and FAQ
+- [Contact](https://recaptured.io/contact/): routed addresses for sales, support, security, privacy, legal, and billing, plus a link to book a discovery call
+- [Acceptable Use Policy](https://recaptured.io/legal/acceptable-use/): recording consent and notice, protected health information, prohibited uses, and enforcement
+- [Book a discovery call](https://calendly.com/recaptured/discovery-call): a 30-minute session that maps a business onto the platform
+- [LinkedIn](https://www.linkedin.com/company/recaptured-io/): ReCaptured company page
+
+## Contact
+
+- General: info@recaptured.io
+- Sales, demos, and pricing: sales@recaptured.io
+- Customer support: support@recaptured.io
+- Security: security@recaptured.io
+- Privacy and data requests: privacy@recaptured.io
