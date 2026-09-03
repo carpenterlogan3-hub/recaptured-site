@@ -42,6 +42,8 @@ If an industry isn't listed, that's the point: any operating business can be map
 - [Homepage](https://recaptured.io/): what ReCaptured is, industries, capabilities, AI and memory, audio, enterprise, engagements, and FAQ
 - [Contact](https://recaptured.io/contact/): routed addresses for sales, support, security, privacy, legal, and billing, plus a link to book a discovery call
 - [Acceptable Use Policy](https://recaptured.io/legal/acceptable-use/): recording consent and notice, protected health information, prohibited uses, and enforcement
+- [Privacy Policy](https://recaptured.io/legal/privacy/): what we collect, how we use it, text messaging and mobile information, sharing, retention, and your rights
+- [SMS Terms](https://recaptured.io/legal/sms-terms/): how the text messaging program works — opt-in, message frequency, rates, and how to opt out or get help
 - [Book a discovery call](https://calendly.com/recaptured/discovery-call): a 30-minute session that maps a business onto the platform
 - [LinkedIn](https://www.linkedin.com/company/recaptured-io/): ReCaptured company page
 
