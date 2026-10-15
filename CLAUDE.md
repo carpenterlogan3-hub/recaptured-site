@@ -2,6 +2,8 @@
 
 Static marketing site for recaptured.io, served by GitHub Pages from `main`. See README.md for the page map.
 
+- Never push to main or change repository settings without the user's explicit 'ship it' in the current session. Work on a branch, show the diff and checks, then stop.
+
 ## Hands off
 
 Never change `legal/sms-terms/`, `.well-known/security.txt`, `CNAME` or `.nojekyll` unless the task names them explicitly.
