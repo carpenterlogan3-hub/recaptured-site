@@ -1,0 +1,156 @@
+name: Monthly site health
+
+# Audits the LIVE site (Lighthouse + axe-core) and opens/updates a single
+# tracking issue when something regresses. Read-only: never deploys Pages,
+# never runs on push.
+
+on:
+  schedule:
+    - cron: '0 13 1 * *'   # 1st of each month, 13:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: site-health
+  cancel-in-progress: false
+
+jobs:
+  site-health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      BASE_URL: https://recaptured.io
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install audit tools
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install --no-save puppeteer@23.11.1 @axe-core/puppeteer@4.10.1 lighthouse@12.2.1
+
+      - name: Write audit script
+        run: |
+          cat > audit.mjs <<'NODE'
+          import fs from 'node:fs';
+          import puppeteer from 'puppeteer';
+          import lighthouse from 'lighthouse';
+          import { AxePuppeteer } from '@axe-core/puppeteer';
+
+          const BASE = process.env.BASE_URL || 'https://recaptured.io';
+          const PAGES = ['/','/assistant/','/pricing/','/pilot/','/book/','/trust/','/about/','/contact/','/legal/','/legal/terms/','/legal/privacy/','/legal/acceptable-use/','/legal/sms-terms/','/legal/founding-100/','/legal/pilot-terms/','/legal/dmca/'];
+          const LH_PAGES = ['/','/pricing/','/legal/privacy/'];
+          const TAGS = ['wcag2a','wcag2aa','wcag21a','wcag21aa','best-practice'];
+          const failures = [];
+
+          const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox','--disable-gpu','--disable-dev-shm-usage'] });
+          const port = Number(new URL(browser.wsEndpoint()).port);
+
+          // Desktop overrides; omitting them leaves Lighthouse on its default mobile profile.
+          const DESKTOP = {
+            formFactor: 'desktop',
+            screenEmulation: { mobile: false, width: 1350, height: 940, deviceScaleFactor: 1, disabled: false },
+            throttling: { rttMs: 40, throughputKbps: 10240, cpuSlowdownMultiplier: 1 },
+            throttlingMethod: 'simulate'
+          };
+
+          // ---- Lighthouse: /, /pricing/, /legal/privacy/ on mobile + desktop ----
+          for (const p of LH_PAGES) {
+            for (const ff of ['mobile','desktop']) {
+              const url = BASE + p;
+              const flags = { port, output: 'json', logLevel: 'error', onlyCategories: ['performance','accessibility','best-practices','seo'] };
+              if (ff === 'desktop') Object.assign(flags, DESKTOP);
+              let lhr;
+              try { lhr = (await lighthouse(url, flags)).lhr; }
+              catch (e) { failures.push(`Lighthouse ${ff} ${p}: run error — ${e.message}`); continue; }
+              const sc = k => Math.round((lhr.categories[k].score ?? 0) * 100);
+              const perf = sc('performance'), acc = sc('accessibility'), bp = sc('best-practices'), seo = sc('seo');
+              if (acc < 100) failures.push(`Lighthouse ${ff} ${p}: accessibility ${acc} (<100)`);
+              if (bp < 100) failures.push(`Lighthouse ${ff} ${p}: best-practices ${bp} (<100)`);
+              if (seo < 100) failures.push(`Lighthouse ${ff} ${p}: SEO ${seo} (<100)`);
+              if (ff === 'desktop' && perf < 95) failures.push(`Lighthouse desktop ${p}: performance ${perf} (<95)`);
+              console.log(`LH ${ff} ${p}: perf=${perf} a11y=${acc} bp=${bp} seo=${seo}`);
+            }
+          }
+
+          // ---- axe-core: all 16 pages at 1280 and 390 wide ----
+          const page = await browser.newPage();
+          for (const p of PAGES) {
+            for (const w of [1280, 390]) {
+              const url = BASE + p;
+              await page.setViewport({ width: w, height: w >= 1280 ? 900 : 844, deviceScaleFactor: 1, isMobile: w < 768, hasTouch: w < 768 });
+              try { await page.goto(url, { waitUntil: 'load', timeout: 60000 }); }
+              catch (e) { failures.push(`axe ${w}w ${p}: navigation error — ${e.message}`); continue; }
+              await new Promise(r => setTimeout(r, 1500));
+              let violations;
+              try { violations = (await new AxePuppeteer(page).withTags(TAGS).analyze()).violations; }
+              catch (e) { failures.push(`axe ${w}w ${p}: analyze error — ${e.message}`); continue; }
+              if (violations.length) {
+                const nodes = violations.reduce((n, v) => n + v.nodes.length, 0);
+                const ids = violations.map(v => `${v.id} (${v.nodes.length})`).join(', ');
+                failures.push(`axe ${w}w ${p}: ${violations.length} rule(s), ${nodes} node(s) — ${ids}`);
+              }
+              console.log(`axe ${w}w ${p}: ${violations.length} rule(s)`);
+            }
+          }
+
+          // ---- security.txt Expires within 60 days ----
+          try {
+            const r = await fetch(`${BASE}/.well-known/security.txt`);
+            const t = await r.text();
+            const m = t.match(/^Expires:\s*(.+)$/im);
+            if (!m) failures.push('security.txt: no Expires field found');
+            else {
+              const exp = new Date(m[1].trim());
+              if (isNaN(+exp)) failures.push(`security.txt: unparseable Expires "${m[1].trim()}"`);
+              else {
+                const days = Math.floor((+exp - Date.now()) / 86400000);
+                console.log(`security.txt Expires ${exp.toISOString().slice(0,10)} (${days} days)`);
+                if (days < 60) failures.push(`security.txt: Expires in ${days} day(s) on ${exp.toISOString().slice(0,10)} (under 60)`);
+              }
+            }
+          } catch (e) { failures.push(`security.txt: fetch error — ${e.message}`); }
+
+          await browser.close();
+
+          const stamp = new Date().toISOString();
+          const body = failures.length
+            ? `Automated monthly site-health check found issues.\n\n- Run (UTC): ${stamp}\n- Target: ${BASE}\n\n### Failures (${failures.length})\n\n${failures.map(f => `- ${f}`).join('\n')}\n\n_Managed by the \`Monthly site health\` workflow; updated on each run. Close once resolved._\n`
+            : `All monthly site-health checks passed at ${stamp}.`;
+          fs.writeFileSync('report.md', body);
+          if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `fail=${failures.length ? 'true' : 'false'}\n`);
+          console.log(`RESULT: ${failures.length} failure(s)`);
+          NODE
+
+      - name: Run audits
+        id: audit
+        run: node audit.mjs
+
+      - name: Show report
+        if: always()
+        run: cat report.md || true
+
+      - name: Open or update tracking issue
+        if: always() && steps.audit.outputs.fail == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('report.md', 'utf8');
+            const title = 'Monthly site health';
+            const { owner, repo } = context.repo;
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner, repo, state: 'open', per_page: 100
+            });
+            const existing = issues.find(i => i.title === title && !i.pull_request);
+            if (existing) {
+              await github.rest.issues.update({ owner, repo, issue_number: existing.number, body });
+              core.notice(`Updated issue #${existing.number}`);
+            } else {
+              const created = await github.rest.issues.create({ owner, repo, title, body });
+              core.notice(`Opened issue #${created.data.number}`);
+            }
