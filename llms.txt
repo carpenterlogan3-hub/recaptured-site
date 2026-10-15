@@ -1,56 +1,46 @@
 # ReCaptured
 
-> ReCaptured is an AI-first operating system that runs an entire business on one intelligent system. It unifies CRM, projects and programs, documents and e-signature, communications, scheduling, time and workforce, invoicing, and institutional memory into a single configurable platform — and shapes itself to how each business actually works, from the jobsite to the courtroom to the event floor. Operated by ReCaptured LLC (Wilmington, DE, USA).
+> ReCaptured is one connected system for running a business of 3 to 25 people. Leads, deals, projects, people, files, meetings and chat live on a single record, and an AI assistant works from that record and nothing else. One login, one bill, from $69 per seat. Operated by RECAPTURED, LLC (Wilmington, DE, USA).
 
 ## What ReCaptured is
 
-ReCaptured replaces 26+ disconnected tools with one system. Instead of stitching together separate apps for customers, work, files, and communication, a business runs on a single platform where records, conversations, documents, and decisions live together. An AI teammate drafts the tedious work (updates, logs, follow-ups, summaries), recalls the right context on demand, and runs plain-English workflows — but always confirms before it changes anything, with full audit history on every action. The workspace is delivered and shaped for each customer, uses their terminology, and is adjusted as their needs change — no IT staff or development project required. It typically goes live in days, not months.
+Small teams run the business out of a CRM, a project tool, a chat app, a drive and a meeting recorder, each with its own login, bill and version of the truth. ReCaptured replaces that stack with one system of record. Everything that touches the business (a web form, an email, a Slack thread, a meeting, a dictated note, a file) becomes part of a record, stays linked to its source, and becomes something the assistant can answer about. Built-in agents triage intake, draft tasks from meeting transcripts, watch deadlines and SLAs, and propose who should do what next; a person approves each one. Anything that leaves the organization waits for a person to confirm. Private and Off-the-Record content is never indexed.
 
 ## Who it's for
 
-ReCaptured is built for operating businesses that run on customers, work, and knowledge worth keeping. It is shaped to each business, but common fits include nine industries:
+Teams of 3 to 25 who want one system instead of six. Served today: construction and contracting, field services and trades, nonprofits and member organizations, professional services, agencies, sales teams and multi-entity organizations. Golf, boat and member clubs, restaurants and hospitality are in pilot. Larger teams are welcome to talk; the honest answer on fit comes on the call.
 
-- **Construction & Field Trades** — RFIs, submittals, change orders, drawings, daily logs, punch lists, cost-code job costing
-- **Law Firms** — matters, documents, communications, and institutional memory in one record
-- **Event Planning & Production** — clients, vendors, schedules, and on-the-floor coordination
-- **Clubs & Membership Orgs** — members, communications, events, and dues
-- **Insurance Brokerages** — clients, policies, renewals, and documents
-- **Professional Services** — clients, projects, time, and billing
-- **Multi-Site Healthcare** — coordination across locations with disciplined data handling
-- **Logistics & Freight** — operations, documents, and communications on one system
-- **E-Commerce & Product** — orders, customers, and operations unified
+## Pricing
 
-If an industry isn't listed, that's the point: any operating business can be mapped in a discovery session and the platform is shaped to its work, workflows, and vocabulary.
+$69 per full seat per month, 3-seat minimum, billed monthly, cancel any time from account settings. Every module is included; no add-ons. External guests (clients, vendors, board members) are free and view-only, scoped to what you share. Founding 100: the first 100 paying customers keep their per-seat price for 24 months. Pilots: 30 days on your own data for industries ReCaptured is actively building for, no usage charges.
 
-## Core capabilities
+## The AI assistant
 
-- **Customers & Deals** — leads, pipelines, quotes, deal stages, activity timelines, self-enriching records
-- **Projects & Programs** — boards, phases, schedules, budgets, dependencies; charters, stage gates, risk registers, portfolio roll-ups
-- **Tasks & Automation** — assignments, approvals, and recurring work, plus plain-English automations with logging and approvals
-- **Documents & Files** — version history, restore, virus scanning, password-protected external sharing, activity logs
-- **E-Signature** — send, sign, and file from the record; sealed and tamper-evident, no per-envelope bill
-- **Communications** — one thread per relationship across email, text, and transcribed calls; built-in meetings with recording and summaries; guests join by link with no login or license
-- **Audio & Memory** — built-in transcription and summarization, hands-free field recording, sealed tamper-evident transcripts placed on the right record
-- **Scheduling, Time & Money** — shared and unified calendars, timesheets and workforce management, invoicing and payments in sync with existing accounting tools
-- **Reporting & Views** — any record as a table, board, or calendar; live dashboards of real work
-- **AI teammate** — drafts, recalls, runs routines, and compounds institutional memory; always confirms before acting, with full history
-- **Integrations** — mirrors Slack/Teams, Gmail/Outlook, Google/Outlook calendars, and QuickBooks/Xero so consolidation happens on your schedule
-- **Enterprise & multi-entity** — global by default, enterprise-grade controls, multiple companies/brands/subsidiaries each under their own brand and domain, with leadership visibility across all
+Answers from your records and cites the source; follows the screen you're on; drafts tasks from transcripts; triages intake with its reasoning shown; guards deadlines and SLAs; proposes workload rebalances; captures decisions from chat; drafts replies and briefs; enriches company facts from public and connected sources with candidates for you to choose; learns your organization's vocabulary. Connect ChatGPT or Claude to your records through MCP, per organization, with an admin choosing which tools are exposed. It never changes records or sends anything outside the organization without a person's approval. Customer records are not used to train AI models.
+
+## Security and data
+
+Multi-factor authentication required for every account, with Google or Microsoft sign-in. Role-based access with a full audit log, including a log of every ReCaptured operator access. Files are malware-scanned before anything can read them. Meeting recording asks every participant for consent and time-stamps it. Export your data any time in standard formats; if you leave, export for 30 days and deletion within 90 days after that. SOC 2 and ISO 27001 are on the roadmap, not held today. Hosted in the United States (us-east-1).
 
 ## Key pages
 
-- [Homepage](https://recaptured.io/): what ReCaptured is, industries, capabilities, AI and memory, audio, enterprise, engagements, and FAQ
-- [Contact](https://recaptured.io/contact/): routed addresses for sales, support, security, privacy, legal, and billing, plus a link to book a discovery call
-- [Acceptable Use Policy](https://recaptured.io/legal/acceptable-use/): recording consent and notice, protected health information, prohibited uses, and enforcement
-- [Privacy Policy](https://recaptured.io/legal/privacy/): what we collect, how we use it, text messaging and mobile information, sharing, retention, and your rights
-- [SMS Terms](https://recaptured.io/legal/sms-terms/): how the text messaging program works — opt-in, message frequency, rates, and how to opt out or get help
-- [Book a discovery call](https://calendly.com/recaptured/discovery-call): a 30-minute session that maps a business onto the platform
-- [LinkedIn](https://www.linkedin.com/company/recaptured-io/): ReCaptured company page
+- [Home](https://recaptured.io/)
+- [AI assistant](https://recaptured.io/assistant/): what is available now and what is designed for after launch
+- [Pricing](https://recaptured.io/pricing/): $69 per seat, Founding 100
+- [30-day pilot](https://recaptured.io/pilot/)
+- [Book a call](https://recaptured.io/book/): 30-minute discovery call or 45-minute demo
+- [Trust](https://recaptured.io/trust/): security and data practices in plain language
+- [About](https://recaptured.io/about/)
+- [Contact](https://recaptured.io/contact/)
+- [Legal](https://recaptured.io/legal/): Terms of Service, Privacy Notice, Acceptable Use Policy, SMS Terms, Founding 100 Terms, Pilot Terms, Copyright (DMCA) Policy
+- [LinkedIn](https://www.linkedin.com/company/recaptured-io/)
 
 ## Contact
 
 - General: info@recaptured.io
-- Sales, demos, and pricing: sales@recaptured.io
-- Customer support: support@recaptured.io
-- Security: security@recaptured.io
+- Sales: sales@recaptured.io
+- Support: support@recaptured.io
+- Billing: billing@recaptured.io
+- Security: security@recaptured.io (see https://recaptured.io/.well-known/security.txt)
 - Privacy and data requests: privacy@recaptured.io
+- Legal: legal@recaptured.io · Copyright notices: dmca@recaptured.io
