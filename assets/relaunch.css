@@ -449,3 +449,8 @@ table.cmp{width:100%;border-collapse:collapse;margin-top:36px;font-size:.95rem;b
 
 
 @media (max-width:760px){}
+/* Home: product screenshot */
+.shot-figure{margin:0;grid-column:1/-1;max-width:980px}
+.shot-figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:0 10px 30px rgba(27,26,24,.10)}
+.shot-figure figcaption{margin-top:12px;font-size:.95rem;color:var(--graphite)}
+.shot-figure .shot-note{color:var(--mute)}

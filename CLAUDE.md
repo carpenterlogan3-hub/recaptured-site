@@ -30,7 +30,7 @@ Product claims on `/trust/` and `/assistant/` are controlled copy. Do not add or
 
 ## Fictional data
 
-Use only these names: Pellford Medical Group, Calder Yard, Brindlecrest Builders, Larkhollow Mechanical, Gullwhistle Yacht Club, Theo Marchbanks, Marisol Quenneville. Do not introduce other names without a collision check.
+Use only these names: Pellford Medical Group, Calder Yard, Brindlecrest Builders, Larkhollow Mechanical, Gullwhistle Yacht Club, Theo Marchbanks, Marisol Quenneville. Crew and colleague names in screenshots may also appear as an initial plus surname (currently D. Okafor, M. Trevino, R. Alvarez, S. Nakamura); these identify no one and need no check. Any new full name still needs a collision check.
 
 ## Publishing
 
