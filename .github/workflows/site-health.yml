@@ -87,7 +87,8 @@ jobs:
               catch (e) { failures.push(`axe ${w}w ${p}: navigation error — ${e.message}`); continue; }
               await new Promise(r => setTimeout(r, 1500));
               let violations;
-              try { violations = (await new AxePuppeteer(page).withTags(TAGS).analyze()).violations; }
+              // Exclude the Calendly inline widget: it is a cross-origin third-party embed we cannot restyle.
+              try { violations = (await new AxePuppeteer(page).withTags(TAGS).exclude('.calendly-inline-widget').analyze()).violations; }
               catch (e) { failures.push(`axe ${w}w ${p}: analyze error — ${e.message}`); continue; }
               if (violations.length) {
                 const nodes = violations.reduce((n, v) => n + v.nodes.length, 0);
