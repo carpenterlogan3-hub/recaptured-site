@@ -55,6 +55,8 @@ p{margin:0 0 1em}
 .legal .meta{font-size:.88rem;color:var(--mute);margin-bottom:22px}
 .legal .block{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:16px 18px;font-family:ui-monospace,Menlo,monospace;font-size:.9rem;line-height:1.6;color:var(--ink)}
 .legal table{width:100%;border-collapse:collapse;font-size:.92rem;margin:12px 0 18px;background:var(--paper);border:1px solid var(--line)}
+.legal .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0 18px}
+.legal .table-scroll table{margin:0}
 .legal th,.legal td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--mist);vertical-align:top;color:var(--graphite);font-size:.92rem;line-height:1.5}
 .legal th{background:var(--cream);font-size:.78rem;color:var(--mute)}
 .legal code{font-family:ui-monospace,Menlo,monospace;font-size:.85rem;color:var(--ink)}
@@ -201,6 +203,8 @@ p{margin:0 0 1em}
 .asst .lede{margin-bottom:26px}
 .asst-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .asst-badges span{border:1px solid #4a463f;border-radius:999px;padding:7px 12px;font-size:.85rem;font-weight:600;color:var(--on-ink)}
+.asst-badges .pill-live{color:var(--green);border-color:transparent}
+.asst-badges .pill-next{color:var(--blue);border-color:transparent}
 .chat{background:var(--ink-2);border:1px solid #3c3934;border-radius:16px;overflow:hidden;position:relative}
 .chat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--orange)}
 .chat-head{padding:14px 20px 14px 26px;border-bottom:1px solid #3c3934;display:flex;justify-content:space-between;font-size:.85rem;color:var(--on-ink-mute);font-weight:600}
